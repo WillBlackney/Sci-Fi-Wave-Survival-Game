@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 887, y: 494}
   m_MaxSize: {x: 16012, y: 14044}
   vertical: 0
-  controlID: 149
+  controlID: 159
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -410,8 +410,8 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 50490000
-      m_LastClickedID: 18768
+      m_SelectedIDs: 18cd0000
+      m_LastClickedID: 0
       m_ExpandedIDs: 8efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -1023,21 +1023,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Enemies
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Enemies
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Will\Desktop\Unity Projects\Sci-Fi Wave Survival Clone
-    From Princess
+  m_LastProjectPath: C:\Users\Will\Desktop\Unity Projects\Sci-Fi-Wave-Survival-Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 835}
-    m_SelectedIDs: 42420000
-    m_LastClickedID: 16962
-    m_ExpandedIDs: 000000004a2d0000a42d0000f02d0000e42f00003a30000048300000be3000002e31000004320000a8320000f83200000433000008350000263500005635000066350000c837000098390000fa3d0000fc400000004100004247000000ca9a3b
+    scrollPos: {x: 0, y: 1075}
+    m_SelectedIDs: c6370000
+    m_LastClickedID: 14278
+    m_ExpandedIDs: 00000000482d0000a22d0000ee2d0000e22f00003830000046300000bc3000002c31000002320000a6320000f63200000233000006350000243500005435000064350000c637000096390000f83d0000fa400000fe4000004047000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1065,7 +1064,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000004a2d0000a42d0000f02d0000e42f00003a30000048300000be3000002e31000004320000a8320000f83200000433000008350000263500005635000066350000c837000098390000fa3d0000fc4000000041000042470000
+    m_ExpandedIDs: 00000000482d0000a22d0000ee2d0000e22f00003830000046300000bc3000002c31000002320000a6320000f63200000233000006350000243500005435000064350000c637000096390000f83d0000fa400000fe40000040470000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1117,7 +1116,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 41.5}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 203
 --- !u!114 &21
