@@ -758,10 +758,15 @@ public class LivingEntity : MonoBehaviour
             CombatLogic.Instance.CreateAoEAttackEvent(this, myPassiveManager.volatileStacks, TileCurrentlyOn, 1, true, true,AbilityDataSO.DamageType.None);
         }
 
-        // Check if the player has lost all characters and thus the game
+        // Check if this entity is the spaceship, and start game over event if it is
         if (defender)
         {
             DefenderManager.Instance.allDefenders.Remove(defender);
+            if(myClass == Class.SpaceShip)
+            {
+                EventManager.Instance.StartNewGameOverEvent();
+                StopAllCoroutines();
+            }
         }
 
         DisableWorldSpaceCanvas();

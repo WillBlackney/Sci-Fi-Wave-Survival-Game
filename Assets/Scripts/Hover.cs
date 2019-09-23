@@ -41,8 +41,8 @@ public class Hover : Singleton<Hover>
 
     public void Activate(Sprite sprite)
     {
-        this.spriteRenderer.enabled = true;
         this.spriteRenderer.sprite = sprite;
+        this.spriteRenderer.enabled = true;        
     }
 
     public void Deactivate()

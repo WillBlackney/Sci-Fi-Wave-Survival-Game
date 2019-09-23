@@ -14,7 +14,7 @@ public class LevelManager : Singleton<LevelManager>
 
     [SerializeField] private GameObject[] tilePrefabs;
 
-    [SerializeField] private CameraMovement cameraMovement;
+    //[SerializeField] private CameraMovement cameraMovement;
 
     [SerializeField] private Transform TileParent;
 

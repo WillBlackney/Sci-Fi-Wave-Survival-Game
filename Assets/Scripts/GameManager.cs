@@ -37,6 +37,7 @@ public class GameManager : Singleton<GameManager>
 
     public void PickTower(TowerButton towerButton)
     {
+        Debug.Log("Defender button for " + towerButton.name + " clicked on");
         ClickedButton = towerButton;
         Hover.Instance.Activate(towerButton.defenderPrefab.GetComponent<SpriteRenderer>().sprite);
         /*

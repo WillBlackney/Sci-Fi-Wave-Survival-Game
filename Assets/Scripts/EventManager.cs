@@ -12,6 +12,36 @@ public class EventManager : Singleton<EventManager>
         StartNewGameSequence();
     }
 
+    public void StartNewReloadGameSceneEvent()
+    {
+        StartCoroutine(StartNewReloadGameSceneEventCoroutine());
+    }
+    public IEnumerator StartNewReloadGameSceneEventCoroutine()
+    {
+        // Start screen fade out
+        Action action = BlackScreenManager.Instance.FadeOut(1);
+        // wait until screen is completely faded out
+        yield return new WaitUntil(() => action.ActionResolved() == true);
+        // Reload game scene
+        SceneLoader.Instance.LoadGameScene();
+    }
+
+    public void StartNewGameOverEvent()
+    {
+        StartCoroutine(StartNewGameOverEventCoroutine());
+    }
+    public IEnumerator StartNewGameOverEventCoroutine()
+    {
+        // Stop all coroutines running on enemies
+        foreach(Enemy enemy in EnemyManager.Instance.allEnemies)
+        {
+            enemy.StopAllCoroutines();
+        }
+
+        CameraManager.Instance.SetCameraLookAtTarget(LevelManager.Instance.GetWorldCentreTile().gameObject);
+        yield return new WaitForSeconds(3f);
+        UIManager.Instance.SetGameOverCanvasVisibility(true);
+    }
     public void StartNewGameSequence()
     {
         StartCoroutine(StartNewGameSequenceCoroutine());
@@ -23,7 +53,8 @@ public class EventManager : Singleton<EventManager>
         // Populate Spawn Locations around the map
         EnemySpawner.Instance.PopulateEnemyWaveCentrePoints();
         // Centre the camera in the middle of the world
-        CameraManager.Instance.LookAtTarget(LevelManager.Instance.GetWorldCentreTile().gameObject);
+        //CameraManager.Instance.LookAtTarget(LevelManager.Instance.GetWorldCentreTile().gameObject);
+        CameraManager.Instance.SetCameraLookAtTarget(LevelManager.Instance.GetWorldCentreTile().gameObject);
         // Fade in scene
         Action fadeIn = BlackScreenManager.Instance.FadeIn(5);
         // wait until the fade in effect is finished

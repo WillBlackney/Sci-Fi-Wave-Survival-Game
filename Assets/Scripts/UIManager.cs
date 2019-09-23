@@ -7,35 +7,43 @@ public class UIManager : Singleton<UIManager>
 {
     [Header("All UI Elements")]
     public Button EndTurnButton;
-    public GameObject GameOverCanvas;
+    public GameObject GameOverCanvasVisualParent;
     public GameObject CharacterRoster;
     public GameObject worldMap;
     public GameObject RewardScreen;
     public GameObject Inventory;
 
-    // Buttons
+    // Enable/Disable buttons + controls
     public void DisableEndTurnButton()
     {
         EndTurnButton.gameObject.SetActive(false);
     }
-
     public void EnableEndTurnButton()
     {
         EndTurnButton.gameObject.SetActive(true);
     }
-
-    public void EnableGameOverCanvas()
-    {
-        GameOverCanvas.gameObject.SetActive(true);
-    }
+    
 
     // On Button click events
+    #region
+
+    #endregion
+
+    // Enable / Disable views
+    #region
+    public void SetGameOverCanvasVisibility(bool onOrOff)
+    {
+        GameOverCanvasVisualParent.gameObject.SetActive(onOrOff);
+    }
+    #endregion
+
+    // Legacy methods
+    #region
 
     public void OnCharacterPanelBackButtonClicked()
     {
         CharacterRoster.SetActive(false);
     }
-
     public void OnCharacterPanelButtonClicked()
     {
         if (CharacterRoster.activeSelf == true)
@@ -49,14 +57,13 @@ public class UIManager : Singleton<UIManager>
             DisableInventoryView();
             DisableWorldMapView();
         }
-            
-    }  
 
+    }
     public void OnInventoryButtonClicked()
     {
         if (Inventory.activeSelf == true)
         {
-            DisableInventoryView();            
+            DisableInventoryView();
         }
 
         else if (Inventory.activeSelf == false)
@@ -66,10 +73,9 @@ public class UIManager : Singleton<UIManager>
             DisableWorldMapView();
         }
     }
-
     public void OnWorldMapButtonClicked()
     {
-        if(worldMap.activeSelf == true)
+        if (worldMap.activeSelf == true)
         {
             DisableWorldMapView();
         }
@@ -79,55 +85,46 @@ public class UIManager : Singleton<UIManager>
             DisableInventoryView();
             DisableCharacterRosterView();
             EnableWorldMapView();
-            if(WorldMap.Instance.canSelectNewEncounter == true)
+            if (WorldMap.Instance.canSelectNewEncounter == true)
             {
                 WorldMap.Instance.HighlightNextAvailableEncounters();
             }
-            
-            
+
+
         }
     }
-
-    // Enable / Disable views
-
     public void EnableWorldMapView()
     {
         worldMap.SetActive(true);
     }
-
     public void DisableWorldMapView()
     {
         worldMap.SetActive(false);
     }
-
     public void EnableRewardScreenView()
     {
         RewardScreen.SetActive(true);
     }
-
     public void DisableRewardScreenView()
     {
         RewardScreen.SetActive(false);
-    }   
-
+    }
     public void EnableInventoryView()
     {
         Inventory.SetActive(true);
     }
-
     public void DisableInventoryView()
     {
         Inventory.SetActive(false);
     }
-
     public void EnableCharacterRosterView()
     {
         CharacterRoster.SetActive(true);
     }
-
     public void DisableCharacterRosterView()
     {
         CharacterRoster.SetActive(false);
         CampSiteManager.Instance.awaitingLevelUpChoice = false;
     }
+    #endregion
 }
