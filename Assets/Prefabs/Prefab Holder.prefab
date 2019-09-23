@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8230548189762907350
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8230548189762907344}
+  - component: {fileID: 8230548189762907345}
+  m_Layer: 0
+  m_Name: Prefab Holder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8230548189762907344
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8230548189762907350}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 247, y: 138.9993, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8230548189762907345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8230548189762907350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691d83da7006ff142b3228d98a30fed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AbilityButtonPrefab: {fileID: 1932043087034701526, guid: 9f3d347b57d16ff4cb0eda733f8f0747,
+    type: 3}
+  spellInfoPrefab: {fileID: 1373087064629809897, guid: 8d18a9be3ae035c4f8d96935f374e8e6,
+    type: 3}
+  spaceShipPrefab: {fileID: 2768033196073136405, guid: 7ef09d19a7b75f7448dd04368217dcb8,
+    type: 3}
+  warriorPrefab: {fileID: 6927301199644507142, guid: ffbc29eea846820489b872bdea9e5f3b,
+    type: 3}
+  magePrefab: {fileID: 3559319376487774995, guid: 14a6101350844a84b9c05a65d602dc93,
+    type: 3}
+  priestPrefab: {fileID: 6409797628594634772, guid: 151df5c4f6572c44998a35df0ad41e6f,
+    type: 3}
+  rangerPrefab: {fileID: 4061598805563127624, guid: 6fd9952882ef7ce4f899ee4c05bfc5cb,
+    type: 3}
+  roguePrefab: {fileID: 4061598805563127624, guid: 8d70853991a97b149a5bd51968eaaf37,
+    type: 3}
+  shamanPrefab: {fileID: 3558336318184339076, guid: dca2d5c473deddd42b0a594b1ad0a2d2,
+    type: 3}
+  treePrefab: {fileID: 4714179162167363359, guid: 132baf5bb00f16449976f244ef11c610,
+    type: 3}
+  rockWallPrefab: {fileID: 2306637336434112965, guid: ffd927fa99e046a4eb659fdc0550666e,
+    type: 3}
+  rubblePrefab: {fileID: 353143825491827762, guid: e8237e9c662951444a9e8c4ba4531334,
+    type: 3}
+  GoldRewardButton: {fileID: 1219674534713617894, guid: 976e1a167169aab439941989b2f25a2c,
+    type: 3}
+  ItemRewardButton: {fileID: 8757620878221013843, guid: b85aec8319f4a0948bdc4e9c758abcfa,
+    type: 3}
+  ArtifactRewardButton: {fileID: 8757620878221013843, guid: 5fde9767743e7c646a3812fe6d6c4e3f,
+    type: 3}
+  ArtifactGO: {fileID: 6814500050501459451, guid: 6936986fd8e3a2c438a0a25680d55000,
+    type: 3}
+  ItemCard: {fileID: 6102940201404517147, guid: aeb27dee0749bce458ec2ce0df595b1f,
+    type: 3}
+  TreasureChest: {fileID: 5594969955182072137, guid: 389a07be3a0d66243995413ce7e7d265,
+    type: 3}
+  LevelBG: {fileID: 3111062959990947664, guid: 37e8b36c9804c8e41b8baeb8a7b48c3a, type: 3}
+  ZombiePrefab: {fileID: 331731056945787492, guid: 47f5564b9ebf0b245aebf669a401e825,
+    type: 3}

@@ -1,0 +1,1949 @@
+fileFormatVersion: 2
+guid: f8ed7dd79ce25044c89c18638600ec00
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4787344305747144066
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_0
+  - first:
+      213: -2053030339719735280
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_1
+  - first:
+      213: -4338535316173185189
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_2
+  - first:
+      213: 8839800693357276601
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_3
+  - first:
+      213: 1120052620753110817
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_4
+  - first:
+      213: -2635752461856179424
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_5
+  - first:
+      213: 6820043176199060086
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_6
+  - first:
+      213: -2430473249977603762
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_7
+  - first:
+      213: 6945922775584945064
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_8
+  - first:
+      213: 7073911176701706079
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_9
+  - first:
+      213: 8701305534615864875
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_10
+  - first:
+      213: 6185133351083005352
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_11
+  - first:
+      213: -5408369510832408155
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_12
+  - first:
+      213: 8493171115696348752
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_13
+  - first:
+      213: -2773679646683254153
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_14
+  - first:
+      213: -2998591975981927876
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_15
+  - first:
+      213: 3744775534495518137
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_16
+  - first:
+      213: -3071248032197189841
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_17
+  - first:
+      213: 3811900072430403263
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_18
+  - first:
+      213: 1273308797848937007
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_19
+  - first:
+      213: -1822319537154477938
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_20
+  - first:
+      213: -5442554132841207772
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_21
+  - first:
+      213: -3308748815350715514
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_22
+  - first:
+      213: 4953785254520050041
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_23
+  - first:
+      213: -5944940837518638108
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_24
+  - first:
+      213: -2229883517881080476
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_25
+  - first:
+      213: 3900243757538511696
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_26
+  - first:
+      213: -1339324012931353256
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_27
+  - first:
+      213: -6016098988220172407
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_28
+  - first:
+      213: -907075374730777005
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_29
+  - first:
+      213: 8937255902979129922
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_30
+  - first:
+      213: -2583450252267512855
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_31
+  - first:
+      213: -5588252389130708946
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_32
+  - first:
+      213: -4666938320763386820
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_33
+  - first:
+      213: 7965641697313698021
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_34
+  - first:
+      213: 5748733151758125708
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_35
+  - first:
+      213: 4647282249356726729
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_36
+  - first:
+      213: -3380342599368029952
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_37
+  - first:
+      213: 5437383368225643469
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_38
+  - first:
+      213: -8251072974178692558
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_39
+  - first:
+      213: 1302330816916331081
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_40
+  - first:
+      213: 2697341960365126153
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_41
+  - first:
+      213: 109066406664706130
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_42
+  - first:
+      213: 8504139258632598838
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_43
+  - first:
+      213: 9204573966923060247
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_44
+  - first:
+      213: -754129707067348879
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_45
+  - first:
+      213: 197673991575230177
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_46
+  - first:
+      213: -7359308652734950983
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_47
+  - first:
+      213: 5186489025579336333
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_48
+  - first:
+      213: 8216301448151169166
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_49
+  - first:
+      213: -7122949406837484998
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_50
+  - first:
+      213: 2363969057063980090
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_51
+  - first:
+      213: -2012778358812611159
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_52
+  - first:
+      213: -214179153628553782
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_53
+  - first:
+      213: 8203118626383868336
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_54
+  - first:
+      213: -5380660885343297397
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_55
+  - first:
+      213: 3439600527493465326
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_56
+  - first:
+      213: 3196771458105556892
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_57
+  - first:
+      213: 3828468499168867925
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_58
+  - first:
+      213: -6920142447341293508
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_59
+  - first:
+      213: 965657155935442980
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_60
+  - first:
+      213: 8428580181950666817
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_61
+  - first:
+      213: -825851156025080666
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_62
+  - first:
+      213: 3463206042914959581
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_63
+  - first:
+      213: -4553387178494174955
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_64
+  - first:
+      213: 4560950050333557314
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_65
+  - first:
+      213: -7853652389796430597
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_66
+  - first:
+      213: -413571787261820278
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_67
+  - first:
+      213: -9056926017686958019
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_68
+  - first:
+      213: -6827378887645092775
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_69
+  - first:
+      213: -2516887816999561977
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_70
+  - first:
+      213: -302667662932168221
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_71
+  - first:
+      213: -4627228210877736401
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_72
+  - first:
+      213: 4869877932953439143
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_73
+  - first:
+      213: -2425763141915369280
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_74
+  - first:
+      213: -6995103504106522792
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_75
+  - first:
+      213: 919208287771278707
+    second: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_76
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 178
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2188e987d291ef2488eed9d9697f5bed
+      internalID: -4787344305747144066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 178
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e0e9ca6b2ac9af4b984c5f8d74a0d35
+      internalID: -2053030339719735280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 178
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 948ac1aa246cbd94e855d3e94d58f969
+      internalID: -4338535316173185189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_3
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 178
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9117ceedcbf6cd46822ddf52ce0a718
+      internalID: 8839800693357276601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_4
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 177
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a35a536774c8a77479fe60fdc81e2a8f
+      internalID: 1120052620753110817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_5
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 177
+        width: 25
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7e7fd7deff91834bae05e60acc83e0a
+      internalID: -2635752461856179424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_6
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 176
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1ec2d974f28b3b4294f9a14dac1b03e
+      internalID: 6820043176199060086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_7
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 176
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 137bd9135055811499d0f40627b727f0
+      internalID: -2430473249977603762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_8
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 177
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0fff28048b15774f9c7a37f54a1f22a
+      internalID: 6945922775584945064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_9
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 176
+        width: 25
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4f8bee3692149041bf2a0dc19fd22ad
+      internalID: 7073911176701706079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_10
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 159
+        width: 5
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7559b3599a0d4a64cb8c53424146cba7
+      internalID: 8701305534615864875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_11
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 161
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8cd4182a2681e347a4d5348667d1753
+      internalID: 6185133351083005352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_12
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 158
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd237fb4c3987344bb7ce1f0853b1473
+      internalID: -5408369510832408155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 161
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d66c282313c42a4e9bf9227691f25b4
+      internalID: 8493171115696348752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_14
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 161
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9abe26cce4abf7243923426409c51156
+      internalID: -2773679646683254153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_15
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 155
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e93b1b397b5801b43a1e46c8413819ea
+      internalID: -2998591975981927876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_16
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 158
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 276dba2680ad09e4d8807301392d1d87
+      internalID: 3744775534495518137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_17
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 159
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6152669cfdacd84eb47518cbe5b2481
+      internalID: -3071248032197189841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_18
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 161
+        width: 22
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a29de3b02bb094e4ebbe7ca268f081e4
+      internalID: 3811900072430403263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_19
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 159
+        width: 29
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c43c1debf2933942a682751085407f2
+      internalID: 1273308797848937007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_20
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 160
+        width: 23
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef2aebe354569bf439ff60ac592e47ee
+      internalID: -1822319537154477938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_21
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 158
+        width: 31
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ceee7d51b8472849a7dbd6b62e99644
+      internalID: -5442554132841207772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 142
+        width: 52
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e532546474b5d4543912e7268fc93418
+      internalID: -3308748815350715514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_23
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 142
+        width: 54
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5dabb8ded66166469afe0f2cf299d82
+      internalID: 4953785254520050041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_24
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 142
+        width: 52
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ba8ba00ede18db4d826124afbadc5df
+      internalID: -5944940837518638108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_25
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 143
+        width: 34
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c22e7d98a0079cc418c25c4dc16e4fdb
+      internalID: -2229883517881080476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_26
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 144
+        width: 45
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f722ae5dd614bc4bb4e184bc434c757
+      internalID: 3900243757538511696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_27
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 142
+        width: 34
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e602696d613221b479b0ad4e4d66f3f9
+      internalID: -1339324012931353256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 126
+        width: 56
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19d86b9f296166e4aa2626e022698ec8
+      internalID: -6016098988220172407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_29
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 126
+        width: 57
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a47933f609d3fb140a1385b5d144df3e
+      internalID: -907075374730777005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_30
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 126
+        width: 58
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c94284112d7ff714e97c7bdc9e1f4c00
+      internalID: 8937255902979129922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_31
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 127
+        width: 59
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 830c50d532af1af4f9523fae475b4954
+      internalID: -2583450252267512855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_32
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 125
+        width: 65
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0068c5b303a57174a868cea10056b661
+      internalID: -5588252389130708946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_33
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 123
+        width: 58
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d82509ea7608aa041b26e259a3582991
+      internalID: -4666938320763386820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 106
+        width: 61
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df10a662145c52d40bdcb3b9dc0ecaba
+      internalID: 7965641697313698021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_35
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 107
+        width: 57
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1abd3f6750a7bb4a819b41b7fc3beb8
+      internalID: 5748733151758125708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_36
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 109
+        width: 56
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 522923f5a31000e44bcec2f519c2503a
+      internalID: 4647282249356726729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_37
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 103
+        width: 53
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08dde783885ee1642b0a5a012f65a546
+      internalID: -3380342599368029952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_38
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 102
+        width: 56
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 676e1c3db8771814eb98b103f53a483a
+      internalID: 5437383368225643469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 89
+        width: 58
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb6941b51dc00f44863001ace2976f1
+      internalID: -8251072974178692558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_40
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 89
+        width: 56
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41fc9882f4b0780458bbd7630dc58dc9
+      internalID: 1302330816916331081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_41
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 89
+        width: 51
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c78de895e7d27d4e8e16bc4d91921fd
+      internalID: 2697341960365126153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_42
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 85
+        width: 39
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3236a5c0f18ad504cbedc28ad5d8d31a
+      internalID: 109066406664706130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_43
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 71
+        width: 54
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b265b108bb856dc45bbe5b8b659b8688
+      internalID: 8504139258632598838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_44
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 70
+        width: 44
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce088d0ada3eb0244b53434d8b81e2aa
+      internalID: 9204573966923060247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_45
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 67
+        width: 35
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58812a40a8f8eec47ae055664ec0faa0
+      internalID: -754129707067348879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_46
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 65
+        width: 47
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17fe77c30c77cf7438255fed141ef7b0
+      internalID: 197673991575230177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_47
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 67
+        width: 47
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d75ada9749fd0644bb2fac9965d0e09
+      internalID: -7359308652734950983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_48
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 66
+        width: 34
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f9ea852b9c2a99428f424a47341960f
+      internalID: 5186489025579336333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_49
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 66
+        width: 42
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2ac4bae65523484ea5cb9aaa48006f3
+      internalID: 8216301448151169166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_50
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 64
+        width: 41
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 321420f09af3de644adcbbf6b3d5fdb9
+      internalID: -7122949406837484998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_51
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 64
+        width: 46
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ece72089c095c04a992097c8c885bcc
+      internalID: 2363969057063980090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_52
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 46
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be48ebd65d1b10841936a33559cfbc46
+      internalID: -2012778358812611159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_53
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 48
+        width: 40
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2580322779d6764e99cba9a29aeca8d
+      internalID: -214179153628553782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_54
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 50
+        width: 40
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e58ee7bea6ebaf347ad1fbe144646e2a
+      internalID: 8203118626383868336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_55
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 49
+        width: 38
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 305f397f87cfcaf45bfeb37ab4b1d878
+      internalID: -5380660885343297397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_56
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 51
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba23d35549b6d8438f85520771318d1
+      internalID: 3439600527493465326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_57
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 45
+        width: 23
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28476a9378535a45a2a937f13ae1fff
+      internalID: 3196771458105556892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_58
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 45
+        width: 34
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0013a4eeb3eefa448a68fca154d8ab44
+      internalID: 3828468499168867925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_59
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 45
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d2f802699c3cb3408dfc65b316fd90c
+      internalID: -6920142447341293508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_60
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 48
+        width: 21
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8debb0163e8efcc4fbcf1a7af2795097
+      internalID: 965657155935442980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_61
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 28
+        width: 37
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54941a88e578ce04aab73fb73648d57b
+      internalID: 8428580181950666817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_62
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 23
+        width: 51
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b51cda82b37d524db0ad34d042076b4
+      internalID: -825851156025080666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_63
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 28
+        width: 41
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2924bd13c7a04e84fb1ac4cd1425f2eb
+      internalID: 3463206042914959581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_64
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 26
+        width: 67
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ef1ac45bcdce3246a2cc40057a5efc5
+      internalID: -4553387178494174955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_65
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 30
+        width: 42
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f148f9d94d363b4f8531887d4fd47cf
+      internalID: 4560950050333557314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_66
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 28
+        width: 44
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b604aeb7c4cf494f8e6bd37f1d396c6
+      internalID: -7853652389796430597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_67
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 26
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 493b596e68708f546833a14db43b99d5
+      internalID: -413571787261820278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_68
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 19
+        width: 55
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6429c93e14a551644ae76a26601b455c
+      internalID: -9056926017686958019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_69
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0b50e273e123ce4681a25563ef60c90
+      internalID: -6827378887645092775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_70
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 4
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2e60bedd1bf75e49972368fcee0bab2
+      internalID: -2516887816999561977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_71
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 4
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa98f642a2c99924aaf55c996abaadfe
+      internalID: -302667662932168221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_72
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 5
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8306bef90643d614981f5c1d92e42614
+      internalID: -4627228210877736401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_73
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 0
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a77b9850540e44444b4e29f9855e65ce
+      internalID: 4869877932953439143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_74
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 3
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63267921e1a44f542b5a6d46009dd4ff
+      internalID: -2425763141915369280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_75
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 7
+        width: 23
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c6210121415d245ba38f460d777dfa
+      internalID: -6995103504106522792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nazi_zombies_weapons_and_power_ups_by_im_not_crying_d5q055s_76
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 4
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e900c1b8e71d8884ebbec0c95c76a4f2
+      internalID: 919208287771278707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 1903021c4ca2f6b4c809296dabae5169
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

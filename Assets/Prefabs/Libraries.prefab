@@ -1,0 +1,944 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &404561288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 404561289}
+  - component: {fileID: 404561290}
+  m_Layer: 0
+  m_Name: Weapon Library
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &404561289
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404561288}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4676288073241910911}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &404561290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404561288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0533c0e2040c86542b65223b2f72bcf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allWeapons:
+  - {fileID: 11400000, guid: 6c623f33812059347b4f6595bf6881cc, type: 2}
+  - {fileID: 11400000, guid: 057663ac3a44a2145a51021b3abcf79f, type: 2}
+  - {fileID: 11400000, guid: f2c27034f9f61a8438cdf8254e06ac55, type: 2}
+--- !u!1 &4676288073241910910
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4676288073241910911}
+  m_Layer: 0
+  m_Name: Libraries
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4676288073241910911
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4676288073241910910}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4676288073585011275}
+  - {fileID: 4676288073577457592}
+  - {fileID: 4676288074198292593}
+  - {fileID: 4676288074583106509}
+  - {fileID: 4676288073985712957}
+  - {fileID: 404561289}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4676288073577457594
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4676288073577457592}
+  - component: {fileID: 4676288073577457595}
+  m_Layer: 0
+  m_Name: Character Library
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4676288073577457592
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4676288073577457594}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4676288073241910911}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4676288073577457595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4676288073577457594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2719b5c2aa46ec348b5ea91f02fcd038, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  warriorSprite: {fileID: 21300000, guid: 6039d6cf6c5aeeb47aa02211985561ff, type: 3}
+  warriorClassName: Warrior
+  mageSprite: {fileID: 21300000, guid: 131c734ef65ed0a45812f973de7e8739, type: 3}
+  mageClassName: Mage
+  rangerSprite: {fileID: 21300000, guid: 696283f8283215b448c150a53090ea14, type: 3}
+  rangerClassName: Ranger
+  priestSprite: {fileID: 21300000, guid: 1fe311341e4a6254c94c731e26b4e4ca, type: 3}
+  priestClassName: Priest
+  rogueSprite: {fileID: 21300000, guid: 696283f8283215b448c150a53090ea14, type: 3}
+  rogueClassName: Rogue
+  shamanSprite: {fileID: 21300000, guid: edd60446d68287a41a593110af8a623c, type: 3}
+  shamanClassName: Shaman
+--- !u!1 &4676288073585011277
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4676288073585011275}
+  - component: {fileID: 4676288073585011274}
+  m_Layer: 0
+  m_Name: Ability Library
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4676288073585011275
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4676288073585011277}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4676288073241910911}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4676288073585011274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4676288073585011277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ddadc1799e77fd488972473dd70deb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AllAbilities:
+  - {fileID: 11400000, guid: c71c767d11afa644e8247ebad49e110b, type: 2}
+  - {fileID: 11400000, guid: 2fd0b8978a0598d4d83de026c5670704, type: 2}
+  - {fileID: 11400000, guid: c6b8c40732fd23443b625ca77089096a, type: 2}
+  - {fileID: 11400000, guid: 74c531bfcb1d6574c80a83a7abcbc286, type: 2}
+  - {fileID: 11400000, guid: 8f7e0fdc12c3d4c48b83e40849bf2c34, type: 2}
+  - {fileID: 11400000, guid: c5b29b10abddb2e4a8b208594b703636, type: 2}
+  - {fileID: 11400000, guid: 9dbbc80cc03d88945b75e636af7a29fd, type: 2}
+  - {fileID: 11400000, guid: afb89a267d4a82f4da754c99c1b6ce41, type: 2}
+  - {fileID: 11400000, guid: b46475e0120e9b24da57852f988c5ef5, type: 2}
+  - {fileID: 11400000, guid: 1107ba36f67c2b14e9189c53aec2eee5, type: 2}
+  - {fileID: 11400000, guid: 5a70004e3bb5bf647b96e7ad6f6e48e9, type: 2}
+  - {fileID: 11400000, guid: cc6f223deded98940b604238a8f1a3c8, type: 2}
+  - {fileID: 11400000, guid: d22c0e7100d422b4aad9b97cf454c943, type: 2}
+  - {fileID: 11400000, guid: 5eb24e7942671b4408a928e8a30fab51, type: 2}
+  - {fileID: 11400000, guid: c2ffb6a09c36c884083139debfc9711f, type: 2}
+  - {fileID: 11400000, guid: 27bd8c43108d9b14c9989e718315b977, type: 2}
+  - {fileID: 11400000, guid: 0a3f868726d1fc14580da3ed7ce873b2, type: 2}
+  - {fileID: 11400000, guid: df0cc416d2e63e54ba08041909d39e84, type: 2}
+  - {fileID: 11400000, guid: 3758e158870669b4dbd47b37de1a5f5a, type: 2}
+  - {fileID: 11400000, guid: d92cf084940a7214d9fee4781193db0a, type: 2}
+  - {fileID: 11400000, guid: 63d8dfe8745fde14c985422a66789010, type: 2}
+  - {fileID: 11400000, guid: dec1a6ca1abe69443826652c3a0b4ea9, type: 2}
+  - {fileID: 11400000, guid: a427f175f84104d4baa75a2043df6187, type: 2}
+  - {fileID: 11400000, guid: 14edbe2fd3d235044a0abb32d39bb803, type: 2}
+  - {fileID: 11400000, guid: ed57b86d50b639045a82e94a3625ab1a, type: 2}
+  - {fileID: 11400000, guid: 8548f2e744c518840859d3bbf055a963, type: 2}
+  - {fileID: 11400000, guid: dd873fe8dadf19a42a680f0e0ff3d052, type: 2}
+  - {fileID: 11400000, guid: 6deea6cefcbd9cd4cb1d3b3953d6db89, type: 2}
+  - {fileID: 11400000, guid: 92ef90b9b3589ca4abb55666efa99e80, type: 2}
+  - {fileID: 11400000, guid: c310cd5f33d64254ba964f011aca51b0, type: 2}
+  - {fileID: 11400000, guid: 81e29b72e6c69c64fa849060d9f00a7e, type: 2}
+  - {fileID: 11400000, guid: 1014acdafb16efd479e39849aaed646a, type: 2}
+  - {fileID: 11400000, guid: 1cd02890c07c94e43be148ca2a321c83, type: 2}
+  - {fileID: 11400000, guid: 2f8a3e472cb59dd48a7c1ea6781d302d, type: 2}
+  - {fileID: 11400000, guid: b6fca95a13229fc438a17d65b13df1e9, type: 2}
+  - {fileID: 11400000, guid: 187214e0c00d6a94c81bea9447d2ebc2, type: 2}
+  - {fileID: 11400000, guid: 08118d2007776ff4c91272c911e208d3, type: 2}
+  - {fileID: 11400000, guid: 973b0efc188eb4f41bdbfacb0a53d3cb, type: 2}
+  - {fileID: 11400000, guid: f17c7eaabe36035439f00f06ad8b6560, type: 2}
+  - {fileID: 11400000, guid: e84a39b488398d749a4744b8780c3e4c, type: 2}
+  - {fileID: 11400000, guid: 40ef839629ccd2b44bd2f6656e4df7d1, type: 2}
+  - {fileID: 11400000, guid: 6cda32d2702bdff41bb09cde3a3515d7, type: 2}
+  - {fileID: 11400000, guid: c9e7f391ae936df4c86fa9a210cd7c4a, type: 2}
+  - {fileID: 11400000, guid: ed223b25fe728ae44b424a843be085f3, type: 2}
+  moveImage: {fileID: 21300000, guid: f2fc880836bad7b4d8f1de44a202f40a, type: 3}
+  moveName: Move
+  moveDescription: Move to a tile within range of your mobility.
+  moveCooldownTime: 0
+  moveAPCost: 2
+  moveRange: 0
+  movePrimaryValue: 0
+  moveSecondaryValue: 0
+  strikeImage: {fileID: 21300000, guid: 28db2b314f6432d4293730f91536aaf4, type: 3}
+  strikeName: Strike
+  strikeDescription: Deal 3 damage to a target within melee range
+  strikeCooldownTime: 0
+  strikeAPCost: 2
+  strikeRange: 1
+  strikePrimaryValue: 3
+  strikeSecondaryValue: 0
+  blockImage: {fileID: 21300000, guid: e36a4156a177f7247b5c742fd297606e, type: 3}
+  blockName: Block
+  blockDescription: Gain 3 block
+  blockCooldownTime: 0
+  blockAPCost: 2
+  blockRange: 0
+  blockPrimaryValue: 3
+  blockSecondaryValue: 0
+  chargeImage: {fileID: 21300000, guid: a9bc8cabfb663c6408ce04ae0edb8f8a, type: 3}
+  chargeName: Charge
+  chargeDescription: Charge towards a target enemy within 3 tiles and knock them down
+  chargeCooldownTime: 2
+  chargeAPCost: 2
+  chargeRange: 3
+  chargePrimaryValue: 0
+  chargeSecondaryValue: 0
+  inspireImage: {fileID: 21300000, guid: 24e51024f055b2e448b1d679e6a7512b, type: 3}
+  inspireName: Inspire
+  inspireDescription: Give yourself or a target friendly character +1 strength.
+  inspireCooldownTime: 1
+  inspireAPCost: 0
+  inspireRange: 2
+  inspirePrimaryValue: 1
+  inspireSecondaryValue: 0
+  guardImage: {fileID: 21300000, guid: 372a4c2741d2fa449a1cf0214677a8c3, type: 3}
+  guardName: Guard
+  guardDescription: Target yourself or a friendly character, The next time they take
+    damage, ignore it
+  guardCooldownTime: 3
+  guardAPCost: 2
+  guardRange: 2
+  guardPrimaryValue: 1
+  guardSecondaryValue: 0
+  meteorImage: {fileID: 21300000, guid: b75cd55d5cdb9cf4bb3df9129f2b6f9a, type: 3}
+  meteorName: Meteor
+  meteorDescription: Deal 5 damage to all enemies in a 3x3 area
+  meteorCooldownTime: 4
+  meteorAPCost: 3
+  meteorRange: 3
+  meteorPrimaryValue: 5
+  meteorSecondaryValue: 0
+  telekinesisImage: {fileID: 21300000, guid: 9c81ff137ca18fc44a91844bb5bd0885, type: 3}
+  telekinesisName: Telekinesis
+  telekinesisDescription: Teleport a target to any tile within 1 tile of it's current
+    location.
+  telekinesisCooldownTime: 1
+  telekinesisAPCost: 0
+  telekinesisRange: 3
+  telekinesisPrimaryValue: 1
+  telekinesisSecondaryValue: 0
+  frostboltImage: {fileID: 21300000, guid: 56d1b9108c0c1044490b46337ed938dd, type: 3}
+  frostboltName: Frost Bolt
+  frostboltDescription: Deal 3 magic damage to an enemy target and apply 'Pinned'.
+  frostboltCooldownTime: 2
+  frostboltAPCost: 0
+  frostboltRange: 3
+  frostboltPrimaryValue: 3
+  frostboltSecondaryValue: 0
+  fireballImage: {fileID: 21300000, guid: 817b660af2e88d94dbae91fbf145a852, type: 3}
+  fireballName: Fire Ball
+  fireballDescription: Deal 5 magic damage to a target enemy
+  fireballCooldownTime: 0
+  fireballAPCost: 2
+  fireballRange: 3
+  fireballPrimaryValue: 5
+  fireballSecondaryValue: 0
+  shootImage: {fileID: 21300000, guid: 1f07e0e3156f27b41aad10b1ea3eed30, type: 3}
+  shootName: Shoot
+  shootDescription: Deal 3 physical damage to a target
+  shootCooldownTime: 0
+  shootAPCost: 2
+  shootRange: 2
+  shootPrimaryValue: 3
+  shootSecondaryValue: 0
+  rapidFireImage: {fileID: 21300000, guid: 06f9d857755642d4d80ee6a4d6ef548b, type: 3}
+  rapidFireName: Rapid Fire
+  rapidFireDescription: Spend all your AP. Deal 2 damage to an enemy for each point
+    spent
+  rapidFireCooldownTime: 4
+  rapidFireAPCost: 1
+  rapidFireRange: 3
+  rapidFirePrimaryValue: 2
+  rapidFireSecondaryValue: 0
+  impalingBoltImage: {fileID: 21300000, guid: a4da350a90fb01d478a9d7e6a8cf1745, type: 3}
+  impalingBoltName: Impaling Bolt
+  impalingBoltDescription: Deal 3 physical damage and knock a target back 2 tiles.
+  impalingBoltCooldownTime: 3
+  impalingBoltAPCost: 2
+  impalingBoltRange: 2
+  impalingBoltPrimaryValue: 3
+  impalingBoltSecondaryValue: 2
+  forestMedicineImage: {fileID: 21300000, guid: d444451d1f4be1e41b0cc8f71550bd07,
+    type: 3}
+  forestMedicineName: Forest Medicine
+  forestMedicineDescription: Give a friendly character 5 block.
+  forestMedicineCooldownTime: 3
+  forestMedicineAPCost: 1
+  forestMedicineRange: 2
+  forestMedicinePrimaryValue: 5
+  forestMedicineSecondaryValue: 0
+  whirlwindImage: {fileID: 21300000, guid: 501d8a81e6582c7408644f0720503e4d, type: 3}
+  whirlwindName: Whirlwind
+  whirlwindDescription: Deal 5 physical damage to all enemies within melee range
+  whirlwindCooldownTime: 1
+  whirlwindAPCost: 2
+  whirlwindRange: 1
+  whirlwindPrimaryValue: 5
+  whirlwindSecondaryValue: 0
+  summonUndeadImage: {fileID: 21300000, guid: f1ba9fee1386cc445890a9ce38ea6ee1, type: 3}
+  summonUndeadName: Summon Undead
+  summonUndeadDescription: Summon an undead skeleton within 3 tiles.
+  summonUndeadCooldownTime: 0
+  summonUndeadAPCost: 2
+  summonUndeadRange: 3
+  summonUndeadPrimaryValue: 1
+  summonUndeadSecondaryValue: 1
+  chaosBoltImage: {fileID: 21300000, guid: 12be1468e1ada4441ab273d4701ee24a, type: 3}
+  chaosBoltName: Chaos Bolt
+  chaosBoltDescription: Deal 5 magic damage to target and knock them down
+  chaosBoltCooldownTime: 1
+  chaosBoltAPCost: 2
+  chaosBoltRange: 3
+  chaosBoltPrimaryValue: 5
+  chaosBoltSecondaryValue: 0
+  crushingBlowImage: {fileID: 21300000, guid: e744bf2061b6c494a894b549215e5e4c, type: 3}
+  crushingBlowName: Crushing Blow
+  crushingBlowDescription: Deal 8 physical damage to a target and stun them for 1
+    turn.
+  crushingBlowCooldownTime: 4
+  crushingBlowAPCost: 3
+  crushingBlowRange: 0
+  crushingBlowPrimaryValue: 8
+  crushingBlowSecondaryValue: 0
+  invigorateImage: {fileID: 21300000, guid: f079cdde31cd1eb48b1dc43b300c1807, type: 3}
+  invigorateName: Invigorate
+  invigorateDescription: Give a friendly character +2 AP.
+  invigorateCooldownTime: 1
+  invigorateAPCost: 0
+  invigorateRange: 2
+  invigoratePrimaryValue: 2
+  invigorateSecondaryValue: 0
+  holyFireImage: {fileID: 21300000, guid: 4385fe49951e4f1449b87d69cb88a9c1, type: 3}
+  holyFireName: Holy Fire
+  holyFireDescription: Deal 3 magic damage to an enemy, or give 3 block to an ally
+  holyFireCooldownTime: 0
+  holyFireAPCost: 2
+  holyFireRange: 2
+  holyFirePrimaryValue: 3
+  holyFireSecondaryValue: 0
+  voidBombImage: {fileID: 21300000, guid: 91851b5dfed99e94f8482655b63826a0, type: 3}
+  voidBombName: Void Bomb
+  voidBombDescription: Deal 8 magic damage to an enemy and stun them
+  voidBombCooldownTime: 3
+  voidBombAPCost: 3
+  voidBombRange: 5
+  voidBombPrimaryValue: 8
+  voidBombSecondaryValue: 0
+  nightmareImage: {fileID: 21300000, guid: 7d83b85225f569b49bf403c22dcb8335, type: 3}
+  nightmareName: Nightmare
+  nightmareDescription: Put a target to sleep for 2 turns.
+  nightmareCooldownTime: 4
+  nightmareAPCost: 2
+  nightmareRange: 2
+  nightmarePrimaryValue: 2
+  nightmareSecondaryValue: 0
+  twinStrikeImage: {fileID: 21300000, guid: 3163027ee4838294283e840c1f3cf624, type: 3}
+  twinStrikeName: Twin Strike
+  twinStrikeDescription: Deal 3 physical damage twice.
+  twinStrikeCooldownTime: 1
+  twinStrikeAPCost: 2
+  twinStrikeRange: 1
+  twinStrikePrimaryValue: 3
+  twinStrikeSecondaryValue: 0
+  dashImage: {fileID: 21300000, guid: 522287a635d2b694e8b22048b25173d5, type: 3}
+  dashName: Dash
+  dashDescription: Move to a location within 3 tiles.
+  dashCooldownTime: 1
+  dashAPCost: 0
+  dashRange: 3
+  dashPrimaryValue: 3
+  dashSecondaryValue: 0
+  preparationImage: {fileID: 21300000, guid: 6bbefc0629990374b844a73244b081f5, type: 3}
+  preparationName: Preparation
+  preparationDescription: The next ability you use costs 0 AP
+  preparationCooldownTime: 2
+  preparationAPCost: 0
+  preparationRange: 0
+  preparationPrimaryValue: 0
+  preparationSecondaryValue: 0
+  snipeImage: {fileID: 21300000, guid: f12f77e2cf045f14b9ac703d6bd73499, type: 3}
+  snipeName: Snipe
+  snipeDescription: Deal physical 3 damage to a target
+  snipeCooldownTime: 0
+  snipeAPCost: 2
+  snipeRange: 7
+  snipePrimaryValue: 3
+  snipeSecondaryValue: 0
+  healingLightImage: {fileID: 21300000, guid: 8927dd60d66279c4f9f503c5f08e72b4, type: 3}
+  healingLightName: Healing Light
+  healingLightDescription: Restore 5HP to an ally
+  healingLightCooldownTime: 0
+  healingLightAPCost: 2
+  healingLightRange: 3
+  healingLightPrimaryValue: 5
+  healingLightSecondaryValue: 0
+  rockTossImage: {fileID: 21300000, guid: 688cce28246caf34680f078dabe0a779, type: 3}
+  rockTossName: Rock Toss
+  rockTossDescription: Deal physical 5 damage and knock the a target back 1 tile
+  rockTossCooldownTime: 0
+  rockTossAPCost: 2
+  rockTossRange: 7
+  rockTossPrimaryValue: 5
+  rockTossSecondaryValue: 1
+  siphonLifeImage: {fileID: 21300000, guid: 07962845a507e374cb5a7f51e5296695, type: 3}
+  siphonLifeName: Siphon Life
+  siphonLifeDescription: Target enemy sufers -1 strength. Gain 1 strength.
+  siphonLifeCooldownTime: 3
+  siphonLifeAPCost: 1
+  siphonLifeRange: 3
+  siphonLifePrimaryValue: 1
+  siphonLifeSecondaryValue: 0
+  teleportImage: {fileID: 21300000, guid: 2876045e6103237409f007423c72160a, type: 3}
+  teleportName: Teleport
+  teleportDescription: Teleport to a valid unoccupied tile
+  teleportCooldownTime: 3
+  teleportAPCost: 0
+  teleportRange: 7
+  teleportPrimaryValue: 0
+  teleportSecondaryValue: 0
+  sliceAndDiceImage: {fileID: 21300000, guid: e440874943fa2b24fa09337afff90259, type: 3}
+  sliceAndDiceName: Slice And Dice
+  sliceAndDiceDescription: Spend all your AP. Deal 3 damage to a target fo each point
+    spent
+  sliceAndDiceCooldownTime: 3
+  sliceAndDiceAPCost: 0
+  sliceAndDiceRange: 0
+  sliceAndDicePrimaryValue: 3
+  sliceAndDiceSecondaryValue: 0
+  poisonDartImage: {fileID: 21300000, guid: dcdd68fb3f5938944810f7e6145d2265, type: 3}
+  poisonDartName: Poison Dart
+  poisonDartDescription: Apply 2 poison to a target
+  poisonDartCooldownTime: 1
+  poisonDartAPCost: 2
+  poisonDartRange: 3
+  poisonDartPrimaryValue: 0
+  poisonDartSecondaryValue: 2
+  chemicalReactionImage: {fileID: 21300000, guid: 382eb07a9006ad949b3a950938e4ee68,
+    type: 3}
+  chemicalReactionName: Chemical Reaction
+  chemicalReactionDescription: Double a target's poison
+  chemicalReactionCooldownTime: 3
+  chemicalReactionAPCost: 2
+  chemicalReactionRange: 3
+  chemicalReactionPrimaryValue: 0
+  chemicalReactionSecondaryValue: 0
+  bloodLustImage: {fileID: 21300000, guid: a2678dcb8b1d3254980f84c8c11364e5, type: 3}
+  bloodLustName: Blood Lust
+  bloodLustDescription: Lose 3hp. Gain 2 AP.
+  bloodLustCooldownTime: 1
+  bloodLustAPCost: 0
+  bloodLustRange: 0
+  bloodLustPrimaryValue: 2
+  bloodLustSecondaryValue: 3
+  getDownImage: {fileID: 21300000, guid: e7dfd63ace3b99e458fb936de2efe9bb, type: 3}
+  getDownName: Get Down!
+  getDownDescription: Move to a tile within 2. At the end of the move, give adjacent
+    allies 5 block
+  getDownCooldownTime: 2
+  getDownAPCost: 2
+  getDownRange: 2
+  getDownPrimaryValue: 5
+  getDownSecondaryValue: 0
+  doomImage: {fileID: 21300000, guid: 707fdd621e245374dab0b09b1b3d75d3, type: 3}
+  doomName: Doom
+  doomDescription: All enemies suffer -1 energy
+  doomCooldownTime: 3
+  doomAPCost: 2
+  doomRange: 0
+  doomPrimaryValue: 0
+  doomSecondaryValue: 0
+  smashImage: {fileID: 21300000, guid: 4e79c552ff737cd4882a47983f8ffa68, type: 3}
+  smashName: Smash
+  smashDescription: Deal 4 physical damage and knock a target back 1 tile.
+  smashCooldownTime: 1
+  smashAPCost: 0
+  smashRange: 1
+  smashPrimaryValue: 4
+  smashSecondaryValue: 1
+  lightningShieldImage: {fileID: 21300000, guid: 700e082e2e46154408449d6f88a7d7d7,
+    type: 3}
+  lightningShieldName: Lightning Shield
+  lightningShieldDescription: For one turn, when target ally is attacked, they return
+    3 magic damage.
+  lightningShieldCooldownTime: 2
+  lightningShieldAPCost: 2
+  lightningShieldRange: 3
+  lightningShieldPrimaryValue: 3
+  lightningShieldSecondaryValue: 0
+  electricalDischargeImage: {fileID: 21300000, guid: dabea394e9681274d8811a755dadc07c,
+    type: 3}
+  electricalDischargeName: Electrical Discharge
+  electricalDischargeDescription: Enemies in your melee range take 5 magic damage,
+    allies gain +5 block
+  electricalDischargeCooldownTime: 2
+  electricalDischargeAPCost: 3
+  electricalDischargeRange: 0
+  electricalDischargePrimaryValue: 5
+  electricalDischargeSecondaryValue: 0
+  chainLightningImage: {fileID: 21300000, guid: e5c004e52d6c71f4f8dcc24d8058e2a9,
+    type: 3}
+  chainLightningName: Chain Lightning
+  chainLightningDescription: Deal 3 magic damage to a target. Jumps to an adjacent
+    enemy up to 3 more times
+  chainLightningCooldownTime: 2
+  chainLightningAPCost: 3
+  chainLightningRange: 2
+  chainLightningPrimaryValue: 3
+  chainLightningSecondaryValue: 3
+  primalRageImage: {fileID: 21300000, guid: 364d1fe805f0e1b40924ac69f700947c, type: 3}
+  primalRageName: Primal Rage
+  primalRageDescription: Give an ally +3 strength for 1 turn
+  primalRageCooldownTime: 3
+  primalRageAPCost: 1
+  primalRageRange: 2
+  primalRagePrimaryValue: 3
+  primalRageSecondaryValue: 0
+  primalBlastImage: {fileID: 21300000, guid: 0d1b28b8e3c9f8f40b8d79d8962bc33c, type: 3}
+  primalBlastName: Primal Blast
+  primalBlastDescription: Deal 3 physical damage and then 3 magic damage to a target
+  primalBlastCooldownTime: 3
+  primalBlastAPCost: 1
+  primalBlastRange: 2
+  primalBlastPrimaryValue: 3
+  primalBlastSecondaryValue: 0
+  phaseShiftImage: {fileID: 21300000, guid: 95ca8fae2f0e44b4a961dd1a2a5ffdf4, type: 3}
+  phaseShiftName: Phase Shift
+  phaseShiftDescription: Swap positions with a target character.
+  phaseShiftCooldownTime: 4
+  phaseShiftAPCost: 2
+  phaseShiftRange: 3
+  phaseShiftPrimaryValue: 0
+  phaseShiftSecondaryValue: 0
+  sanctityImage: {fileID: 21300000, guid: 5184c1a5f8deb7644ba87958031839dc, type: 3}
+  sanctityName: Sanctity
+  sanctityDescription: Remove poison, stunned, pinned, vulnerable and weak from an
+    ally
+  sanctityCooldownTime: 4
+  sanctityAPCost: 2
+  sanctityRange: 3
+  sanctityPrimaryValue: 0
+  sanctitySecondaryValue: 0
+  blessImage: {fileID: 21300000, guid: a7ae212e7e5bd1443afe3daca2542de9, type: 3}
+  blessName: Bless
+  blessDescription: Give an ally +1 rune
+  blessCooldownTime: 3
+  blessAPCost: 1
+  blessRange: 3
+  blessPrimaryValue: 1
+  blessSecondaryValue: 0
+--- !u!1 &4676288073985712956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4676288073985712957}
+  - component: {fileID: 4676288073985712954}
+  m_Layer: 0
+  m_Name: Artifact Library
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4676288073985712957
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4676288073985712956}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4676288073241910911}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4676288073985712954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4676288073985712956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70064bdea54b97748a8473eb530cda81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allArtifacts:
+  - {fileID: 11400000, guid: b63acaf350fbdb4478dda5f6feb350aa, type: 2}
+  - {fileID: 11400000, guid: 07b33aa0b9abaed4e8e1bbb277382119, type: 2}
+  - {fileID: 11400000, guid: f1ae9724588b00f469c7c6b90646f145, type: 2}
+  - {fileID: 11400000, guid: ebbd28e9a171e784fab362630dcebb21, type: 2}
+  - {fileID: 11400000, guid: ac435e7a98fb38e40b6339a4040ad4e3, type: 2}
+  - {fileID: 11400000, guid: 9c47862db862a804d9b7202345c407e6, type: 2}
+  - {fileID: 11400000, guid: db90dc01bc8b0f644b7196fd12fff157, type: 2}
+  - {fileID: 11400000, guid: 93e01cb170151a14095af681d4f7e5e8, type: 2}
+  - {fileID: 11400000, guid: c3bf529240a0a8041b3f2ba2ade378bd, type: 2}
+  - {fileID: 11400000, guid: be75ea272c6a2924f980004b9bede8ae, type: 2}
+  - {fileID: 11400000, guid: 1cae6c3581d12d243b4b566ffc90b3c7, type: 2}
+  - {fileID: 11400000, guid: 166fe703107256e48ad4ce7d6fb35021, type: 2}
+  - {fileID: 11400000, guid: 7dd82aabc1b54514cbcac4e34190a080, type: 2}
+  - {fileID: 11400000, guid: e5b6655f8163c414ca0487dc5ad33fc9, type: 2}
+  - {fileID: 11400000, guid: 82c4debfdd31faf449d77ab2c03fa9e7, type: 2}
+  stinkyPooArtifact: {fileID: 11400000, guid: 0b2076149572a704da4505c9396b49ac, type: 2}
+--- !u!1 &4676288074198292595
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4676288074198292593}
+  - component: {fileID: 4676288074198292592}
+  - component: {fileID: 4676288074198292558}
+  m_Layer: 0
+  m_Name: Status Icon Library
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4676288074198292593
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4676288074198292595}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4676288073241910911}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4676288074198292592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4676288074198292595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f33b0f70b05894f8ba66c301b3834f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allIcons: []
+  knockDownImage: {fileID: 21300000, guid: 8e8b0b176a6e54e4aa04e8fedd8feab1, type: 3}
+  knockDownStatusName: Knock Down
+  knockDownStatusDescription: Damage taken increased by 50%
+  knockDownStatusStacks: 0
+  strengthImage: {fileID: 21300000, guid: 13133af29279ae84796ff09cf36115bd, type: 3}
+  strengthStatusName: Strength
+  strengthStatusDescription: Increase the damage of attacks by this amount
+  strengthStatusStacks: 0
+  dexterityImage: {fileID: 21300000, guid: cc89b9ed69a100c44be448871b1e450c, type: 3}
+  dexterityStatusName: Dexterity
+  dexterityStatusDescription: Increass the amount of block gained by this amount
+  dexterityStatusStacks: 0
+  stunnedImage: {fileID: 21300000, guid: 0e1759785116d1e448827a9adf86c8ad, type: 3}
+  stunnedStatusName: Stunned
+  stunnedStatusDescription: Unable to take any action
+  stunnedStatusStacks: 0
+  pinnedImage: {fileID: 21300000, guid: 2aea15c3a1f55324d9b7d6bea2d9c6a5, type: 3}
+  pinnedStatusName: Pinned
+  pinnedStatusDescription: Unable to move
+  pinnedStatusStacks: 0
+  barrierImage: {fileID: 21300000, guid: f58d689ac5a78fa4499368a65274fe3e, type: 3}
+  barrierStatusName: Barrier
+  barrierStatusDescription: The next time this character loses HP, ignore it.
+  barrierStatusStacks: 0
+  enrageImage: {fileID: 21300000, guid: 374c70e81daa2f84da161af4468c98b4, type: 3}
+  enrageStatusName: Enrage
+  enrageStatusDescription: Whenever this character loses HP, gains strength
+  enrageStatusStacks: 0
+  growingImage: {fileID: 21300000, guid: 5bd17da7bc63579429ee238151e417b1, type: 3}
+  growingStatusName: Growing
+  growingStatusDescription: At the start of turn, gain additional strength.
+  growingStatusStacks: 0
+  volatileImage: {fileID: 21300000, guid: fb2117ec391dd65448b8ec9395b17761, type: 3}
+  volatileStatusName: Volatile
+  volatileStatusDescription: On death, all characters within 1 tile take damage
+  volatileStatusStacks: 0
+  sleepingImage: {fileID: 21300000, guid: 5e139de9b546e3a41bee4282493b97b1, type: 3}
+  sleepingStatusName: Sleeping
+  sleepingStatusDescription: Unable to take actions. Taking damage will cancel this.
+  sleepingStatusStacks: 0
+  camoflageImage: {fileID: 21300000, guid: f94bd916f012fdd469bb9c8ee125ca40, type: 3}
+  camoflageStatusName: Camoflage
+  camoflageStatusDescription: Can't be targetted by abilities further than 1 tile
+    away. Cancelled upon taking or dealing damage
+  camoflageStatusStacks: 0
+  poisonImage: {fileID: 21300000, guid: ad710dccde33f364bb49c1673e5b81a9, type: 3}
+  poisonStatusName: Poison
+  poisonStatusDescription: At the end of turn, lose HP equal to your poison amount.
+  poisonStatusStacks: 0
+  cautiousImage: {fileID: 21300000, guid: 9a4dacf02dfc3244b80df960cbb6ea86, type: 3}
+  cautiousStatusName: Cautious
+  cautiousStatusDescription: At the end turn, gain armor equal to Cautious amount
+  cautiousStatusStacks: 0
+  fleetFootedImage: {fileID: 21300000, guid: 156ade3b11472fd43ab60e4b09de349d, type: 3}
+  fleetFootedStatusName: Fleet Footed
+  fleetFootedStatusDescription: Your first move action each turn cost 0 AP
+  fleetFootedStatusStacks: 0
+  encouragingPresenceImage: {fileID: 21300000, guid: c5620d6a2e87f1041b3fa97f8a32ccb6,
+    type: 3}
+  encouragingPresenceStatusName: Encouraging Presence
+  encouragingPresenceStatusDescription: At the end of turn, give adjacent allies +1
+    AP
+  encouragingPresenceStatusStacks: 0
+  poisonousImage: {fileID: 21300000, guid: 0239340819ea4c444bded2b657cbd0ee, type: 3}
+  poisonousStatusName: Poisonous
+  poisonousStatusDescription: Whenever this character reduces HP with an attack, it
+    applies poison
+  poisonousStatusStacks: 0
+  preparationImage: {fileID: 21300000, guid: 6bbefc0629990374b844a73244b081f5, type: 3}
+  preparationStatusName: Preparation
+  preparationStatusDescription: The next ability used costs 0 AP
+  preparationStatusStacks: 0
+  stealthImage: {fileID: 21300000, guid: 97360e023b27d1542b52276949f14363, type: 3}
+  stealthStatusName: Stealth
+  stealthStatusDescription: Cannot be targeted by abilities further than 1 tile away
+  stealthStatusStacks: 0
+  thornsImage: {fileID: 21300000, guid: 14238d8cb8e68fe4abb1f94197b3d450, type: 3}
+  thornsStatusName: Thorns
+  thornsStatusDescription: 'Whenever this character is attacked, it deals damage back '
+  thornsStatusStacks: 0
+  unhygienicImage: {fileID: 21300000, guid: 19341609052ca104d939d0fa6aae7e0f, type: 3}
+  unhygienicStatusName: Unhygienic
+  unhygienicStatusDescription: At the end of turn, apply poison to adjacent enemies
+  unhygienicStatusStacks: 0
+  quickReflexesImage: {fileID: 21300000, guid: 17dbed4e4c884c24baf03c473446e29c, type: 3}
+  quickReflexesStatusName: Quick Reflexes
+  quickReflexesStatusDescription: The first time this character is attacked each turn,
+    it moves to a random adjacent tile.
+  quickReflexesStatusStacks: 0
+  regenerationImage: {fileID: 21300000, guid: 18d7651aa9ff925428af004080302feb, type: 3}
+  regenerationStatusName: Regeneration
+  regenerationStatusDescription: At the end of turn, recover HP
+  regenerationStatusStacks: 0
+  adaptiveImage: {fileID: 21300000, guid: 22e95bc57af6edb4ba36c1a17169ee6f, type: 3}
+  adaptiveStatusName: Adaptive
+  adaptiveStatusDescription: Whenever you lose HP, gain block
+  adaptiveStatusStacks: 0
+  poisonImmunityImage: {fileID: 21300000, guid: a24451a3471473e4783e749018b08ebb,
+    type: 3}
+  poisonImmunityStatusName: Poison Immunity
+  poisonImmunityStatusDescription: This character is immune to poison
+  poisonImmunityStatusStacks: 0
+  hatefulPresenceImage: {fileID: 21300000, guid: 936161c986c87d84eb63849b321c0779,
+    type: 3}
+  hatefulPresenceStatusName: Hateful Presence
+  hatefulPresenceStatusDescription: On turn end, give adjacent allies +1 strength
+  hatefulPresenceStatusStacks: 0
+  soulDrainAuraImage: {fileID: 21300000, guid: 99114c296eeb67445818ca143122f5c9, type: 3}
+  soulDrainAuraStatusName: Soul Drain Aura
+  soulDrainAuraStatusDescription: On turn end, steal 1 strength from adjacent enemies
+  soulDrainAuraStatusStacks: 0
+  lightningShieldImage: {fileID: 21300000, guid: 2879500ceea986b4eba5fa46205a6597,
+    type: 3}
+  lightningShieldStatusName: Lightning Shield
+  lightningShieldStatusDescription: When attacked, deal 3 magic damage to the attacker
+  lightningShieldStatusStacks: 0
+  thickOfTheFightImage: {fileID: 21300000, guid: a1a1afb60b8d47a49b0f0c9a53bbf05d,
+    type: 3}
+  thickOfTheFightStatusName: Thick Of The Fight
+  thickOfTheFightStatusDescription: On turn start, gain AP if an enemy is in your
+    melee range
+  thickOfTheFightStatusStacks: 0
+  temporaryStrengthImage: {fileID: 21300000, guid: 60ebb24692318a04c89cd74f7baa0417,
+    type: 3}
+  temporaryStrengthStatusName: Temporary Strength
+  temporaryStrengthStatusDescription: On turn end, lose strength
+  temporaryStrengthStatusStacks: 0
+  runeImage: {fileID: 21300000, guid: 7797a294190edf947aa906381fe1d772, type: 3}
+  runeStatusName: Rune
+  runeStatusDescription: Negates the next harmful status effect.
+  runeStatusStacks: 0
+  exposedImage: {fileID: 21300000, guid: 04fd49a972c604a4eaf4ad87a8dbf2ca, type: 3}
+  exposedStatusName: Exposed
+  exposedStatusDescription: Increase all damage taken by 50%
+  exposedStatusStacks: 0
+  exhaustedImage: {fileID: 21300000, guid: 5882e9df35d3054478432b192ce3515e, type: 3}
+  exhaustedStatusName: Reduce all damage dealt by 50%
+  exhaustedStatusDescription: 
+  exhaustedStatusStacks: 0
+  magicImmunityImage: {fileID: 21300000, guid: 2f9aa849df13a364dba42f5190920fa3, type: 3}
+  magicImmunityStatusName: Immune to magical damage
+  magicImmunityStatusDescription: 
+  magicImmunityStatusStacks: 0
+  physicalImmunityImage: {fileID: 21300000, guid: 1ec53c240a4282a4ba682f2cafa5ff08,
+    type: 3}
+  physicalImmunityStatusName: Immune to physical damage
+  physicalImmunityStatusDescription: 
+  physicalImmunityStatusStacks: 0
+  flankedImage: {fileID: 21300000, guid: 9a4dacf02dfc3244b80df960cbb6ea86, type: 3}
+  flankedStatusName: Flanked
+  flankedStatusDescription: Damage from attacks is increased by 50%
+  flankedStatusStacks: 0
+--- !u!95 &4676288074198292558
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4676288074198292595}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &4676288074583106508
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4676288074583106509}
+  - component: {fileID: 4676288074583106506}
+  m_Layer: 0
+  m_Name: Item Library
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4676288074583106509
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4676288074583106508}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4676288073241910911}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4676288074583106506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4676288074583106508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41c9a5a4b87c0dc468e6b984df45f19c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allItems:
+  - {fileID: 11400000, guid: a35cd4e08ab40ea45aca3496b1fb1e34, type: 2}
+  - {fileID: 11400000, guid: 250d9fb9905c56e49b7c11fed5f1bb16, type: 2}
+  - {fileID: 11400000, guid: de498900db866774b83d3c4196294fb0, type: 2}
+  - {fileID: 11400000, guid: 8a02aecd4555ba347a0b6db6e0308686, type: 2}
+  - {fileID: 11400000, guid: 3f877926c66e7f343af140a369eff9ea, type: 2}
+  - {fileID: 11400000, guid: 10fca0a38bed53c4bac269e46aa142e3, type: 2}
+  - {fileID: 11400000, guid: 21f3ca410a6f76a40827fb1c0f4b6fcc, type: 2}
+  - {fileID: 11400000, guid: 399d33acd903aaf40951926166a068b6, type: 2}
+  - {fileID: 11400000, guid: 9c4d3dea725f4014fa4bea031c986f0c, type: 2}
+  - {fileID: 11400000, guid: 0a65f6f635a8aa945adf0f67e66c37e9, type: 2}
+  - {fileID: 11400000, guid: 3a82510b520087643a7c91f7d40a0f63, type: 2}
+  - {fileID: 11400000, guid: 8fdf1556416a3f74c8c09dc280c97160, type: 2}
+  - {fileID: 11400000, guid: 7b413b42d522a39489f9f91f746dd437, type: 2}
+  - {fileID: 11400000, guid: db8f192782a610a49a88ad9e40dfc0c6, type: 2}
+  - {fileID: 11400000, guid: 81d1cf986307ace40bcc4f012c662cb8, type: 2}
+  - {fileID: 11400000, guid: 9506a89d33def484abff41fe20c14296, type: 2}
+  - {fileID: 11400000, guid: ed94b091f1308cb42990a55b730ce052, type: 2}
+  - {fileID: 11400000, guid: 26e491d1a96c2c8499e8a681e994ff92, type: 2}
+  - {fileID: 11400000, guid: 4076f8597776e0646aa60ba57ddddee4, type: 2}
+  - {fileID: 11400000, guid: 51f1d6b49bcf5c34c9a47d5676675313, type: 2}
+  - {fileID: 11400000, guid: 5acf18d61f6c4664e8ca8491a31b581e, type: 2}
