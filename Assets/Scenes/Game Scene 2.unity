@@ -1712,7 +1712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingGold: 5
-  startingMaxTroopCount: 2
+  startingMaxTroopCount: 10
   passiveGoldIncome: 1
 --- !u!1 &1357697457
 GameObject:
