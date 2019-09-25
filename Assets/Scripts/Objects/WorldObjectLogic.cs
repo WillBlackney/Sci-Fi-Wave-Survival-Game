@@ -9,8 +9,7 @@ public class WorldObjectLogic : Singleton<WorldObjectLogic>
         GameObject newWorldObject = Instantiate(objectPrefab, location.transform);
         WorldObject newWorldObjectScript = newWorldObject.GetComponent<WorldObject>();
         newWorldObject.transform.position = location.WorldPosition;
-        newWorldObjectScript.myTile = location;
-        location.myObject = newWorldObjectScript;
-        location.isEmpty = false;
+        location.SetTileAsOccupiedByObject(newWorldObjectScript);
+        newWorldObjectScript.myTile = location;       
     }
 }

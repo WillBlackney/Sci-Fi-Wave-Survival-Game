@@ -226,6 +226,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6cda32d2702bdff41bb09cde3a3515d7, type: 2}
   - {fileID: 11400000, guid: c9e7f391ae936df4c86fa9a210cd7c4a, type: 2}
   - {fileID: 11400000, guid: ed223b25fe728ae44b424a843be085f3, type: 2}
+  - {fileID: 11400000, guid: 998dfde6f0a7ca8439836b1226b23eaa, type: 2}
+  - {fileID: 11400000, guid: e65c67754a7e30d44ad2b4d526f4d11c, type: 2}
+  - {fileID: 11400000, guid: c4311530081e91149bdc4a1f9c95c9e4, type: 2}
   moveImage: {fileID: 21300000, guid: f2fc880836bad7b4d8f1de44a202f40a, type: 3}
   moveName: Move
   moveDescription: Move to a tile within range of your mobility.

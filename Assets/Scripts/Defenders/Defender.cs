@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 
 public class Defender : LivingEntity
 {
-    [Header("UI + Component References ")]    
+    [Header("Defender UI + Component References ")]    
     public AbilityBar myAbilityBar;
     public GameObject myUIParent;
     public CharacterData myCharacterData;
@@ -23,6 +23,10 @@ public class Defender : LivingEntity
     public TextMeshProUGUI myCurrentMaxHealthTextStatBar;
     public TextMeshProUGUI myCurrentDefenseStatText;
     public TextMeshProUGUI myCurrentAimStatText;
+
+    [Header("Defender Properties")]
+    public int myBaseTroopCost;
+    public int myCurrentTroopCost;
 
 
     // State related variables
@@ -63,6 +67,7 @@ public class Defender : LivingEntity
     public bool awaitingBlessOrder;
     public bool awaitingSiphonLifeOrder;
     public bool awaitingChaosBoltOrder;
+    public bool awaitingThrowHandGrenadeTarget;
 
 
     // Initialization and Setup
@@ -78,6 +83,8 @@ public class Defender : LivingEntity
         //RunSetupFromCharacterData();
         //RunSetupFromArtifactData();
         base.SetBaseProperties();
+        myCurrentTroopCost = myBaseTroopCost;
+        PlayerDataManager.Instance.ModifyCurrentTroopCount(myCurrentTroopCost);
         // Set up weapons
         WeaponLogic.Instance.RunDefenderStartingWeaponSetup(this);
         // Set up visuals
@@ -373,6 +380,18 @@ public class Defender : LivingEntity
         else if (abilityName == "Chaos Bolt")
         {
             OnChaosBoltButtonClicked();
+        }
+        else if (abilityName == "Dig In")
+        {
+            OnDigInButtonClicked();
+        }
+        else if (abilityName == "Overwatch")
+        {
+            OnOverwatchButtonClicked();
+        }
+        else if (abilityName == "Throw Hand Grenade")
+        {
+            OnThrowHandGrenadeButtonClicked();
         }
     }
     public void OnMouseDown()
@@ -1036,6 +1055,49 @@ public class Defender : LivingEntity
         myPassiveManager.LearnPreparation(1);
 
     }
+    public void OnDigInButtonClicked()
+    {
+        Debug.Log("Dig In button clicked");
+
+        Ability digIn = mySpellBook.GetAbilityByName("Dig In");
+
+        if (HasEnoughAP(currentAP, digIn.abilityAPCost) == false || IsAbilityOffCooldown(digIn.abilityCurrentCooldownTime) == false)
+        {
+            return;
+        }
+
+        AbilityLogic.Instance.PerformDigIn(this);        
+
+    }
+    public void OnOverwatchButtonClicked()
+    {
+        Debug.Log("Overwatch button clicked");
+
+        Ability overwatch = mySpellBook.GetAbilityByName("Overwatch");
+
+        if (HasEnoughAP(currentAP, overwatch.abilityAPCost) == false || IsAbilityOffCooldown(overwatch.abilityCurrentCooldownTime) == false)
+        {
+            return;
+        }
+
+        AbilityLogic.Instance.PerformOverwatch(this);      
+    }
+
+    public void OnThrowHandGrenadeButtonClicked()
+    {
+        Debug.Log("Throw Hand Grenade button clicked");
+
+        Ability throwHandGrenade = mySpellBook.GetAbilityByName("Throw Hand Grenade");
+
+        if (HasEnoughAP(currentAP, throwHandGrenade.abilityAPCost) == false || IsAbilityOffCooldown(throwHandGrenade.abilityCurrentCooldownTime) == false)
+        {
+            return;
+        }
+
+        awaitingThrowHandGrenadeTarget = true;
+        LevelManager.Instance.HighlightTiles(LevelManager.Instance.GetTilesWithinRange(throwHandGrenade.abilityRange, LevelManager.Instance.Tiles[GridPosition], false));
+
+    }
     public void OnTwinStrikeButtonClicked()
     {
         Ability twinStrike = mySpellBook.GetAbilityByName("Twin Strike");
@@ -1146,6 +1208,17 @@ public class Defender : LivingEntity
             Debug.Log("Selected tile is valid, starting move...");
             awaitingGetDownOrder = false;
             AbilityLogic.Instance.PerformGetDown(this, destination);
+        }
+    }
+    public void StartThrowHandGrenadeProcess(TileScript destination)
+    {
+        Ability throwHandGrenade = mySpellBook.GetAbilityByName("Throw Hand Grenade");
+
+        // if the selected tile is within grenade range, execute ability
+        if(LevelManager.Instance.GetTilesWithinRange(throwHandGrenade.abilityRange,TileCurrentlyOn).Contains(destination))
+        {
+            awaitingThrowHandGrenadeTarget = false;
+            AbilityLogic.Instance.PerformThrowHandGrenade(this, destination);
         }
     }
     public void StartStrikeProcess()

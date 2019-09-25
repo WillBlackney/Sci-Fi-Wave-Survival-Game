@@ -348,10 +348,24 @@ public class CombatLogic : MonoBehaviour
     // Method evaluates the difference between the attackers 'Aim' and the target's 'Defense', then returns the attackers hit probability as a percentage
     public int CalculateHitChanceFromAimVsDefense(LivingEntity attacker, LivingEntity target)
     {
+        Debug.Log("CalculateHitChanceFromAimVsDefense() calculated hit probability between attacker " + attacker.name + " and " + target.name);
+        // Set up base hit chance properties
         int baseHitChance = 50;
         int attackerTotalAimValue = attacker.currentAim + baseHitChance;
-
         attackerTotalAimValue -= target.currentDefense;
+
+        // Check for passive traits that modify defense or aim
+        if (attacker.myPassiveManager.Entrenched)
+        {
+            Debug.Log("Attacker" + attacker.name + " is 'Entrenched', hit chance +10");
+            attackerTotalAimValue += 10;
+
+        }
+        if (target.myPassiveManager.Entrenched)
+        {
+            Debug.Log("Attacker" + target.name + " is 'Entrenched', hit chance -10");
+            attackerTotalAimValue -= 10;
+        }
 
         // Add bonus defense if target is in half/full cover
         if(PositionLogic.Instance.IsTargetInHalfCover(attacker, target))

@@ -107,7 +107,8 @@ public class LivingEntity : MonoBehaviour
         // Set our current tile
         TileCurrentlyOn = startingTile;
         // Set its tile to 'occupied' state
-        LevelManager.Instance.SetTileAsOccupied(startingTile);
+        //LevelManager.Instance.SetTileAsOccupiedByEntity(startingTile);
+        startingTile.SetTileAsOccupiedByEntity(this);
         // Place tower in the centre point of the tile
         transform.position = startingTile.WorldPosition;
         // Add this to the list of all active enemy and defender characters
@@ -210,6 +211,7 @@ public class LivingEntity : MonoBehaviour
 
     public void ApplyCamoflage()
     {
+        Debug.Log("Applying Camoflage to entity...");
         isCamoflaged = true;
         myStatusManager.StartAddStatusProcess(StatusIconLibrary.Instance.GetStatusIconByName("Camoflage"), 1);
         StartCoroutine(VisualEffectManager.Instance.CreateStatusEffect(transform.position, "Camoflage!", false));
@@ -387,7 +389,7 @@ public class LivingEntity : MonoBehaviour
 
     public bool IsTargetValid(LivingEntity target)
     {
-        List<TileScript> tilesWithinStealthSight = LevelManager.Instance.GetTilesWithinRange(1, TileCurrentlyOn);
+        List<TileScript> tilesWithinStealthSight = LevelManager.Instance.GetTilesWithinRange(5, TileCurrentlyOn);
 
         if (tilesWithinStealthSight.Contains(target.TileCurrentlyOn) == false && 
             (target.isCamoflaged || target.myPassiveManager.Stealth)
@@ -747,7 +749,8 @@ public class LivingEntity : MonoBehaviour
    
     public virtual IEnumerator HandleDeath()
     {
-        LevelManager.Instance.SetTileAsUnoccupied(TileCurrentlyOn);
+        //LevelManager.Instance.SetTileAsUnoccupiedByEntity(TileCurrentlyOn);
+        TileCurrentlyOn.SetTileAsUnoccupiedByEntity();
         LivingEntityManager.Instance.allLivingEntities.Remove(this);
 
         Defender defender = GetComponent<Defender>();
@@ -758,11 +761,14 @@ public class LivingEntity : MonoBehaviour
             CombatLogic.Instance.CreateAoEAttackEvent(this, myPassiveManager.volatileStacks, TileCurrentlyOn, 1, true, true,AbilityDataSO.DamageType.None);
         }
 
-        // Check if this entity is the spaceship, and start game over event if it is
+        
         if (defender)
         {
             DefenderManager.Instance.allDefenders.Remove(defender);
-            if(myClass == Class.SpaceShip)
+            // Remove troop counts from total
+            PlayerDataManager.Instance.ModifyCurrentTroopCount(-defender.myCurrentTroopCost);
+            // Check if this entity is the spaceship, and start game over event if it is
+            if (myClass == Class.SpaceShip)
             {
                 EventManager.Instance.StartNewGameOverEvent();
                 StopAllCoroutines();
@@ -920,6 +926,11 @@ public class LivingEntity : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
         }
 
+        if (myPassiveManager.Overwatch)
+        {
+            myPassiveManager.ModifyOverwatch(myPassiveManager.overwatchStacks);
+            yield return new WaitForSeconds(0.5f);
+        }
         if (myPassiveManager.LightningShield)
         {
             myPassiveManager.LightningShield = false;
@@ -1172,52 +1183,12 @@ public class LivingEntity : MonoBehaviour
             ApplyCamoflage();
             yield return new WaitForSeconds(0.5f);
 
-            /*
-            // Snake ring 
-            if (defender &&
-                ArtifactManager.Instance.HasArtifact("Snake Ring")
-                )
-            {
-                ModifyCurrentStrength(1);
-                yield return new WaitForSeconds(0.5f);
-            }
+            
         }
-
-        if (TileCurrentlyOn.myTileType == TileScript.TileType.Rock)
-        {
-            Debug.Log("Turn ended on grass: applying stealth...");
-            // Gain 5 block
-            ModifyCurrentBlock(5);
-            yield return new WaitForSeconds(0.5f);            
-        }
-
-        // Artifact related events
-
-        /*
-        if( defender && 
-            ArtifactManager.Instance.HasArtifact("Wind Up Boots") &&
-            TurnManager.Instance.playerTurnCount == 1)
-        {
-            ModifyCurrentMobility(-1);
-            yield return new WaitForSeconds(0.5f);
-        }
-
-        if (defender &&
-           ArtifactManager.Instance.HasArtifact("Crown Of Kings") &&
-           currentAP == currentMaxAP)
-        {
-            ModifyCurrentStrength(1);
-            yield return new WaitForSeconds(0.5f);
-        }
-        */
-        }
-
         yield return new WaitForSeconds(0.5f);
         myOnTurnEndEffectsFinished = true;
 
-        
-
-        }
+    }
         
 
 
@@ -1398,7 +1369,7 @@ public class LivingEntity : MonoBehaviour
         List<TileScript> adjacentTiles = LevelManager.Instance.GetTilesWithinMovementRange(range, TileCurrentlyOn);
         foreach (TileScript tile in adjacentTiles)
         {
-            if (tile.myTileType == TileScript.TileType.Grass && tile.isEmpty && tile.isWalkable)
+            if (tile.myTileType == TileScript.TileType.Grass && tile.CanBeOccupied())
             {
                 closestGrassTile = tile;
             }

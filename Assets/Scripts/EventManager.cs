@@ -7,6 +7,8 @@ public class EventManager : Singleton<EventManager>
     public TreasureChest activeTreasureChest;
     public WorldEncounter.EncounterType currentEncounterType;
 
+    public bool gameOverEventStarted;
+
     private void Start()
     {
         StartNewGameSequence();
@@ -32,6 +34,7 @@ public class EventManager : Singleton<EventManager>
     }
     public IEnumerator StartNewGameOverEventCoroutine()
     {
+        gameOverEventStarted = true;
         // Stop all coroutines running on enemies
         foreach(Enemy enemy in EnemyManager.Instance.allEnemies)
         {
@@ -56,10 +59,10 @@ public class EventManager : Singleton<EventManager>
         //CameraManager.Instance.LookAtTarget(LevelManager.Instance.GetWorldCentreTile().gameObject);
         CameraManager.Instance.SetCameraLookAtTarget(LevelManager.Instance.GetWorldCentreTile().gameObject);
         // Fade in scene
-        Action fadeIn = BlackScreenManager.Instance.FadeIn(5);
+        Action fadeIn = BlackScreenManager.Instance.FadeIn(1);
         // wait until the fade in effect is finished
         //yield return new WaitUntil(() => fadeIn.ActionResolved() == true);
-        yield return new WaitForSeconds(3f);
+        //yield return new WaitForSeconds(1.5f);
         // Create Space ship at world centre
         DefenderManager.Instance.CreateSpaceShip();
         // TO DO: 
@@ -73,6 +76,7 @@ public class EventManager : Singleton<EventManager>
         // Camera then moves back to look at the spaceship and defenders
         // Start the players first turn
         StartCoroutine(TurnManager.Instance.StartPlayerTurn());
+        yield return null;
         
     }
 

@@ -96,15 +96,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myAnimator: {fileID: 0}
   myTileType: 2
-  myTileSetupType: 0
+  myTileSetupType: 7
   myObject: {fileID: 0}
+  myEntity: {fileID: 0}
   originalColor:
     serializedVersion: 2
     rgba: 0
   highlightedColor:
     serializedVersion: 2
     rgba: 2768219136
-  isEmpty: 0
   isWalkable: 1
   isBuildable: 0
 --- !u!61 &61540997985762336

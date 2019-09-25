@@ -85,6 +85,12 @@ public class PassiveManager : MonoBehaviour
     public bool Flanked;
     public int flankedStacks;
 
+    public bool Entrenched;
+    public int entrenchedStacks;
+
+    public bool Overwatch;
+    public int overwatchStacks;
+
 
     public void InitializeSetup()
     {
@@ -153,6 +159,39 @@ public class PassiveManager : MonoBehaviour
         preparationStacks += stacks;
         myLivingEntity.myStatusManager.StartAddStatusProcess(StatusIconLibrary.Instance.GetStatusIconByName("Preparation"), stacks);
         StartCoroutine(VisualEffectManager.Instance.CreateStatusEffect(transform.position, "Preparation", false));
+    }
+    public void ModifyEntrenched(int stacks)
+    {
+        StatusIcon entrenched = StatusIconLibrary.Instance.GetStatusIconByName("Entrenched");
+        entrenchedStacks += stacks;
+        if(entrenchedStacks > 0)
+        {
+            Entrenched = true;
+        }
+        else
+        {
+            Entrenched = false;
+        }        
+        
+        myLivingEntity.myStatusManager.StartAddStatusProcess(entrenched, stacks);
+        StartCoroutine(VisualEffectManager.Instance.CreateStatusEffect(transform.position, "Entrenched", false));
+    }
+
+    public void ModifyOverwatch(int stacks)
+    {
+        StatusIcon overwatch = StatusIconLibrary.Instance.GetStatusIconByName("Overwatch");
+        overwatchStacks += stacks;
+        if (overwatchStacks > 0)
+        {
+            Overwatch= true;
+        }
+        else
+        {
+            Overwatch = false;
+        }
+
+        myLivingEntity.myStatusManager.StartAddStatusProcess(overwatch, stacks);
+        StartCoroutine(VisualEffectManager.Instance.CreateStatusEffect(transform.position, "Overwatch", false));
     }
 
     public void LearnStealth()

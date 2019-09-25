@@ -85,7 +85,9 @@
     <Compile Include="Assets\Scripts\Camera\UnityCameraController.cs" />
     <Compile Include="Assets\Scripts\CampSiteManager.cs" />
     <Compile Include="Assets\Scripts\CharacterLibrary.cs" />
+    <Compile Include="Assets\Scripts\DefenderButton.cs" />
     <Compile Include="Assets\Scripts\DefenderManager.cs" />
+    <Compile Include="Assets\Scripts\DefenderPanelManager.cs" />
     <Compile Include="Assets\Scripts\Defenders\Defender.cs" />
     <Compile Include="Assets\Scripts\Defenders\Mortar.cs" />
     <Compile Include="Assets\Scripts\Enemies\GrimReaper.cs" />
@@ -110,8 +112,8 @@
     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\EnemyWaveSO.cs" />
     <Compile Include="Assets\Scripts\EventManager.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GameSessionManager.cs" />
+    <Compile Include="Assets\Scripts\GlobalSettings.cs" />
     <Compile Include="Assets\Scripts\Hover.cs" />
     <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\Items\Inventory.cs" />
@@ -154,7 +156,6 @@
     <Compile Include="Assets\Scripts\Talent.cs" />
     <Compile Include="Assets\Scripts\TalentTree.cs" />
     <Compile Include="Assets\Scripts\TileScript.cs" />
-    <Compile Include="Assets\Scripts\TowerButton.cs" />
     <Compile Include="Assets\Scripts\TurnManager.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\Visual\BlackScreenManager.cs" />

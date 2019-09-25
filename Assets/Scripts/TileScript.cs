@@ -3,7 +3,6 @@ using UnityEngine.EventSystems;
 
 public class TileScript : MonoBehaviour
 {   
-
     [Header("Component References")]
     private SpriteRenderer spriteRenderer;
     public Animator myAnimator;
@@ -12,11 +11,11 @@ public class TileScript : MonoBehaviour
     public TileType myTileType;
     public TileSetupType myTileSetupType;
     public WorldObject myObject;
+    public LivingEntity myEntity;
     public Color32 originalColor;
-    public Color32 highlightedColor = Color.white;
-    public bool isEmpty;
+    public Color32 highlightedColor = Color.white;    
     public bool isWalkable;
-    public bool isBuildable;
+    public bool isBuildable;    
 
 
     // Properties
@@ -28,7 +27,6 @@ public class TileScript : MonoBehaviour
         }
     }
     public Point GridPosition { get; set; }
-
 
     // Enum declarations
     public enum TileSetupType { None, Dirt, DirtTree, DirtRock, DirtRubble, DirtGoldNode, DirtSteelNode, Grass, GrassTree, Rock, Water };
@@ -57,6 +55,10 @@ public class TileScript : MonoBehaviour
         {
             RunDirtRockTileSetup();
         }
+        else if (myTileSetupType == TileSetupType.DirtRubble)
+        {
+            RunDirtRubbleTileSetup();
+        }
         else if (myTileSetupType == TileSetupType.Grass)
         {
             RunGrassTileSetup();
@@ -77,58 +79,44 @@ public class TileScript : MonoBehaviour
 
 
     // Set tile type
+    #region
     public void RunDirtTileSetup()
     {
-        isWalkable = true;
-        isEmpty = true;
+        isWalkable = true;        
     }
     public void RunDirtTreeTileSetup()
     {
-        isWalkable = true;
-        isEmpty = false;
+        isWalkable = true;        
         WorldObjectLogic.Instance.CreateObjectAtLocation(PrefabHolder.Instance.treePrefab, this);
     }
     public void RunDirtRockTileSetup()
     {
-        isWalkable = true;
-        isEmpty = false;
+        isWalkable = true;        
         WorldObjectLogic.Instance.CreateObjectAtLocation(PrefabHolder.Instance.rockWallPrefab, this);
     }
     public void RunDirtRubbleTileSetup()
     {
-        isWalkable = true;
-        isEmpty = false;
+        isWalkable = true;        
         WorldObjectLogic.Instance.CreateObjectAtLocation(PrefabHolder.Instance.rubblePrefab, this);
     }
     public void RunGrassTileSetup()
     {
-        isWalkable = true;
-        isEmpty = true;
-    }
-    public void RunRockTileSetup()
-    {
-        isWalkable = true;
-        isEmpty = true;
-    }
-    public void RunForestTileSetup()
-    {
-        isWalkable = false;
-        isEmpty = false;
-    }
+        isWalkable = true;        
+    }        
     public void RunWaterTileSetup()
     {
-        isWalkable = false;
-        isEmpty = true;
+        isWalkable = false;        
     }
-
+    #endregion
 
     // Input + mouse related events
+    #region
     private void OnMouseOver()
     {
         LevelManager.Instance.mousedOverTile = this;
 
         // TO DO: The tile colouring is currently disabled to fix highlighting moveable tiles, fix this
-        if (!EventSystem.current.IsPointerOverGameObject() && GameManager.Instance.ClickedButton != null)
+        if (!EventSystem.current.IsPointerOverGameObject() && DefenderPanelManager.Instance.ClickedDefender != null)
         {
             //Hover.Instance.SetPosition(WorldPosition);
 
@@ -182,31 +170,41 @@ public class TileScript : MonoBehaviour
         {
             selectedDefender.StartGetDownProcess(this);
         }
+        else if (selectedDefender != null && selectedDefender.awaitingThrowHandGrenadeTarget == true)
+        {
+            selectedDefender.StartThrowHandGrenadeProcess(this);
+        }
 
     }
-
+    #endregion
 
     // Defender / entity creation related
+    #region
     public void PlaceDefender()
     {
-        GameObject newDefenderGO = Instantiate(GameManager.Instance.ClickedButton.defenderPrefab, DefenderManager.Instance.defendersParent.transform);
+        GameObject newDefenderGO = Instantiate(DefenderPanelManager.Instance.ClickedDefender.defenderPrefab, DefenderManager.Instance.defendersParent.transform);
 
-        newDefenderGO.GetComponent<Defender>().InitializeSetup(this.GridPosition, this);
+        newDefenderGO.GetComponent<Defender>().InitializeSetup(GridPosition, this);
 
-        //GameManager.Instance.ClickedButton = null;
+        DefenderPanelManager.Instance.BuyDefender();
+
+        DefenderPanelManager.Instance.ClickedDefender = null;
+        
         Hover.Instance.Deactivate();
     }
+    #endregion
 
-   
     // Visual + Animation
+    #region
     public void ColorTile(Color newColor)
     {
         //Debug.Log("Coloring tile...");
         spriteRenderer.color = newColor;
     }
-
+    #endregion
 
     // Cover, LoS, Movement World Object Logic
+    #region
     public bool ProvidesHalfCover()
     {
         if (myObject != null && myObject.providesHalfCover)
@@ -218,7 +216,7 @@ public class TileScript : MonoBehaviour
             return false;
         }
 
-    }
+    }    
     public bool ProvidesFullCover()
     {
         if (myObject != null && myObject.providesFullCover)
@@ -233,33 +231,45 @@ public class TileScript : MonoBehaviour
     }
     public bool CanBeMovedThrough()
     {
-        if(myObject == null && isWalkable)
-        {
-            return true;
-        }
-        if (myObject != null && myObject.canBeMovedThrough && isWalkable)
-        {
-            return true;
-        }
-        else
+        if(isWalkable == false)
         {
             return false;
+        }
+
+        else if(myObject != null && myObject.canBeMovedThrough == false)
+        {
+            return false;
+        }
+
+        else if(myEntity != null)
+        {
+            return false;
+        }
+        
+        else
+        {
+            return true;
         }
     }
     public bool CanBeOccupied()
     {
-        if (myObject == null && isWalkable && isEmpty)
-        {
-            return true;
-        }
-        if (myObject != null && myObject.preventsOccupation == false && isWalkable && isEmpty)
-        {
-            return true;
-        }
-        else
+        if(isWalkable == false)
         {
             return false;
         }
+        else if(myObject != null && myObject.preventsOccupation)
+        {
+            return false;
+        }
+        else if(myEntity != null)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+       
     }
     public bool CanBeSeenThrough()
     {
@@ -276,8 +286,33 @@ public class TileScript : MonoBehaviour
             return true;
         }
     }
+    #endregion
 
-    // World Object related
+    // Occupation by Entity / World Object
+    #region
+    public void SetTileAsOccupiedByEntity(LivingEntity entity)
+    {
+        Debug.Log("Tile " + GridPosition.X + ", " + GridPosition.Y + " is now occupied");
+        myEntity = entity;        
+    }
+    public void SetTileAsUnoccupiedByEntity()
+    {
+        Debug.Log("Tile " + GridPosition.X + ", " + GridPosition.Y + " is now unoccupied");
+        myEntity = null;        
+    }
+    public void SetTileAsOccupiedByObject(WorldObject worldObject)
+    {
+        //Debug.Log("Tile " + GridPosition.X + ", " + GridPosition.Y + " is now occupied");
+        myObject = worldObject;
+    }
+    public void SetTileAsUnoccupiedByObject()
+    {
+        //Debug.Log("Tile " + GridPosition.X + ", " + GridPosition.Y + " is now unoccupied");
+        myObject = null;
+    }
+    #endregion
+
+
 
 
 

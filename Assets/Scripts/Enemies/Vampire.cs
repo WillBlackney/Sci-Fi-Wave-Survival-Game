@@ -160,7 +160,7 @@ public class Vampire : Enemy
 
         foreach(TileScript tile in allTiles)
         {            
-            if(tile.isEmpty && tile.isWalkable)
+            if(tile.CanBeOccupied())
             {
                 float distancefromThisTile = 0;
 

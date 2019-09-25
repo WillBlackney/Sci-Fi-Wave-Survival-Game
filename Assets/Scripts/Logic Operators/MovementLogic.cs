@@ -25,8 +25,7 @@ public class MovementLogic : Singleton<MovementLogic>
         List<TileScript> validTilesWithinMovementRange = LevelManager.Instance.GetValidMoveableTilesWithinRange(range, LevelManager.Instance.Tiles[characterMoved.GridPosition]);
 
         if (validTilesWithinMovementRange.Contains(destination) &&
-            destination.isEmpty &&
-            destination.isWalkable
+            destination.CanBeOccupied()
             )
         {
             return true;
@@ -49,6 +48,8 @@ public class MovementLogic : Singleton<MovementLogic>
     }
     public IEnumerator MoveEntityCoroutine(LivingEntity characterMoved, TileScript destination, Action action, float speed = 3)
     {
+        Debug.Log("Running MovementLogic.MoveEntityCoroutine() coroutine...");
+
         // Set properties
         float originalSpeed = characterMoved.speed;
         float speedOfThisMovement = speed;
@@ -61,13 +62,18 @@ public class MovementLogic : Singleton<MovementLogic>
         characterMoved.myAnimator.SetTrigger("Move");
 
         // flip the sprite's x axis depending on the direction of movement
-        PositionLogic.Instance.CalculateWhichDirectionToFace(characterMoved, destination);  
+        PositionLogic.Instance.CalculateWhichDirectionToFace(characterMoved, destination);
+
+        // remove entrenched if the character has it
+        if (characterMoved.myPassiveManager.Entrenched)
+        {
+            characterMoved.myPassiveManager.ModifyEntrenched(-characterMoved.myPassiveManager.entrenchedStacks);
+        }
 
         // Commence movement
         while (hasCompletedMovement == false)
-        {
+        {           
             
-            Debug.Log("Running MoveAcrossPath() coroutine...");
             characterMoved.transform.position = Vector2.MoveTowards(characterMoved.transform.position, characterMoved.destination, speedOfThisMovement * Time.deltaTime);
 
             if (characterMoved.transform.position == characterMoved.destination)
@@ -75,33 +81,34 @@ public class MovementLogic : Singleton<MovementLogic>
                 // if we have reached the next tile in our path
                 if (characterMoved.path != null && characterMoved.path.Count > 0)
                 {
-                    TileScript previousTile = characterMoved.TileCurrentlyOn;
+                    // Get the grid pos point reference of the tile we just moved on
                     characterMoved.GridPosition = characterMoved.path.Peek().GridPosition;
-                    // Free up the tile we were standing on before we moved
-                    LevelManager.Instance.SetTileAsUnoccupied(characterMoved.TileCurrentlyOn);
-                    // Set our current tile to the tile we ended up at the end of the move
+                    // Free up the tile we were previously standing                
+                    characterMoved.TileCurrentlyOn.SetTileAsUnoccupiedByEntity();
+                    // Set our 'TileCurrentlyOn' to our new location (from the grid pos we just stored)
                     characterMoved.TileCurrentlyOn = LevelManager.Instance.GetTileFromPointReference(characterMoved.GridPosition);
-                    // Set our current tile to be occupied, so other characters cant stack ontop of it.
-                    LevelManager.Instance.SetTileAsOccupied(characterMoved.TileCurrentlyOn);
-                    //Action moveToNewLocation = OnLocationMovedTo(characterMoved, characterMoved.TileCurrentlyOn, previousTile);
-                    //yield return new WaitUntil(() => moveToNewLocation.ActionResolved() == true);
+                    // Set our current tile to be occupied, so other characters cant stack ontop of it.                    
+                    characterMoved.TileCurrentlyOn.SetTileAsOccupiedByEntity(characterMoved);
+                    // Check for events related to moving to a new location(overwatch, camoflage, etc)
+                    Action movedToNewLocation = OnLocationMovedTo(characterMoved);
+                    // wait until these events (if any) are resolved
+                    yield return new WaitUntil(() => movedToNewLocation.ActionResolved() == true);
+                    // Set our destination to the next element in the path stack
                     characterMoved.destination = characterMoved.path.Pop().WorldPosition;
                 }
 
                 // if we have reached the final destination
                 else if (characterMoved.path != null && characterMoved.path.Count == 0)
                 {
-                    TileScript previousTile = characterMoved.TileCurrentlyOn;
-                    // Free up the tile we were standing on before we moved
-                    LevelManager.Instance.SetTileAsUnoccupied(characterMoved.TileCurrentlyOn);
-                    // Set our current tile to the tile we ended up at the end of the move
+                    characterMoved.TileCurrentlyOn.SetTileAsUnoccupiedByEntity();
+                    // Set our 'TileCurrentlyOn' to our new location (from the grid pos we just stored)
                     characterMoved.TileCurrentlyOn = LevelManager.Instance.GetTileFromPointReference(characterMoved.GridPosition);
-                    // Set our current tile to be occupied, so other characters cant stack ontop of it.
-                    LevelManager.Instance.SetTileAsOccupied(characterMoved.TileCurrentlyOn);
-                    // Prevent character from being able to move again
-                    //hasMovedThisTurn = true;
-                    //Action moveToNewLocation = OnLocationMovedTo(characterMoved, characterMoved.TileCurrentlyOn, previousTile);
-                    //yield return new WaitUntil(() => moveToNewLocation.ActionResolved() == true);
+                    // Set our current tile to be occupied, so other characters cant stack ontop of it.                    
+                    characterMoved.TileCurrentlyOn.SetTileAsOccupiedByEntity(characterMoved);
+                    // Check for events related to moving to a new location(overwatch, camoflage, etc)
+                    Action movedToNewLocation = OnLocationMovedTo(characterMoved);
+                    // wait until these events (if any) are resolved
+                    yield return new WaitUntil(() => movedToNewLocation.ActionResolved() == true);
                     Debug.Log("Final point reached, movement finished");
                     characterMoved.myAnimator.SetTrigger("Idle");
                     hasCompletedMovement = true;
@@ -125,11 +132,13 @@ public class MovementLogic : Singleton<MovementLogic>
     }
     public IEnumerator TeleportEntityCoroutine(LivingEntity target, TileScript destination)
     {
-        LevelManager.Instance.SetTileAsUnoccupied(target.TileCurrentlyOn);
+        target.TileCurrentlyOn.SetTileAsUnoccupiedByEntity();
+        //LevelManager.Instance.SetTileAsUnoccupiedByEntity(target.TileCurrentlyOn);
         target.GridPosition = destination.GridPosition;
         target.TileCurrentlyOn = destination;
         target.transform.position = destination.WorldPosition;
-        LevelManager.Instance.SetTileAsOccupied(destination);
+        //LevelManager.Instance.SetTileAsOccupiedByEntity(destination);
+        destination.SetTileAsOccupiedByEntity(target);
         yield return null;
     }
 
@@ -177,7 +186,7 @@ public class MovementLogic : Singleton<MovementLogic>
             // This is determined looking at the next tile, and checking if it contains an enemy on it already.
             foreach (TileScript tile in SortedList)
             {
-                if (tile.isEmpty && tile.isWalkable)
+                if (tile.CanBeOccupied())
                 {
                     finalDestination = tile;
                 }
@@ -219,7 +228,7 @@ public class MovementLogic : Singleton<MovementLogic>
 
             foreach (TileScript tile in SortedList)
             {
-                if (tile.isEmpty && tile.isWalkable)
+                if (tile.CanBeOccupied())
                 {
                     finalDestination = tile;
                 }
@@ -237,11 +246,13 @@ public class MovementLogic : Singleton<MovementLogic>
             }
 
 
-            LevelManager.Instance.SetTileAsUnoccupied(target.TileCurrentlyOn);
-            target.GridPosition = finalDestination.GridPosition;
+            //LevelManager.Instance.SetTileAsUnoccupiedByEntity(target.TileCurrentlyOn);
+            target.TileCurrentlyOn.SetTileAsUnoccupiedByEntity();
+;           target.GridPosition = finalDestination.GridPosition;
             target.TileCurrentlyOn = finalDestination;
             target.transform.position = finalDestination.WorldPosition;
-            LevelManager.Instance.SetTileAsOccupied(finalDestination);
+            //LevelManager.Instance.SetTileAsOccupiedByEntity(finalDestination);
+            finalDestination.SetTileAsOccupiedByEntity(target);
         }
 
         // East
@@ -270,7 +281,7 @@ public class MovementLogic : Singleton<MovementLogic>
             // This is determined looking at the next tile, and checking if it contains an enemy on it already.
             foreach (TileScript tile in SortedList)
             {
-                if (tile.isEmpty && tile.isWalkable)
+                if (tile.CanBeOccupied())
                 {
                     finalDestination = tile;
                 }
@@ -315,7 +326,7 @@ public class MovementLogic : Singleton<MovementLogic>
             // This is determined looking at the next tile, and checking if it contains an enemy on it already.
             foreach (TileScript tile in tilesOnPath)
             {
-                if (tile.isEmpty && tile.isWalkable)
+                if (tile.CanBeOccupied())
                 {
                     finalDestination = tile;
                 }
@@ -374,7 +385,7 @@ public class MovementLogic : Singleton<MovementLogic>
             // This is determined looking at the next tile, and checking if it contains an enemy on it already.
             foreach (TileScript tile in tilesOnPath)
             {
-                if (tile.isEmpty && tile.isWalkable)
+                if (tile.CanBeOccupied())
                 {
                     finalDestination = tile;
                 }
@@ -433,7 +444,7 @@ public class MovementLogic : Singleton<MovementLogic>
             // This is determined looking at the next tile, and checking if it contains an enemy on it already.
             foreach (TileScript tile in tilesOnPath)
             {
-                if (tile.isEmpty && tile.isWalkable)
+                if (tile.CanBeOccupied())
                 {
                     finalDestination = tile;
                 }
@@ -492,7 +503,7 @@ public class MovementLogic : Singleton<MovementLogic>
             // This is determined looking at the next tile, and checking if it contains an enemy on it already.
             foreach (TileScript tile in tilesOnPath)
             {
-                if (tile.isEmpty && tile.isWalkable)
+                if (tile.CanBeOccupied())
                 {
                     finalDestination = tile;
                 }
@@ -551,7 +562,7 @@ public class MovementLogic : Singleton<MovementLogic>
             // This is determined looking at the next tile, and checking if it contains an enemy on it already.
             foreach (TileScript tile in tilesOnPath)
             {
-                if (tile.isEmpty && tile.isWalkable)
+                if (tile.CanBeOccupied())
                 {
                     finalDestination = tile;
                 }
@@ -569,12 +580,14 @@ public class MovementLogic : Singleton<MovementLogic>
             }
         }
 
-        LevelManager.Instance.SetTileAsUnoccupied(target.TileCurrentlyOn);
+        //LevelManager.Instance.SetTileAsUnoccupiedByEntity(target.TileCurrentlyOn);
+        target.TileCurrentlyOn.SetTileAsUnoccupiedByEntity();
         target.GridPosition = finalDestination.GridPosition;
         target.TileCurrentlyOn = finalDestination;
         //target.transform.position = finalDestination.WorldPosition;
         StartCoroutine(KnockBackEntityCoroutine(target, finalDestination.WorldPosition));
-        LevelManager.Instance.SetTileAsOccupied(finalDestination);
+        //LevelManager.Instance.SetTileAsOccupiedByEntity(finalDestination);
+        finalDestination.SetTileAsOccupiedByEntity(target);
 
 
         Debug.Log("Tiles on path: " + tilesOnPath.Count.ToString());
@@ -598,25 +611,21 @@ public class MovementLogic : Singleton<MovementLogic>
         }
     }
 
-    public Action OnLocationMovedTo(LivingEntity character, TileScript newLocation, TileScript previousLocation)
+    public Action OnLocationMovedTo(LivingEntity characterMoved)
     {
         Debug.Log("OnLocationMovedToCalled() called....");
         Action action = new Action();
-        StartCoroutine(OnLocationMovedToCoroutine(character, newLocation, previousLocation,action));
+        StartCoroutine(OnLocationMovedToCoroutine(characterMoved, action));
         return action;
     }
 
-    public IEnumerator OnLocationMovedToCoroutine(LivingEntity character, TileScript newLocation, TileScript previousLocation, Action action)
+    public IEnumerator OnLocationMovedToCoroutine(LivingEntity characterMoved, Action action)
     {
-        Debug.Log("OnLocationMovedToCalledCoroutine() called....");
-        //TileScript previousLocation = character.TileCurrentlyOn;
-        //SetCharacterLocation(character, newLocation);
-        // check for free strikes
-        //Action freeStrikeEvents = ResolveFreeStrikes(character, previousLocation, newLocation);
-        //yield return new WaitUntil(() => freeStrikeEvents.ActionResolved() == true);
-        //PositionLogic.Instance.CheckForFlanking();
-        action.actionResolved = true;    
-        yield return null;
+        Debug.Log("OnLocationMovedToCalledCoroutine() called....");        
+        PositionLogic.Instance.CheckForCamoflage(characterMoved);
+        Action overwatchCheck = CheckAndResolveOverwatch(characterMoved);
+        yield return new WaitUntil(() => overwatchCheck.ActionResolved() == true);
+        action.actionResolved = true;           
         
     }
 
@@ -627,6 +636,43 @@ public class MovementLogic : Singleton<MovementLogic>
         Action action = new Action();
         StartCoroutine(ResolveFreeStrikesCoroutine(characterMoved, action, previousLocation, newLocation));
         return action;
+    }
+
+    public Action CheckAndResolveOverwatch(LivingEntity characterMoved)
+    {
+        Action action = new Action();
+        StartCoroutine(CheckAndResolveOverwatchCoroutine(characterMoved, action));
+        return action;
+    }
+
+    public IEnumerator CheckAndResolveOverwatchCoroutine(LivingEntity characterMoved, Action action)
+    {
+        List<LivingEntity> enemiesWithOverwatch = new List<LivingEntity>();
+
+        // Filter a list of enemies
+        foreach (LivingEntity entity in LivingEntityManager.Instance.allLivingEntities)
+        {
+            if (CombatLogic.Instance.IsTargetFriendly(characterMoved, entity) == false &&
+                entity.myPassiveManager.Overwatch)
+            {
+                enemiesWithOverwatch.Add(entity);
+            }
+        }
+
+        foreach(LivingEntity entity in enemiesWithOverwatch)
+        {          
+                // if there is LoS AND the attacker actually has a ranged weapon AND the character moving is in range of the attackers ranged weapon
+                if (PositionLogic.Instance.IsThereLosFromAtoB(entity.TileCurrentlyOn, characterMoved.TileCurrentlyOn) &&
+                    entity.myRangedWeapon != null &&
+                    entity.IsTargetInRange(characterMoved, entity.myRangedWeapon.weaponRange))
+                {
+                    // All conditions for an overwatch attack have been met, perform an overwatch attack
+                    Action overwatchAction = AbilityLogic.Instance.PerformOverwatchShot(entity, characterMoved);
+                    yield return new WaitUntil(() => overwatchAction.ActionResolved() == true);
+                }            
+        }
+
+        action.actionResolved = true;
     }
 
     public IEnumerator ResolveFreeStrikesCoroutine(LivingEntity characterMoved, Action action, TileScript previousLocation, TileScript newLocation)

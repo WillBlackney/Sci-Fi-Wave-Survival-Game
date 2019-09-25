@@ -48,7 +48,7 @@ public class Hover : Singleton<Hover>
     public void Deactivate()
     {
         this.spriteRenderer.enabled = false;
-        GameManager.Instance.ClickedButton = null;
+        DefenderPanelManager.Instance.ClickedDefender = null;
     }
 
     public void SetPosition(Vector3 position)

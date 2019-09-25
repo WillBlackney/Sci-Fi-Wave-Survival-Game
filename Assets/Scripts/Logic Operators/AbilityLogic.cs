@@ -77,6 +77,50 @@ public class AbilityLogic : MonoBehaviour
         action.actionResolved = true;        
     }
 
+    // Overwatch ATTACK
+    public Action PerformOverwatchShot(LivingEntity attacker, LivingEntity victim)
+    {
+        Action action = new Action();
+        StartCoroutine(PerformOverwatchShotCoroutine(attacker, victim, action));
+        return action;
+    }
+    public IEnumerator PerformOverwatchShotCoroutine(LivingEntity attacker, LivingEntity victim, Action action)
+    {
+        StartCoroutine(VisualEffectManager.Instance.CreateStatusEffect(attacker.transform.position, "Overwatch!", false));
+        attacker.myPassiveManager.ModifyOverwatch(-1);
+        yield return new WaitForSeconds(1f);
+        Ability shoot = attacker.mySpellBook.GetAbilityByName("Shoot");
+        attacker.StartCoroutine(attacker.AttackMovement(victim));
+
+        bool attackSuccesful = CombatLogic.Instance.CalculateIfAttackHitOrMiss(attacker, victim);
+
+        if (attackSuccesful)
+        {
+            CombatLogic.Instance.HandleDamage(CombatLogic.Instance.CalculateDamage(WeaponLogic.Instance.CalculateRandomWeaponDamageValue(attacker.myRangedWeapon), victim, attacker, shoot.abilityDamageType), attacker, victim);
+        }
+        else
+        {
+            // TO DO IN FUTURE: method here should be something like CombatLogic.Instance.HandleMiss()
+            StartCoroutine(VisualEffectManager.Instance.CreateStatusEffect(victim.transform.position, "Miss!", false));
+        }       
+        
+        yield return new WaitForSeconds(1f);
+        action.actionResolved = true;
+    }
+
+    // Throw Hand Grenade
+    public void PerformThrowHandGrenade(LivingEntity attacker, TileScript destination)
+    {
+        StartCoroutine(PerformThrowHandGrenadeCoroutine(attacker, destination));
+    }
+    public IEnumerator PerformThrowHandGrenadeCoroutine(LivingEntity attacker, TileScript destination)
+    {
+        Ability throwHandGrenade = attacker.mySpellBook.GetAbilityByName("Throw Hand Grenade");
+        CombatLogic.Instance.CreateAoEAttackEvent(attacker, throwHandGrenade, destination, throwHandGrenade.abilitySecondaryValue, false, true);
+        OnAbilityUsed(throwHandGrenade, attacker);
+        yield return null;
+    }
+
     //Strike
     public void PerformStrike(LivingEntity attacker, LivingEntity victim)
     {
@@ -128,12 +172,41 @@ public class AbilityLogic : MonoBehaviour
     {
         StartCoroutine(PerformFireBallCoroutine(attacker, victim));
     }
+    
     public IEnumerator PerformFireBallCoroutine(LivingEntity attacker, LivingEntity victim)
     {
         Ability fireball = attacker.mySpellBook.GetAbilityByName("Fire Ball");
         attacker.StartCoroutine(attacker.AttackMovement(victim));
         CombatLogic.Instance.HandleDamage(CombatLogic.Instance.CalculateDamage(fireball.abilityPrimaryValue, victim, attacker, fireball.abilityDamageType), attacker, victim);
         OnAbilityUsed(fireball, attacker);
+        yield return null;
+    }
+
+    // Dig in
+    public void PerformDigIn(LivingEntity caster)
+    {
+        StartCoroutine(PerformDigInCoroutine(caster));
+    }
+
+    public IEnumerator PerformDigInCoroutine(LivingEntity caster)
+    {
+        Ability digIn = caster.mySpellBook.GetAbilityByName("Dig In");
+        caster.myPassiveManager.ModifyEntrenched(1);
+        OnAbilityUsed(digIn, caster);
+        yield return null;
+    }
+
+    // Overwatch
+    public void PerformOverwatch(LivingEntity caster)
+    {
+        StartCoroutine(PerformOverwatchCoroutine(caster));
+    }
+
+    public IEnumerator PerformOverwatchCoroutine(LivingEntity caster)
+    {
+        Ability overwatch = caster.mySpellBook.GetAbilityByName("Overwatch");
+        caster.myPassiveManager.ModifyOverwatch(1);
+        OnAbilityUsed(overwatch, caster);
         yield return null;
     }
 

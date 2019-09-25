@@ -388,6 +388,18 @@ public class PositionLogic : Singleton<PositionLogic>
     }
     #endregion
 
+    // Overwatch + Camoflage + On tile moved on checking
+    public void CheckForCamoflage(LivingEntity entity)
+    {
+        if(entity.TileCurrentlyOn.myTileType == TileScript.TileType.Grass && entity.isCamoflaged == false)
+        {
+            entity.ApplyCamoflage();
+        }
+        else if (entity.TileCurrentlyOn.myTileType != TileScript.TileType.Grass && entity.isCamoflaged)
+        {
+            entity.RemoveCamoflage();
+        }
+    }
     // Legacy Methods
     #region
     public List<TileScript> GetTargetsFrontArcTiles(LivingEntity character)

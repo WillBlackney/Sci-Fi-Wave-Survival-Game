@@ -70,11 +70,13 @@ public class Enemy : LivingEntity
                 {
                     GridPosition = path.Peek().GridPosition;
                     // Free up the tile we were standing on before we moved
-                    LevelManager.Instance.SetTileAsUnoccupied(TileCurrentlyOn);
+                    //LevelManager.Instance.SetTileAsUnoccupiedByEntity(TileCurrentlyOn);
+                    TileCurrentlyOn.SetTileAsUnoccupiedByEntity();
                     // Set our current tile to the tile we ended up at the end of the move
                     TileCurrentlyOn = LevelManager.Instance.GetTileFromPointReference(GridPosition);
                     // Set our current tile to be occupied, so other characters cant stack ontop of it.
-                    LevelManager.Instance.SetTileAsOccupied(TileCurrentlyOn);
+                    //LevelManager.Instance.SetTileAsOccupiedByEntity(TileCurrentlyOn);
+                    TileCurrentlyOn.SetTileAsOccupiedByEntity(this);
                     destination = path.Pop().WorldPosition;
                     Debug.Log("Remaining tiles on this movement path: " + path.Count);
                 }
@@ -85,11 +87,13 @@ public class Enemy : LivingEntity
                     )
                 {
                     // Free up the tile we were standing on before we moved
-                    LevelManager.Instance.SetTileAsUnoccupied(TileCurrentlyOn);
+                    //LevelManager.Instance.SetTileAsUnoccupiedByEntity(TileCurrentlyOn);
+                    TileCurrentlyOn.SetTileAsUnoccupiedByEntity();
                     // Set our current tile to the tile we ended up at the end of the move
                     TileCurrentlyOn = LevelManager.Instance.GetTileFromPointReference(GridPosition);
                     // Set our current tile to be occupied, so other characters cant stack ontop of it.
-                    LevelManager.Instance.SetTileAsOccupied(TileCurrentlyOn);
+                    //LevelManager.Instance.SetTileAsOccupiedByEntity(TileCurrentlyOn);
+                    TileCurrentlyOn.SetTileAsOccupiedByEntity(this);
                     
                     Debug.Log("Final point reached, movement finished");
                     hasCompletedMovement = true;
@@ -378,7 +382,7 @@ public class Enemy : LivingEntity
         
         foreach (TileScript tile in tiles)
         {
-            if(tile.isEmpty && tile.isWalkable)
+            if (tile.CanBeOccupied()) 
             {
                 float distanceFromEnemy = Vector2.Distance(tile.gameObject.transform.position, transform.position);
                 if (distanceFromEnemy < minimumDistance)

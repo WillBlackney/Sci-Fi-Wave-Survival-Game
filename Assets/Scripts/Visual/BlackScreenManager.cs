@@ -84,8 +84,13 @@ public class BlackScreenManager : Singleton<BlackScreenManager>
             canvasGroup.alpha += 0.02f * speed;
             yield return new WaitForEndOfFrame();
         }
-        SetSortingLayer(behindEverything);
-        SetActive(false);
+
+        if(EventManager.Instance.gameOverEventStarted == false)
+        {
+            SetSortingLayer(behindEverything);
+            SetActive(false);
+        }        
+        
         action.actionResolved = true;        
     }
 

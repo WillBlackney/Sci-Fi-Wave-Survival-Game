@@ -471,7 +471,7 @@ public class LevelManager : Singleton<LevelManager>
         foreach (TileScript tile in tiles)
         {
             float distancefromTileFrom = Vector2.Distance(tile.gameObject.transform.position, transform.position);
-            if (distancefromTileFrom < minimumDistance && tile.isEmpty && tile.isWalkable)
+            if (distancefromTileFrom < minimumDistance && tile.CanBeOccupied())
             {
                 closestTile = tile;
                 minimumDistance = distancefromTileFrom;
@@ -499,7 +499,7 @@ public class LevelManager : Singleton<LevelManager>
         foreach (TileScript tile in tiles)
         {
             float distancefromTileFrom = Vector2.Distance(tile.gameObject.transform.position, transform.position);
-            if (distancefromTileFrom > minimumDistance && tile.isEmpty && tile.isWalkable)
+            if (distancefromTileFrom > minimumDistance && tile.CanBeOccupied())
             {
                 furthestTile = tile;
                 minimumDistance = distancefromTileFrom;
@@ -658,16 +658,20 @@ public class LevelManager : Singleton<LevelManager>
 
     // Set Tile State
     #region
-    public void SetTileAsOccupied(TileScript tile)
+        /*
+    public void SetTileAsOccupiedByEntity(TileScript tile, LivingEntity entity)
     {
         Debug.Log("Tile " + tile.GridPosition.X + ", " + tile.GridPosition.Y + " is now occupied");
-        tile.isEmpty = false;
+        tile.myEntity = entity;
+        //tile.isEmpty = false;
     }
-    public void SetTileAsUnoccupied(TileScript tile)
+    public void SetTileAsUnoccupiedByEntity(TileScript tile)
     {
-        Debug.Log("Tile " + tile.GridPosition.X + ", " + tile.GridPosition.Y + " is now occupied");
-        tile.isEmpty = true;
+        Debug.Log("Tile " + tile.GridPosition.X + ", " + tile.GridPosition.Y + " is now unoccupied");
+        tile.myEntity = null;
+        //tile.isEmpty = true;
     }
+    */
     #endregion
 
 

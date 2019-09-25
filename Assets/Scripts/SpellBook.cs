@@ -62,6 +62,9 @@ public class SpellBook : MonoBehaviour
     public bool KnowsBless;
     public bool KnowsSiphonLife;
     public bool KnowsChaosBolt;
+    public bool KnowsThrowHandGrenade;
+    public bool KnowsDigIn;
+    public bool KnowsOverwatch;
 
     public void InitializeSetup()
     {
@@ -343,6 +346,9 @@ public class SpellBook : MonoBehaviour
         {
             LearnMove();
             LearnShoot();
+            LearnDigIn();
+            LearnThrowHandGrenade();
+            LearnOverwatch();
             
         }
         
@@ -618,6 +624,55 @@ public class SpellBook : MonoBehaviour
             EnemyLearnAbility("Shoot");
         }
 
+    }
+
+    public void LearnOverwatch()
+    {
+        KnowsOverwatch = true;
+        Enemy enemy = myLivingEntity.GetComponent<Enemy>();
+        Defender defender = myLivingEntity.GetComponent<Defender>();
+
+        if (defender)
+        {
+            DefenderLearnAbility("Overwatch");
+        }
+
+        else if (enemy)
+        {
+            EnemyLearnAbility("Overwatch");
+        }
+    }
+    public void LearnDigIn()
+    {
+        KnowsDigIn = true;
+        Enemy enemy = myLivingEntity.GetComponent<Enemy>();
+        Defender defender = myLivingEntity.GetComponent<Defender>();
+
+        if (defender)
+        {
+            DefenderLearnAbility("Dig In");
+        }
+
+        else if (enemy)
+        {
+            EnemyLearnAbility("Dig In");
+        }
+    }
+    public void LearnThrowHandGrenade()
+    {
+        KnowsThrowHandGrenade = true;
+        Enemy enemy = myLivingEntity.GetComponent<Enemy>();
+        Defender defender = myLivingEntity.GetComponent<Defender>();
+
+        if (defender)
+        {
+            DefenderLearnAbility("Throw Hand Grenade");
+        }
+
+        else if (enemy)
+        {
+            EnemyLearnAbility("Throw Hand Grenade");
+        }
     }
 
     public void LearnRapidFire()

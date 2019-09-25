@@ -5,17 +5,28 @@ using TMPro;
 
 public class TurnManager : Singleton<TurnManager>
 {
-    [Header("Turn Notifier Properties + Components")]
+    [Header("Component References")]
     public TextMeshProUGUI whoseTurnText;
+    public TextMeshProUGUI playerCurrentTurnText;
     public CanvasGroup visualParentCG;
     public GameObject startPos;
     public GameObject endPos;
     public GameObject middlePos;
 
-    public bool currentlyPlayersTurn = false;
-
+    [Header("Properties")]
+    public bool currentlyPlayersTurn;
     public int playerTurnCount = 0;
     public int enemyTurnCount = 0;
+
+    public void ModifyPlayerTurnCount(int turnCountGainedOrLost)
+    {
+        playerTurnCount += turnCountGainedOrLost;
+        UpdateCurrentPlayerTurnText(playerTurnCount);
+    }
+    public void UpdateCurrentPlayerTurnText(int newTurnCount)
+    {
+        playerCurrentTurnText.text = newTurnCount.ToString();
+    }
 
     public bool playerOnTurnEndEventsResolved;
     public bool PlayerOnTurnEndEventsResolved()
@@ -30,7 +41,6 @@ public class TurnManager : Singleton<TurnManager>
             return false;
         }
     }
-
     public void OnEndTurnButtonClicked()
     {
         StartCoroutine(OnEndTurnButtonClickedCoroutine());
@@ -81,15 +91,17 @@ public class TurnManager : Singleton<TurnManager>
 
     public IEnumerator StartPlayerTurn()
     {
-        playerTurnCount++;
+        ModifyPlayerTurnCount(1);
+        PlayerDataManager.Instance.GenerateIncomeOnPlayerTurnStart();
 
         // Spawn a new enemy wave every 5 turns
-        if(playerTurnCount == 5 ||
-            playerTurnCount == 10 ||
-            playerTurnCount == 15 ||
-            playerTurnCount == 20 ||
-            playerTurnCount == 25)
+        if(playerTurnCount == 3 ||
+            playerTurnCount == 6 ||
+            playerTurnCount == 9 ||
+            playerTurnCount == 12 ||
+            playerTurnCount == 15)
         {
+            // to do in future: camera should move to focus on the area where the enemies spawned to show player
             EnemySpawner.Instance.SpawnEnemyWave();
             yield return new WaitForSeconds(2f);
         }
@@ -134,7 +146,7 @@ public class TurnManager : Singleton<TurnManager>
 
     public void ResetTurnManagerPropertiesOnCombatStart()
     {
-        playerTurnCount = 0;
+        ModifyPlayerTurnCount(-playerTurnCount);
         enemyTurnCount = 0;
     }
 

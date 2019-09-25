@@ -48,7 +48,7 @@ public static class AStar
                 {
                     Point neighbourPos = new Point(currentNode.GridPosition.X - x, currentNode.GridPosition.Y - y);
 
-                    if (LevelManager.Instance.InBounds(neighbourPos) && LevelManager.Instance.Tiles[neighbourPos].isWalkable && LevelManager.Instance.Tiles[neighbourPos].isEmpty && neighbourPos != currentNode.GridPosition)
+                    if (LevelManager.Instance.InBounds(neighbourPos) && LevelManager.Instance.Tiles[neighbourPos].CanBeMovedThrough() &&  neighbourPos != currentNode.GridPosition)
                     {
                         int gCost = 0;
                         if (Math.Abs(x - y) == 1)
@@ -120,11 +120,11 @@ public static class AStar
         Point first = new Point(currentNode.GridPosition.X + direction.X, currentNode.GridPosition.Y);
         Point second = new Point(currentNode.GridPosition.X, currentNode.GridPosition.Y + direction.Y);
 
-        if(LevelManager.Instance.InBounds(first) && !LevelManager.Instance.Tiles[first].isWalkable)
+        if(LevelManager.Instance.InBounds(first) && !LevelManager.Instance.Tiles[first].CanBeMovedThrough())
         {
             return false;
         }
-        if(LevelManager.Instance.InBounds(second) && !LevelManager.Instance.Tiles[second].isWalkable)
+        if(LevelManager.Instance.InBounds(second) && !LevelManager.Instance.Tiles[second].CanBeMovedThrough())
         {
             return false;
         }

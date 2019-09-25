@@ -49,6 +49,8 @@ public class StatusIconLibrary : MonoBehaviour
         CreateMagicImmunityIconData();
         CreatePhysicalImmunityIconData();
         CreateFlankedIconData();
+        CreateEntrenchedIconData();
+        CreateOverwatchIconData();
     }
 
     public StatusIcon GetStatusIconByName(string name)
@@ -409,6 +411,25 @@ public class StatusIconLibrary : MonoBehaviour
         allIcons.Add(flanked);
     }
 
+    public void CreateEntrenchedIconData()
+    {
+        StatusIcon entrenched = gameObject.AddComponent<StatusIcon>();
+        entrenched.statusImage = entrenchedImage;
+        entrenched.statusName = entrenchedStatusName;
+        entrenched.statusDescription = entrenchedStatusDescription;
+        entrenched.statusStacks = entrenchedStatusStacks;
+        allIcons.Add(entrenched);
+    }
+    public void CreateOverwatchIconData()
+    {
+        StatusIcon overwatch = gameObject.AddComponent<StatusIcon>();
+        overwatch.statusImage = overwatchImage;
+        overwatch.statusName = overwatchStatusName;
+        overwatch.statusDescription = overwatchStatusDescription;
+        overwatch.statusStacks = overwatchStatusStacks;
+        allIcons.Add(overwatch);
+    }
+
 
     [Header("Knockdown Icon Data")]
     public Sprite knockDownImage;
@@ -619,5 +640,17 @@ public class StatusIconLibrary : MonoBehaviour
     public string flankedStatusName;
     public string flankedStatusDescription;
     public int flankedStatusStacks;
+
+    [Header("Entrenched Icon Data")]
+    public Sprite entrenchedImage;
+    public string entrenchedStatusName;
+    public string entrenchedStatusDescription;
+    public int entrenchedStatusStacks;
+
+    [Header("Overwatch Icon Data")]
+    public Sprite overwatchImage;
+    public string overwatchStatusName;
+    public string overwatchStatusDescription;
+    public int overwatchStatusStacks;
 
 }
