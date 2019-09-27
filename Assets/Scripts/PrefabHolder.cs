@@ -10,6 +10,7 @@ public class PrefabHolder : Singleton<PrefabHolder>
 
     [Header("Defender Prefabs")]
     public GameObject spaceShipPrefab;
+    public GameObject riflemanPrefab;
     public GameObject warriorPrefab;
     public GameObject magePrefab;
     public GameObject priestPrefab;

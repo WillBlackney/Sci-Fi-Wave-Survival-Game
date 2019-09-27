@@ -4,29 +4,14 @@ using UnityEngine;
 
 public class EnemySpawner : Singleton<EnemySpawner>
 {
-    [Header("Enemy Encounter Lists")]
-    public List<EnemyWaveSO> basicEnemyWaves;
-    public List<EnemyWaveSO> eliteEnemyWaves;
-    public List<EnemyWaveSO> bossEnemyWaves;    
-    public List<TileScript> spawnLocations;
+    [Header("Enemy Wave SO's")]
+    public List<EnemyWaveSO> allWaves;
 
+    [Header("Properties")]
     public List<TileScript> waveSpawnCentrePoints;
-    
-    
-    public EnemyWaveSO GetRandomWaveSO(List<EnemyWaveSO> enemyWaves)
-    {
-        int randomIndex = Random.Range(0, enemyWaves.Count);
-        return enemyWaves[randomIndex];
-    }
-    public void SpawnEnemyWave(string enemyType = "Basic")
-    {
-        TileScript spawnCentrePoint = GetRandomEnemyWaveCentrePoint();
-        List<TileScript> possibleSpawnLocations = GetValidSpawnLocationsWithinRangeOfCentrePoint(spawnCentrePoint, 5);
-        InstantiateEnemiesFromWave(GetRandomWaveSO(basicEnemyWaves), possibleSpawnLocations);
-               
-    }    
 
     // Spawn location related
+    #region
     public void PopulateEnemyWaveCentrePoints()
     {
         waveSpawnCentrePoints.AddRange(LevelManager.Instance.GetTilesOnMapEdges());
@@ -41,6 +26,10 @@ public class EnemySpawner : Singleton<EnemySpawner>
         List<TileScript> validSpawnLocations = LevelManager.Instance.GetValidMoveableTilesWithinRange(range, centrePoint);
         return validSpawnLocations;
     }
+    #endregion
+
+    // Spawning + Instantiation
+    #region
     public void InstantiateEnemiesFromWave(EnemyWaveSO enemyWave, List<TileScript> spawnLocations)
     {
         foreach (EnemyGroup enemyGroup in enemyWave.enemyGroups)
@@ -56,5 +45,67 @@ public class EnemySpawner : Singleton<EnemySpawner>
             newEnemy.InitializeSetup(spawnLocation.GridPosition, spawnLocation);
         }
     }
+    public void SpawnEnemyWave(EnemyWaveSO enemyWave)
+    {
+        TileScript spawnCentrePoint = GetRandomEnemyWaveCentrePoint();
+        List<TileScript> possibleSpawnLocations = GetValidSpawnLocationsWithinRangeOfCentrePoint(spawnCentrePoint, 5);
+        InstantiateEnemiesFromWave(enemyWave, possibleSpawnLocations);
+
+    }
+    public EnemyWaveSO GetRandomWave(EnemyWaveSO.WaveType waveType, int level)
+    {
+        List<EnemyWaveSO> possibleWaves = new List<EnemyWaveSO>();
+
+        foreach (EnemyWaveSO wave in allWaves)
+        {
+            if (wave.waveType == waveType && wave.level == level)
+            {
+                possibleWaves.Add(wave);
+            }
+        }
+
+        int randomIndex = Random.Range(0, possibleWaves.Count);
+        return possibleWaves[randomIndex];
+
+    }
+    public void SpawnNextWave()
+    {
+        List<int> levelOneTurns = new List<int> { 0, 3, 6 };
+        List<int> levelTwoTurns = new List<int> { 9, 12, 15 };
+        List<int> eliteTurns = new List<int> { 6, 15, 24, 33 };
+
+        int level = 0;
+        EnemyWaveSO.WaveType waveType;
+
+        // Set difficulty level based on player current turn count
+        if (levelOneTurns.Contains(TurnManager.Instance.playerTurnCount))
+        {
+            level = 1;
+        }
+        else if (levelTwoTurns.Contains(TurnManager.Instance.playerTurnCount))
+        {
+            level = 2;
+        }
+
+        // Set wave type based on player current turn count
+        if (eliteTurns.Contains(TurnManager.Instance.playerTurnCount))
+        {
+            waveType = EnemyWaveSO.WaveType.Elite;
+        }
+        else
+        {
+            waveType = EnemyWaveSO.WaveType.Basic;
+        }
+
+        // stop spawning if this not a correct turn for spawning
+        if(level == 0)
+        {
+            return;
+        }
+
+        SpawnEnemyWave(GetRandomWave(waveType, level));
+
+    }
+    #endregion
 
 }

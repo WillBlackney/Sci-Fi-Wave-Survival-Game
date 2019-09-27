@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bd1bf0b56234af4c808b8522b29dcbf, type: 3}
+  m_Name: Test Wave 2
+  m_EditorClassIdentifier: 
+  level: 1
+  waveType: 1
+  enemyGroups:
+  - enemyList:
+    - {fileID: 5257032101743427276, guid: 13e47534d33f7f44b9c413884c1643fa, type: 3}
+  - enemyList:
+    - {fileID: 5210104506958411162, guid: 43d1cbc02853f3648923b4d6d1c2e968, type: 3}
+  - enemyList:
+    - {fileID: 595198161559585954, guid: 6b40d210f3090ba42889eee79d949dd3, type: 3}

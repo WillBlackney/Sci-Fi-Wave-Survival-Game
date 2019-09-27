@@ -46,11 +46,7 @@ public class DefenderManager : Singleton<DefenderManager>
         }
         CameraManager.Instance.ClearCameraLookAtTarget();
         LevelManager.Instance.UnhighlightAllTiles();
-    }
-
-   
-
-    
+    }    
 
     public void DestroyAllDefenders()
     {
@@ -80,6 +76,17 @@ public class DefenderManager : Singleton<DefenderManager>
 
         GameObject spaceShip = Instantiate(PrefabHolder.Instance.spaceShipPrefab, defendersParent.transform);
         spaceShip.GetComponent<Defender>().InitializeSetup(spawnLocation.GridPosition, spawnLocation);
+    }
+
+    public void CreateStartingDefenders()
+    {
+        List<TileScript> spawnLocations = LevelManager.Instance.GetDefenderSpawnLocations();
+
+        foreach(TileScript tile in spawnLocations)
+        {
+            GameObject newRifleman = Instantiate(PrefabHolder.Instance.riflemanPrefab, defendersParent.transform);
+            newRifleman.GetComponent<Defender>().InitializeSetup(tile.GridPosition, tile);
+        }
     }
 
    

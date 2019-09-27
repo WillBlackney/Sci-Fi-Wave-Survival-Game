@@ -23,6 +23,8 @@ public class LevelManager : Singleton<LevelManager>
     public Dictionary<Point, TileScript> Tiles { get; set; }
 
     public List<TileScript> HighlightedTiles = new List<TileScript>();
+
+    public List<TileScript> spaceShipControlZone;
     public float TileSize
     {
         get { return tilePrefabs[0].GetComponent<SpriteRenderer>().sprite.bounds.size.x; }
@@ -69,6 +71,10 @@ public class LevelManager : Singleton<LevelManager>
         //FindObjectOfType<CameraMovement>().cinemachineCamera.transform.position = new Vector3(GetWorldCentreTile().WorldPosition.x, GetWorldCentreTile().WorldPosition.y, -10);
 
     }	
+    public void CreateSpaceShipControlZone()
+    {
+        spaceShipControlZone = GetTilesWithinRange(GlobalSettings.Instance.spaceShipControlZoneSize, GetWorldCentreTile());
+    }
     private void PlaceTile(string tileType, int x, int y, Vector3 worldStart)
     {
         int tileIndex = int.Parse(tileType);
@@ -294,9 +300,18 @@ public class LevelManager : Singleton<LevelManager>
     }
     public List<TileScript> GetTilesWithinRangeAndLoS(int range, TileScript origin)
     {
-        List<TileScript> tilesWithinRange = LevelManager.Instance.GetTilesWithinRange(range, origin, true);
+        List<TileScript> tilesWithinRange = GetTilesWithinRange(range, origin, true);
         List<TileScript> tilesWithLoS = new List<TileScript>();
 
+        for (int loopCount = 0; loopCount < tilesWithinRange.Count; loopCount++)
+        {
+            if (PositionLogic.Instance.IsThereLosFromAtoB(origin, tilesWithinRange[loopCount]))
+            {
+                tilesWithLoS.Add(tilesWithinRange[loopCount]);
+            }
+        }
+
+        /*
         foreach (TileScript tile in tilesWithinRange)
         {
             if (PositionLogic.Instance.IsThereLosFromAtoB(origin, tile))
@@ -304,6 +319,7 @@ public class LevelManager : Singleton<LevelManager>
                 tilesWithLoS.Add(tile);
             }
         }
+        */
 
         return tilesWithLoS;
     }    
@@ -457,6 +473,35 @@ public class LevelManager : Singleton<LevelManager>
         }
 
         return tilesOnNSEW;
+    }
+    public List<TileScript> GetDefenderSpawnLocations()
+    {
+        List<TileScript> tilesReturned = new List<TileScript>();
+        TileScript centreTile = GetWorldCentreTile();
+
+        foreach(TileScript tile in GetAllTilesFromCurrentLevelDictionary())
+        {
+            
+            if(
+                // North West
+                (tile.GridPosition.X == centreTile.GridPosition.X - 2 && tile.GridPosition.Y == centreTile.GridPosition.Y - 2) ||
+                // North East
+                (tile.GridPosition.X == centreTile.GridPosition.X + 2 && tile.GridPosition.Y == centreTile.GridPosition.Y - 2) ||
+                // South West
+                (tile.GridPosition.X == centreTile.GridPosition.X - 2 && tile.GridPosition.Y == centreTile.GridPosition.Y + 2) ||
+                // South East
+                (tile.GridPosition.X == centreTile.GridPosition.X + 2 && tile.GridPosition.Y == centreTile.GridPosition.Y + 2)
+                )
+            {
+                tilesReturned.Add(tile);
+            }
+        }
+
+        return tilesReturned;
+    }
+    public List<TileScript> GetSpaceShipControlZoneTile()
+    {
+        return spaceShipControlZone;
     }
     #endregion
 

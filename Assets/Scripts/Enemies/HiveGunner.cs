@@ -8,12 +8,14 @@ public class HiveGunner : Enemy
     {
         base.SetBaseProperties();
 
-        WeaponLogic.Instance.AssignWeaponToEntity(this, WeaponLibrary.Instance.GetWeaponByName("Razor Claws"));
-        WeaponLogic.Instance.AssignWeaponToEntity(this, WeaponLibrary.Instance.GetWeaponByName("Spike Rifle"));
+        WeaponLogic.Instance.AssignWeaponToEntity(this, WeaponLibrary.Instance.GetWeaponByName("Bone Nails"));
+        WeaponLogic.Instance.AssignWeaponToEntity(this, WeaponLibrary.Instance.GetWeaponByName("Bone Rifle"));
 
         mySpellBook.EnemyLearnAbility("Strike");
         mySpellBook.EnemyLearnAbility("Shoot");
         mySpellBook.EnemyLearnAbility("Move");
+
+        myPassiveManager.LearnRegeneration(2);
     }
 
     public override IEnumerator StartMyActivationCoroutine()
@@ -44,8 +46,9 @@ public class HiveGunner : Enemy
         }
 
         // Shoot
-        else if (IsTargetInRange(GetClosestDefender(),myRangedWeapon.weaponRange) &&
+        else if (IsTargetInRange(GetClosestDefender(), myRangedWeapon.weaponRange) &&
             HasEnoughAP(currentAP, shoot.abilityAPCost) &&
+            PositionLogic.Instance.IsThereLosFromAtoB(TileCurrentlyOn, GetClosestDefender().TileCurrentlyOn) &&
             IsAbilityOffCooldown(shoot.abilityCurrentCooldownTime))
         {
             SetTargetDefender(GetClosestDefender());
@@ -59,12 +62,12 @@ public class HiveGunner : Enemy
         }
 
         // Move
-        else if (IsTargetInRange(myCurrentTarget, currentMeleeRange) == false && IsAbleToMove() && HasEnoughAP(currentAP, move.abilityAPCost))
+        else if (IsTargetInRange(myCurrentTarget, myRangedWeapon.weaponRange) == false && IsAbleToMove() && HasEnoughAP(currentAP, move.abilityAPCost))
         {
             StartCoroutine(VisualEffectManager.Instance.CreateStatusEffect(transform.position, "Move", false));
             yield return new WaitForSeconds(0.5f);
 
-            TileScript destination = AILogic.GetBestValidMoveLocationBetweenMeAndTarget(this, myCurrentTarget, currentMeleeRange, currentMobility);
+            TileScript destination = AILogic.GetBestValidMoveLocationBetweenMeAndTarget(this, myCurrentTarget, myRangedWeapon.weaponRange, currentMobility);
             Action action = AbilityLogic.Instance.PerformMove(this, destination);
             yield return new WaitUntil(() => action.ActionResolved() == true);
 

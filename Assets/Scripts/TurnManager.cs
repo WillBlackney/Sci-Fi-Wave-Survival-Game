@@ -94,17 +94,11 @@ public class TurnManager : Singleton<TurnManager>
         ModifyPlayerTurnCount(1);
         PlayerDataManager.Instance.GenerateIncomeOnPlayerTurnStart();
 
-        // Spawn a new enemy wave every 5 turns
-        if(playerTurnCount == 3 ||
-            playerTurnCount == 6 ||
-            playerTurnCount == 9 ||
-            playerTurnCount == 12 ||
-            playerTurnCount == 15)
-        {
-            // to do in future: camera should move to focus on the area where the enemies spawned to show player
-            EnemySpawner.Instance.SpawnEnemyWave();
-            yield return new WaitForSeconds(2f);
-        }
+        // Spawn a new enemy wave every 3 turns
+        
+        // to do in future: camera should move to focus on the area where the enemies spawned to show player
+        EnemySpawner.Instance.SpawnNextWave();
+        // yield return new WaitForSeconds(2f);        
 
         StartCoroutine(DisplayTurnChangeNotification(true));
         yield return new WaitUntil(() => NotificationComplete() == true);

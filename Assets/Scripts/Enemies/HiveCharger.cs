@@ -2,30 +2,54 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HiveSwarmer : Enemy
+public class HiveCharger : Enemy
 {
     public override void SetBaseProperties()
     {
         base.SetBaseProperties();
 
-        WeaponLogic.Instance.AssignWeaponToEntity(this, WeaponLibrary.Instance.GetWeaponByName("Razor Claws"));
+        WeaponLogic.Instance.AssignWeaponToEntity(this, WeaponLibrary.Instance.GetWeaponByName("Bone Claws"));
 
         mySpellBook.EnemyLearnAbility("Strike");
-        mySpellBook.EnemyLearnAbility("Move");        
+        mySpellBook.EnemyLearnAbility("Move");
+        mySpellBook.EnemyLearnAbility("Charge");
+
+        myPassiveManager.LearnRegeneration(2);
     }
 
     public override IEnumerator StartMyActivationCoroutine()
     {
         Ability strike = mySpellBook.GetAbilityByName("Strike");
-        Ability move = mySpellBook.GetAbilityByName("Move");        
+        Ability move = mySpellBook.GetAbilityByName("Move");
+        Ability charge = mySpellBook.GetAbilityByName("Charge");
 
         ActionStart:
 
-        SetTargetDefender(GetClosestDefender());        
+        SetTargetDefender(GetClosestDefender());
 
         if (IsAbleToTakeActions() == false)
         {
             EndMyActivation();
+        }
+
+        // Charge
+        else if (IsAbilityOffCooldown(charge.abilityCurrentCooldownTime) &&
+            IsTargetInRange(myCurrentTarget, currentMobility) &&
+            HasEnoughAP(currentAP, charge.abilityAPCost) &&
+            IsAbleToMove()
+            )
+        {
+            TileScript destination = AILogic.GetBestValidMoveLocationBetweenMeAndTarget(this, myCurrentTarget, currentMeleeRange, currentMobility);
+
+            StartCoroutine(VisualEffectManager.Instance.CreateStatusEffect(transform.position, "Charge", false));
+            yield return new WaitForSeconds(0.5f);
+            Action action = AbilityLogic.Instance.PerformCharge(this, myCurrentTarget, destination);
+            // wait for charge event to finish
+            yield return new WaitUntil(() => action.ActionResolved() == true);
+            // brief delay between actions
+            yield return new WaitForSeconds(1f);
+            goto ActionStart;
+
         }
 
         // Strike

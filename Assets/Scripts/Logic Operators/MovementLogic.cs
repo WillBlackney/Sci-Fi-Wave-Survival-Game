@@ -659,12 +659,15 @@ public class MovementLogic : Singleton<MovementLogic>
             }
         }
 
-        foreach(LivingEntity entity in enemiesWithOverwatch)
-        {          
-                // if there is LoS AND the attacker actually has a ranged weapon AND the character moving is in range of the attackers ranged weapon
-                if (PositionLogic.Instance.IsThereLosFromAtoB(entity.TileCurrentlyOn, characterMoved.TileCurrentlyOn) &&
-                    entity.myRangedWeapon != null &&
-                    entity.IsTargetInRange(characterMoved, entity.myRangedWeapon.weaponRange))
+        foreach (LivingEntity entity in enemiesWithOverwatch)
+        {
+            // if there is LoS AND the attacker actually has a ranged weapon AND the character moving is in range of the attackers ranged weapon
+            if (PositionLogic.Instance.IsThereLosFromAtoB(entity.TileCurrentlyOn, characterMoved.TileCurrentlyOn) &&
+                entity.myRangedWeapon != null &&
+                entity.IsTargetInRange(characterMoved, entity.myRangedWeapon.weaponRange) &&
+                ((entity.myPassiveManager.HeavyWeapon && entity.myPassiveManager.Entrenched) ||
+                  entity.myPassiveManager.HeavyWeapon == false)
+                    )
                 {
                     // All conditions for an overwatch attack have been met, perform an overwatch attack
                     Action overwatchAction = AbilityLogic.Instance.PerformOverwatchShot(entity, characterMoved);

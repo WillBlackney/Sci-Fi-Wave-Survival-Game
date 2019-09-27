@@ -114,6 +114,7 @@ public class TileScript : MonoBehaviour
     private void OnMouseOver()
     {
         LevelManager.Instance.mousedOverTile = this;
+        TileCoverHover.Instance.OnNewTileMousedOver(this);
 
         // TO DO: The tile colouring is currently disabled to fix highlighting moveable tiles, fix this
         if (!EventSystem.current.IsPointerOverGameObject() && DefenderPanelManager.Instance.ClickedDefender != null)
@@ -132,7 +133,18 @@ public class TileScript : MonoBehaviour
             */
             if (Input.GetMouseButtonDown(0))
             {
-                PlaceDefender();
+                if (LevelManager.Instance.GetSpaceShipControlZoneTile().Contains(this) == false)
+                {
+                    Debug.Log("Cannot place defender: Chosen tile is outside the build zone");
+                }
+                else if (CanBeOccupied() == false)
+                {
+                    Debug.Log("Cannot place defender: Chosen tile cannot be occupied");
+                }
+                else
+                {
+                    PlaceDefender();
+                }                
             }
         }
     }
@@ -173,6 +185,10 @@ public class TileScript : MonoBehaviour
         else if (selectedDefender != null && selectedDefender.awaitingThrowHandGrenadeTarget == true)
         {
             selectedDefender.StartThrowHandGrenadeProcess(this);
+        }
+        else if (selectedDefender != null && selectedDefender.awaitingAreaSupressionTarget == true)
+        {
+            selectedDefender.StartAreaSupressionProcess(this);
         }
 
     }

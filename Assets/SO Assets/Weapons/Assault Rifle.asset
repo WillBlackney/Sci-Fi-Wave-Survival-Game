@@ -16,6 +16,6 @@ MonoBehaviour:
     type: 3}
   weaponType: 0
   weaponName: Assault Rifle
-  weaponRange: 10
+  weaponRange: 8
   weaponMinDamage: 3
   weaponMaxDamage: 5

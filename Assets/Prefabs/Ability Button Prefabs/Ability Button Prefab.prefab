@@ -150,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myLivingEntity: {fileID: 0}
   myCooldownText: {fileID: 824116617888971687}
+  myAbilityData: {fileID: 0}
   abilityImage: {fileID: 0}
   glowHighlightCG: {fileID: 5249487390225268884}
   abilityName: 
@@ -160,6 +161,8 @@ MonoBehaviour:
   abilityRange: 0
   abilityPrimaryValue: 0
   abilitySecondaryValue: 0
+  abilityAttackType: 0
+  abilityDamageType: 0
   highlightButton: 0
 --- !u!61 &2123568794060010855
 BoxCollider2D:
@@ -366,7 +369,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2947172855515694024
 RectTransform:
   m_ObjectHideFlags: 0

@@ -18,4 +18,6 @@ public class AbilityDataSO : ScriptableObject
     public int abilitySecondaryValue;
     public DamageType abilityDamageType;
     public AttackType abilityAttackType;
+    public bool usesRangedWeapon;
+    public bool usesMeleeWeapon;
 }

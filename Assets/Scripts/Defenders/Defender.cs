@@ -68,6 +68,7 @@ public class Defender : LivingEntity
     public bool awaitingSiphonLifeOrder;
     public bool awaitingChaosBoltOrder;
     public bool awaitingThrowHandGrenadeTarget;
+    public bool awaitingAreaSupressionTarget;
 
 
     // Initialization and Setup
@@ -80,9 +81,8 @@ public class Defender : LivingEntity
     }
     public override void SetBaseProperties()
     {
-        //RunSetupFromCharacterData();
-        //RunSetupFromArtifactData();
         base.SetBaseProperties();
+        myPassiveManager.RunDefenderSetup();
         myCurrentTroopCost = myBaseTroopCost;
         PlayerDataManager.Instance.ModifyCurrentTroopCount(myCurrentTroopCost);
         // Set up weapons
@@ -393,6 +393,14 @@ public class Defender : LivingEntity
         {
             OnThrowHandGrenadeButtonClicked();
         }
+        else if (abilityName == "Area Supression")
+        {
+            OnAreaSupressionButtonClicked();
+        }
+        else if (abilityName == "Dead Eye")
+        {
+            OnDeadEyeButtonClicked();
+        }
     }
     public void OnMouseDown()
     {
@@ -524,7 +532,9 @@ public class Defender : LivingEntity
         awaitingSanctityOrder = false;
         awaitingBlessOrder = false;
         awaitingSiphonLifeOrder = false;
+        awaitingThrowHandGrenadeTarget = false;        
 
+        TileCoverHover.Instance.SetVisibility(false);
         LevelManager.Instance.UnhighlightAllTiles();
 
         myCurrentTarget = null;
@@ -556,6 +566,7 @@ public class Defender : LivingEntity
         }
         Debug.Log("Move button clicked, awaiting move order");
         awaitingMoveOrder = true;
+        TileCoverHover.Instance.SetVisibility(true);
         LevelManager.Instance.HighlightTiles(LevelManager.Instance.GetValidMoveableTilesWithinRange(currentMobility, LevelManager.Instance.Tiles[GridPosition]));
     }
     public void OnStrikeButtonClicked()
@@ -604,14 +615,15 @@ public class Defender : LivingEntity
         Ability charge = mySpellBook.GetAbilityByName("Charge");
 
         if (HasEnoughAP(currentAP, charge.abilityAPCost) == false
-            || IsAbilityOffCooldown(charge.abilityCurrentCooldownTime) == false)
+            || IsAbilityOffCooldown(charge.abilityCurrentCooldownTime) == false ||
+            IsAbleToMove() == false)
         {
             return;
         }
 
         Debug.Log("Charge button clicked, awaiting charge target");
         awaitingChargeTargetOrder = true;
-        LevelManager.Instance.HighlightTiles(LevelManager.Instance.GetTilesWithinRange(charge.abilityRange, LevelManager.Instance.Tiles[GridPosition]));
+        LevelManager.Instance.HighlightTiles(LevelManager.Instance.GetTilesWithinRange(currentMobility, LevelManager.Instance.Tiles[GridPosition]));
 
     }
     public void OnGetDownButtonClicked()
@@ -741,7 +753,8 @@ public class Defender : LivingEntity
     {
         Ability shoot = mySpellBook.GetAbilityByName("Shoot");
 
-        if (HasEnoughAP(currentAP, shoot.abilityAPCost) == false || IsAbilityOffCooldown(shoot.abilityCurrentCooldownTime) == false)
+        
+        if(IsAbilityValid(shoot) == false)
         {
             return;
         }
@@ -1098,6 +1111,32 @@ public class Defender : LivingEntity
         LevelManager.Instance.HighlightTiles(LevelManager.Instance.GetTilesWithinRange(throwHandGrenade.abilityRange, LevelManager.Instance.Tiles[GridPosition], false));
 
     }
+    public void OnAreaSupressionButtonClicked()
+    {
+        Debug.Log("Area Supression button clicked");
+
+        Ability areaSupression = mySpellBook.GetAbilityByName("Area Supression");
+
+        if(IsAbilityValid(areaSupression) == false)
+        {
+            return;
+        }
+        awaitingAreaSupressionTarget = true;
+        LevelManager.Instance.HighlightTiles(LevelManager.Instance.GetTilesWithinRange(myRangedWeapon.weaponRange, LevelManager.Instance.Tiles[GridPosition], false));
+
+    }
+    public void OnDeadEyeButtonClicked()
+    {
+        Debug.Log("Area Supression button clicked");
+
+        Ability deadEye = mySpellBook.GetAbilityByName("Dead Eye");
+
+        if (IsAbilityValid(deadEye) == false)
+        {
+            return;
+        }
+        AbilityLogic.Instance.PerformDeadEye(this);
+    }
     public void OnTwinStrikeButtonClicked()
     {
         Ability twinStrike = mySpellBook.GetAbilityByName("Twin Strike");
@@ -1221,6 +1260,16 @@ public class Defender : LivingEntity
             AbilityLogic.Instance.PerformThrowHandGrenade(this, destination);
         }
     }
+
+    public void StartAreaSupressionProcess(TileScript destination)
+    {        
+        // if the selected tile is within grenade range, execute ability
+        if (LevelManager.Instance.GetTilesWithinRange(myRangedWeapon.weaponRange, TileCurrentlyOn).Contains(destination))
+        {
+            awaitingAreaSupressionTarget = false;
+            AbilityLogic.Instance.PerformAreaSupression(this, destination);
+        }
+    }
     public void StartStrikeProcess()
     {
         Ability strike = mySpellBook.GetAbilityByName("Strike");
@@ -1289,13 +1338,13 @@ public class Defender : LivingEntity
 
         Debug.Log("Defender.StartChargeLocationSettingProcess() called");
         Enemy enemyTarget = EnemyManager.Instance.selectedEnemy;
-        if (IsTargetInRange(enemyTarget, charge.abilityRange))
+        if (IsTargetInRange(enemyTarget, currentMobility))
         {
             awaitingChargeLocationOrder = true;
             awaitingChargeTargetOrder = false;
 
-            List<TileScript> tilesWithinChargeRangeOfCharacter = LevelManager.Instance.GetValidMoveableTilesWithinRange(charge.abilityRange, TileCurrentlyOn);
-            List<TileScript> tilesWithinMeleeRangeOfTarget = LevelManager.Instance.GetValidMoveableTilesWithinRange(1, enemyTarget.TileCurrentlyOn);
+            List<TileScript> tilesWithinChargeRangeOfCharacter = LevelManager.Instance.GetValidMoveableTilesWithinRange(currentMobility, TileCurrentlyOn);
+            List<TileScript> tilesWithinMeleeRangeOfTarget = LevelManager.Instance.GetValidMoveableTilesWithinRange(currentMeleeRange, enemyTarget.TileCurrentlyOn);
             List<TileScript> validChargeLocationTiles = new List<TileScript>();
 
             foreach (TileScript tile in tilesWithinMeleeRangeOfTarget)
@@ -1316,8 +1365,8 @@ public class Defender : LivingEntity
         Enemy enemyTarget = EnemyManager.Instance.selectedEnemy;
         Ability charge = mySpellBook.GetAbilityByName("Charge");
 
-        List<TileScript> tilesWithinChargeRangeOfCharacter = LevelManager.Instance.GetValidMoveableTilesWithinRange(charge.abilityRange, TileCurrentlyOn);
-        List<TileScript> tilesWithinMeleeRangeOfTarget = LevelManager.Instance.GetValidMoveableTilesWithinRange(1, enemyTarget.TileCurrentlyOn);
+        List<TileScript> tilesWithinChargeRangeOfCharacter = LevelManager.Instance.GetValidMoveableTilesWithinRange(currentMobility, TileCurrentlyOn);
+        List<TileScript> tilesWithinMeleeRangeOfTarget = LevelManager.Instance.GetValidMoveableTilesWithinRange(currentMeleeRange, enemyTarget.TileCurrentlyOn);
         List<TileScript> validChargeLocationTiles = new List<TileScript>();
 
         foreach (TileScript tile in tilesWithinMeleeRangeOfTarget)

@@ -30,7 +30,6 @@ public class WeaponLogic : Singleton<WeaponLogic>
                 {
                     entity.GetComponent<Defender>().myMeleeWeaponSlot.SetWeapon(weaponData);
                 }
-
             }
         }
 
@@ -42,6 +41,19 @@ public class WeaponLogic : Singleton<WeaponLogic>
         if(entity.myClass == LivingEntity.Class.Rifleman)
         {
             AssignWeaponToEntity(entity, WeaponLibrary.Instance.GetWeaponByName("Assault Rifle"));
+        }
+        else if (entity.myClass == LivingEntity.Class.Ranger)
+        {
+            AssignWeaponToEntity(entity, WeaponLibrary.Instance.GetWeaponByName("Shotgun"));
+            AssignWeaponToEntity(entity, WeaponLibrary.Instance.GetWeaponByName("Machete"));
+        }
+        else if (entity.myClass == LivingEntity.Class.MachineGunner)
+        {
+            AssignWeaponToEntity(entity, WeaponLibrary.Instance.GetWeaponByName("Machine Gun"));            
+        }
+        else if (entity.myClass == LivingEntity.Class.Marksman)
+        {
+            AssignWeaponToEntity(entity, WeaponLibrary.Instance.GetWeaponByName("Sniper Rifle"));
         }
     }
 

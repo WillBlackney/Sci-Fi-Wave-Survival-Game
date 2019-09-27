@@ -45,8 +45,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allWeapons:
   - {fileID: 11400000, guid: 6c623f33812059347b4f6595bf6881cc, type: 2}
+  - {fileID: 11400000, guid: 0d51c835dad883147b8e4c1bef9aba38, type: 2}
   - {fileID: 11400000, guid: 057663ac3a44a2145a51021b3abcf79f, type: 2}
+  - {fileID: 11400000, guid: e55de7dbb8c4d424bb5c059c89b2952f, type: 2}
+  - {fileID: 11400000, guid: 0ed389fcbf95d6743bce13cd244847ae, type: 2}
+  - {fileID: 11400000, guid: 0e9f59f68920fd744902ca69e597fa63, type: 2}
   - {fileID: 11400000, guid: f2c27034f9f61a8438cdf8254e06ac55, type: 2}
+  - {fileID: 11400000, guid: 46bc88498508ecb4ab8097458380e82a, type: 2}
 --- !u!1 &4676288073241910910
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,6 +234,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 998dfde6f0a7ca8439836b1226b23eaa, type: 2}
   - {fileID: 11400000, guid: e65c67754a7e30d44ad2b4d526f4d11c, type: 2}
   - {fileID: 11400000, guid: c4311530081e91149bdc4a1f9c95c9e4, type: 2}
+  - {fileID: 11400000, guid: e9ca5250b000cb94189fd6de847bee24, type: 2}
   moveImage: {fileID: 21300000, guid: f2fc880836bad7b4d8f1de44a202f40a, type: 3}
   moveName: Move
   moveDescription: Move to a tile within range of your mobility.
@@ -861,6 +867,15 @@ MonoBehaviour:
   flankedStatusName: Flanked
   flankedStatusDescription: Damage from attacks is increased by 50%
   flankedStatusStacks: 0
+  entrenchedImage: {fileID: 21300000, guid: e36a4156a177f7247b5c742fd297606e, type: 3}
+  entrenchedStatusName: Entrenched
+  entrenchedStatusDescription: +10 Defense and Aim. Cancelled by moving
+  entrenchedStatusStacks: 0
+  overwatchImage: {fileID: 21300000, guid: f12f77e2cf045f14b9ac703d6bd73499, type: 3}
+  overwatchStatusName: Overwatch
+  overwatchStatusDescription: Shoot at the first enemy that moves within range. Expires
+    on turn start
+  overwatchStatusStacks: 0
 --- !u!95 &4676288074198292558
 Animator:
   serializedVersion: 3

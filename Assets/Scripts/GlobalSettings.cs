@@ -8,4 +8,7 @@ public class GlobalSettings : Singleton<GlobalSettings>
     public int startingGold;
     public int startingMaxTroopCount;
     public int passiveGoldIncome;
+
+    [Header("Level Properties")]
+    public int spaceShipControlZoneSize;
 }

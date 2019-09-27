@@ -373,7 +373,7 @@ public class PositionLogic : Singleton<PositionLogic>
 
         // first ray cast and check from the tile the attacker is on        
         RaycastHit2D[] hits = Physics2D.LinecastAll(a.WorldPosition, b.WorldPosition);
-        Debug.Log("Raycast detected and hit " + hits.Length.ToString() + " tiles between A and B tiles");
+        //Debug.Log("Raycast detected and hit " + hits.Length.ToString() + " tiles between A and B tiles");
 
         foreach (RaycastHit2D hit in hits)
         {

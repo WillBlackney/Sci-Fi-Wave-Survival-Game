@@ -51,6 +51,9 @@ public class StatusIconLibrary : MonoBehaviour
         CreateFlankedIconData();
         CreateEntrenchedIconData();
         CreateOverwatchIconData();
+        CreateHeavyWeaponIconData();
+        CreateRapidFireIconData();
+        CreateDeadEyeIconData();
     }
 
     public StatusIcon GetStatusIconByName(string name)
@@ -430,6 +433,36 @@ public class StatusIconLibrary : MonoBehaviour
         allIcons.Add(overwatch);
     }
 
+    public void CreateHeavyWeaponIconData()
+    {
+        StatusIcon heavyWeapon = gameObject.AddComponent<StatusIcon>();
+        heavyWeapon.statusImage = heavyWeaponImage;
+        heavyWeapon.statusName = heavyWeaponStatusName;
+        heavyWeapon.statusDescription = heavyWeaponStatusDescription;
+        heavyWeapon.statusStacks = heavyWeaponStatusStacks;
+        allIcons.Add(heavyWeapon);
+    }
+
+    public void CreateRapidFireIconData()
+    {
+        StatusIcon rapidFire = gameObject.AddComponent<StatusIcon>();
+        rapidFire.statusImage = rapidFireImage;
+        rapidFire.statusName = rapidFireStatusName;
+        rapidFire.statusDescription = rapidFireStatusDescription;
+        rapidFire.statusStacks = rapidFireStatusStacks;
+        allIcons.Add(rapidFire);
+    }
+
+    public void CreateDeadEyeIconData()
+    {
+        StatusIcon deadEye = gameObject.AddComponent<StatusIcon>();
+        deadEye.statusImage = deadEyeImage;
+        deadEye.statusName = deadEyeStatusName;
+        deadEye.statusDescription = deadEyeStatusDescription;
+        deadEye.statusStacks = deadEyeStatusStacks;
+        allIcons.Add(deadEye);
+    }
+
 
     [Header("Knockdown Icon Data")]
     public Sprite knockDownImage;
@@ -652,5 +685,23 @@ public class StatusIconLibrary : MonoBehaviour
     public string overwatchStatusName;
     public string overwatchStatusDescription;
     public int overwatchStatusStacks;
+
+    [Header("Heavy Weapon Icon Data")]
+    public Sprite heavyWeaponImage;
+    public string heavyWeaponStatusName;
+    public string heavyWeaponStatusDescription;
+    public int heavyWeaponStatusStacks;
+
+    [Header("Rapid Fire Icon Data")]
+    public Sprite rapidFireImage;
+    public string rapidFireStatusName;
+    public string rapidFireStatusDescription;
+    public int rapidFireStatusStacks;
+
+    [Header("Dead Eye Icon Data")]
+    public Sprite deadEyeImage;
+    public string deadEyeStatusName;
+    public string deadEyeStatusDescription;
+    public int deadEyeStatusStacks;
 
 }

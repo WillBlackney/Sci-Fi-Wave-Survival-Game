@@ -91,10 +91,31 @@ public class PassiveManager : MonoBehaviour
     public bool Overwatch;
     public int overwatchStacks;
 
+    public bool HeavyWeapon;
+    public int heavyWeaponStacks;
+
+    public bool RapidFire;
+    public int rapidFireStacks;
+
+    public bool DeadEye;
+    public int deadEyeStacks;
 
     public void InitializeSetup()
     {
         myLivingEntity = GetComponent<LivingEntity>();
+    }
+
+    public void RunDefenderSetup()
+    {
+        if(myLivingEntity.myClass == LivingEntity.Class.MachineGunner)
+        {
+            ModifyHeavyWeapon(1);
+            ModifyRapidFire(1);
+        }
+        else if (myLivingEntity.myClass == LivingEntity.Class.Marksman)
+        {
+            ModifyHeavyWeapon(1);
+        }
     }
     public void LearnEnrage(int stacks)
     {
@@ -192,6 +213,22 @@ public class PassiveManager : MonoBehaviour
 
         myLivingEntity.myStatusManager.StartAddStatusProcess(overwatch, stacks);
         StartCoroutine(VisualEffectManager.Instance.CreateStatusEffect(transform.position, "Overwatch", false));
+    }
+    public void ModifyDeadEye(int stacks)
+    {
+        StatusIcon deadEye = StatusIconLibrary.Instance.GetStatusIconByName("Dead Eye");
+        deadEyeStacks += stacks;
+        if (deadEyeStacks > 0)
+        {
+            DeadEye = true;
+        }
+        else
+        {
+            DeadEye = false;
+        }
+
+        myLivingEntity.myStatusManager.StartAddStatusProcess(deadEye, stacks);
+        StartCoroutine(VisualEffectManager.Instance.CreateStatusEffect(transform.position, "Dead Eye", false));
     }
 
     public void LearnStealth()
@@ -401,6 +438,40 @@ public class PassiveManager : MonoBehaviour
         {
             Flanked = false;
         }
+        myLivingEntity.myStatusManager.StartAddStatusProcess(iconData, stacks);
+    }
+    public void ModifyHeavyWeapon(int stacks)
+    {
+        StatusIcon iconData = StatusIconLibrary.Instance.GetStatusIconByName("Heavy Weapon");
+
+        heavyWeaponStacks += stacks;      
+
+        if (heavyWeaponStacks > 0)
+        {
+            HeavyWeapon = true;
+        }
+        else if (heavyWeaponStacks <= 0)
+        {
+            HeavyWeapon = false;
+        }
+
+        myLivingEntity.myStatusManager.StartAddStatusProcess(iconData, stacks);
+    }
+    public void ModifyRapidFire(int stacks)
+    {
+        StatusIcon iconData = StatusIconLibrary.Instance.GetStatusIconByName("Rapid Fire");
+
+        rapidFireStacks += stacks;
+
+        if (rapidFireStacks > 0)
+        {
+            RapidFire = true;
+        }
+        else if (rapidFireStacks <= 0)
+        {
+            RapidFire = false;
+        }
+
         myLivingEntity.myStatusManager.StartAddStatusProcess(iconData, stacks);
     }
 }

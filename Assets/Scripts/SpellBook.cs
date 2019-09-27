@@ -65,6 +65,8 @@ public class SpellBook : MonoBehaviour
     public bool KnowsThrowHandGrenade;
     public bool KnowsDigIn;
     public bool KnowsOverwatch;
+    public bool KnowsAreaSupression;
+    public bool KnowsDeadEye;
 
     public void InitializeSetup()
     {
@@ -347,11 +349,37 @@ public class SpellBook : MonoBehaviour
             LearnMove();
             LearnShoot();
             LearnDigIn();
-            LearnThrowHandGrenade();
             LearnOverwatch();
-            
+            LearnThrowHandGrenade();                       
         }
-        
+
+        else if (myLivingEntity.myClass == LivingEntity.Class.Ranger)
+        {
+            LearnMove();
+            LearnShoot();
+            LearnDigIn();
+            LearnCharge();
+            LearnDash();
+        }
+
+        else if (myLivingEntity.myClass == LivingEntity.Class.MachineGunner)
+        {
+            LearnMove();
+            LearnShoot();
+            LearnDigIn();
+            LearnOverwatch();
+            LearnAreaSupression();
+        }
+
+        else if (myLivingEntity.myClass == LivingEntity.Class.Marksman)
+        {
+            LearnMove();
+            LearnShoot();
+            LearnDigIn();
+            LearnOverwatch();
+            LearnDeadEye();
+        }
+
         /*
         if (myLivingEntity.myClass == LivingEntity.Class.Warrior)
         {
@@ -640,6 +668,38 @@ public class SpellBook : MonoBehaviour
         else if (enemy)
         {
             EnemyLearnAbility("Overwatch");
+        }
+    }
+    public void LearnDeadEye()
+    {
+        KnowsDeadEye = true;
+        Enemy enemy = myLivingEntity.GetComponent<Enemy>();
+        Defender defender = myLivingEntity.GetComponent<Defender>();
+
+        if (defender)
+        {
+            DefenderLearnAbility("Dead Eye");
+        }
+
+        else if (enemy)
+        {
+            EnemyLearnAbility("Dead Eye");
+        }
+    }
+    public void LearnAreaSupression()
+    {
+        KnowsAreaSupression = true;
+        Enemy enemy = myLivingEntity.GetComponent<Enemy>();
+        Defender defender = myLivingEntity.GetComponent<Defender>();
+
+        if (defender)
+        {
+            DefenderLearnAbility("Area Supression");
+        }
+
+        else if (enemy)
+        {
+            EnemyLearnAbility("Area Supression");
         }
     }
     public void LearnDigIn()

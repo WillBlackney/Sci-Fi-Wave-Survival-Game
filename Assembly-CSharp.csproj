@@ -90,9 +90,13 @@
     <Compile Include="Assets\Scripts\DefenderPanelManager.cs" />
     <Compile Include="Assets\Scripts\Defenders\Defender.cs" />
     <Compile Include="Assets\Scripts\Defenders\Mortar.cs" />
+    <Compile Include="Assets\Scripts\Enemies\BroodlingCharger.cs" />
+    <Compile Include="Assets\Scripts\Enemies\BroodlingGunner.cs" />
+    <Compile Include="Assets\Scripts\Enemies\BroodlingSpitter.cs" />
     <Compile Include="Assets\Scripts\Enemies\GrimReaper.cs" />
+    <Compile Include="Assets\Scripts\Enemies\HiveCharger.cs" />
     <Compile Include="Assets\Scripts\Enemies\HiveGunner.cs" />
-    <Compile Include="Assets\Scripts\Enemies\HiveSwarmer.cs" />
+    <Compile Include="Assets\Scripts\Enemies\HiveSpitter.cs" />
     <Compile Include="Assets\Scripts\Enemies\SkeletonArcher.cs" />
     <Compile Include="Assets\Scripts\Enemies\SkeletonAssassin.cs" />
     <Compile Include="Assets\Scripts\Enemies\SkeletonBarbarian.cs" />
@@ -155,6 +159,7 @@
     <Compile Include="Assets\Scripts\SpellInfoPrefabHolder.cs" />
     <Compile Include="Assets\Scripts\Talent.cs" />
     <Compile Include="Assets\Scripts\TalentTree.cs" />
+    <Compile Include="Assets\Scripts\TileCoverHover.cs" />
     <Compile Include="Assets\Scripts\TileScript.cs" />
     <Compile Include="Assets\Scripts\TurnManager.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />

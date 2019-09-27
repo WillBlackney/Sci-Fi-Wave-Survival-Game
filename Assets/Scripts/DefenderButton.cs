@@ -2,36 +2,53 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DefenderButton : MonoBehaviour
 {
     // Variables
-    [SerializeField] public GameObject defenderPrefab;
-    [SerializeField] private Sprite sprite;
-    [SerializeField] private int goldPrice;
-    [SerializeField] private Text priceText;
+    [Header("Properties")]
+    public Image image;
+    public int goldCost;
     public int troopCost;
-       
-    // Properties
-    public GameObject DefenderPrefab
+
+    [Header("Component References")]
+    public TextMeshProUGUI goldCostText;
+    public TextMeshProUGUI troopCostText;
+    public GameObject defenderPrefab;
+
+
+    // Setup
+    private void Awake()
     {
-        get
-        {
-            return defenderPrefab;
-        }       
+        SetGoldCostTextValue(goldCost);
+        SetTroopCostTextValue(troopCost);
     }
+
+    // Properties    
     public Sprite Sprite
     {
         get
         {
-            return sprite;
+            return image.sprite;
         }        
-    }
-    public int GoldPrice
+    }    
+
+    // Text + Visuals related methods
+
+    public void SetGoldCostTextValue(int newValue)
     {
-        get
-        {
-            return goldPrice;
-        }        
+        goldCostText.text = newValue.ToString();
     }
+    public void SetTroopCostTextValue(int newValue)
+    {
+        troopCostText.text = newValue.ToString();
+    }
+
+    // Input
+    public void OnDefenderButtonClicked()
+    {
+        DefenderPanelManager.Instance.PickDefender(this);
+    }
+
 }

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbed479eb48fb414382423f054e1ecb1, type: 3}
+  m_Name: Sniper Rifle
+  m_EditorClassIdentifier: 
+  weaponImage: {fileID: -4666938320763386820, guid: f8ed7dd79ce25044c89c18638600ec00,
+    type: 3}
+  weaponType: 0
+  weaponName: Sniper Rifle
+  weaponRange: 20
+  weaponMinDamage: 4
+  weaponMaxDamage: 6

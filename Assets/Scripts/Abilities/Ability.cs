@@ -28,6 +28,9 @@ public class Ability : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler,
     public AbilityDataSO.AttackType abilityAttackType;
     public AbilityDataSO.DamageType abilityDamageType;
 
+    public bool usesRangedWeapon;
+    public bool usesMeleeWeapon;
+
     public bool highlightButton;    
 
     public void SetupBaseProperties(AbilityDataSO abilityFromLibrary)
@@ -53,7 +56,9 @@ public class Ability : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler,
 
         abilityAttackType = abilityFromLibrary.abilityAttackType;
         abilityDamageType = abilityFromLibrary.abilityDamageType;
-        
+        usesMeleeWeapon = abilityFromLibrary.usesMeleeWeapon;
+        usesRangedWeapon = abilityFromLibrary.usesRangedWeapon;
+
     }
 
     public void OnButtonClick()

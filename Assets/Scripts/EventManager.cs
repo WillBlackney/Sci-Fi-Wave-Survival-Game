@@ -53,6 +53,8 @@ public class EventManager : Singleton<EventManager>
     {
         // Build a new world
         LevelManager.Instance.CreateLevel();
+        // Set up control zone
+        LevelManager.Instance.CreateSpaceShipControlZone();
         // Populate Spawn Locations around the map
         EnemySpawner.Instance.PopulateEnemyWaveCentrePoints();
         // Centre the camera in the middle of the world
@@ -65,13 +67,15 @@ public class EventManager : Singleton<EventManager>
         //yield return new WaitForSeconds(1.5f);
         // Create Space ship at world centre
         DefenderManager.Instance.CreateSpaceShip();
+        // Create Starting Defenders
+        DefenderManager.Instance.CreateStartingDefenders();
         // TO DO: 
         // Set camera to look at the centre tile
         // Play a brief animation of spaceship crashing
         // instantiate 4 rifleman and the warcaster around the space ship
 
         // Instantiate enemies
-        EnemySpawner.Instance.SpawnEnemyWave();
+        EnemySpawner.Instance.SpawnNextWave();
         // TO DO: camera looks at the area where the enemys spawn as they spawn
         // Camera then moves back to look at the spaceship and defenders
         // Start the players first turn
@@ -79,7 +83,6 @@ public class EventManager : Singleton<EventManager>
         yield return null;
         
     }
-
     public void StartNewBasicEncounterEvent()
     {
         // Disable player's ability to click on encounter buttons and start new encounters
@@ -94,7 +97,7 @@ public class EventManager : Singleton<EventManager>
         CharacterRoster.Instance.InstantiateDefenders();
         // DefenderManager.Instance.PlaceDefendersAtStartingLocations();
         // Instantiate enemies
-        EnemySpawner.Instance.SpawnEnemyWave();
+        //EnemySpawner.Instance.SpawnEnemyWave();
         // reset turn manager properties
         TurnManager.Instance.ResetTurnManagerPropertiesOnCombatStart();
         // start player turn 1
@@ -103,7 +106,6 @@ public class EventManager : Singleton<EventManager>
         UIManager.Instance.DisableWorldMapView();
         currentEncounterType = WorldEncounter.EncounterType.BasicEnemy;
     }
-
     public void StartNewEliteEncounterEvent()
     {
         // Disable player's ability to click on encounter buttons and start new encounters
@@ -118,7 +120,7 @@ public class EventManager : Singleton<EventManager>
         CharacterRoster.Instance.InstantiateDefenders();
         //DefenderManager.Instance.PlaceDefendersAtStartingLocations();
         // Instantiate enemies
-        EnemySpawner.Instance.SpawnEnemyWave("Elite");
+        //EnemySpawner.Instance.SpawnEnemyWave("Elite");
         // reset turn manager properties
         TurnManager.Instance.ResetTurnManagerPropertiesOnCombatStart();
         // start player turn 1
@@ -127,7 +129,6 @@ public class EventManager : Singleton<EventManager>
         UIManager.Instance.DisableWorldMapView();
         currentEncounterType = WorldEncounter.EncounterType.EliteEnemy;
     }
-
     public void StartNewRestSiteEncounterEvent()
     {
         // Disable player's ability to click on encounter buttons and start new encounters
@@ -176,12 +177,10 @@ public class EventManager : Singleton<EventManager>
         // Instantiate treasure chest and populate it with loot
         CreateNewTreasureChest();
     }
-
     public void StartNewEndBasicEncounterEvent()
     {
         StartCoroutine(StartNewEndBasicEncounterEventCoroutine());        
     }
-
     public IEnumerator StartNewEndBasicEncounterEventCoroutine()
     {
         Debug.Log("StartNewEndBasicEncounterEvent() coroutine started...");

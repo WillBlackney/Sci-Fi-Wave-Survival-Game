@@ -15,45 +15,25 @@ public class AbilityLogic : MonoBehaviour
     // Misc Logic
     public void OnAbilityUsed(Ability ability, LivingEntity livingEntity)
     {
-        Debug.Log("OnAbilityUsed() called for " + livingEntity.gameObject.name + " using " + ability.abilityName);
+        Debug.Log("OnAbilityUsed() called for " + livingEntity.gameObject.name + " using " + ability.abilityName);       
+
+        int apCost = ability.abilityAPCost;
+
+        if(ability.abilityName == "Shoot")
+        {
+            if(livingEntity.myPassiveManager.RapidFire && livingEntity.shootActionsTakenThisTurn == 0)
+            {
+                apCost = 0;
+            }
+
+            livingEntity.shootActionsTakenThisTurn++;
+        }
+
         // Set ability on cooldown
         ability.ModifyCurrentCooldown(ability.abilityBaseCooldownTime);
-
-        // Reduce AP by cost of the ability
-        // check for preparation here
-        if (livingEntity.myPassiveManager.Preparation && ability.abilityName != "Preparation" && ability.abilityName != "Slice And Dice")
-        {
-            livingEntity.myPassiveManager.Preparation = false;
-            livingEntity.myPassiveManager.preparationStacks = 0;
-            livingEntity.myStatusManager.RemoveStatusIcon(livingEntity.myStatusManager.GetStatusIconByName("Preparation"));
-        }
-        else
-        {
-            livingEntity.ModifyCurrentAP(-ability.abilityAPCost);
-        }
-
-
-        // remove stealth if the ability is not move
-        if (ability.abilityName != "Move")
-        {
-            if (livingEntity.isCamoflaged)
-            {
-                livingEntity.RemoveCamoflage();
-            }
-        }
-
-        // TO DO: re-do fleetfooted pasive bonus logic: move ability should be free, not paid for then refunded with AP
-        else if (ability.abilityName == "Move")
-        {
-            // if character has a free move available
-            if (livingEntity.moveActionsTakenThisTurn == 0 && livingEntity.myPassiveManager.FleetFooted)
-            {
-                livingEntity.StartCoroutine(VisualEffectManager.Instance.CreateStatusEffect(livingEntity.transform.position, "Fleet Footed", true));
-                livingEntity.ModifyCurrentAP(ability.abilityAPCost, false);
-            }
-            livingEntity.moveActionsTakenThisTurn++;
-        }
-
+        // Reduce AP
+        livingEntity.ModifyCurrentAP(-apCost);        
+        // Turn off tile highlights
         LevelManager.Instance.UnhighlightAllTiles();
     }
 
@@ -196,6 +176,29 @@ public class AbilityLogic : MonoBehaviour
         yield return null;
     }
 
+    // Area Supression
+    public void PerformAreaSupression(LivingEntity caster, TileScript location)
+    {
+        StartCoroutine(PerformAreaSupressionCoroutine(caster, location));
+    }
+
+    public IEnumerator PerformAreaSupressionCoroutine(LivingEntity caster, TileScript location)
+    {
+        Ability areaSupression = caster.mySpellBook.GetAbilityByName("Area Supression");
+        List<TileScript> tilesSupressed = LevelManager.Instance.GetTilesWithinRange(areaSupression.abilitySecondaryValue, location);
+        foreach(LivingEntity entity in LivingEntityManager.Instance.allLivingEntities)
+        {
+            if(CombatLogic.Instance.IsTargetFriendly(caster, entity) == false &&
+                tilesSupressed.Contains(entity.TileCurrentlyOn))
+            {
+                entity.ApplyPinned();
+            }
+        }
+
+        OnAbilityUsed(areaSupression, caster);
+        yield return null;
+    }
+
     // Overwatch
     public void PerformOverwatch(LivingEntity caster)
     {
@@ -207,6 +210,20 @@ public class AbilityLogic : MonoBehaviour
         Ability overwatch = caster.mySpellBook.GetAbilityByName("Overwatch");
         caster.myPassiveManager.ModifyOverwatch(1);
         OnAbilityUsed(overwatch, caster);
+        yield return null;
+    }
+
+    // Overwatch
+    public void PerformDeadEye(LivingEntity caster)
+    {
+        StartCoroutine(PerformDeadEyeCoroutine(caster));
+    }
+
+    public IEnumerator PerformDeadEyeCoroutine(LivingEntity caster)
+    {
+        Ability deadEye = caster.mySpellBook.GetAbilityByName("Dead Eye");
+        caster.myPassiveManager.ModifyDeadEye(1);
+        OnAbilityUsed(deadEye, caster);
         yield return null;
     }
 
@@ -421,6 +438,24 @@ public class AbilityLogic : MonoBehaviour
         yield return null;
     }
 
+    // Acid Spit
+    public void PerformAcidSpit(LivingEntity caster, TileScript location)
+    {
+        StartCoroutine(PerformAcidSpitCoroutine(caster, location));
+    }
+    public IEnumerator PerformAcidSpitCoroutine(LivingEntity caster, TileScript location)
+    {
+        Ability acidSpit = caster.mySpellBook.GetAbilityByName("Acid Spit");  
+        if(caster.myCurrentTarget != null)
+        {
+            StartCoroutine(caster.AttackMovement(caster.myCurrentTarget));
+        }        
+        CombatLogic.Instance.CreateAoEAttackEvent(caster, acidSpit, location, acidSpit.abilitySecondaryValue, false, false);
+        //CombatLogic.Instance.HandleDamage(CombatLogic.Instance.CalculateDamage(acidSpit.abilityPrimaryValue, victim, caster, acidSpit.abilityDamageType), caster, victim);
+        OnAbilityUsed(acidSpit, caster);
+        yield return null;
+    }
+
     // Shoot
     public void PerformShoot(LivingEntity caster, LivingEntity victim)
     {
@@ -429,6 +464,13 @@ public class AbilityLogic : MonoBehaviour
     public IEnumerator PerformShootCoroutine(LivingEntity caster, LivingEntity victim)
     {
         Ability shoot = caster.mySpellBook.GetAbilityByName("Shoot");
+
+        // Increase Aim bonus by 50 if dead eye passive
+        if (caster.myPassiveManager.DeadEye)
+        {
+            caster.currentAim += 50;
+        }
+
         bool attackSuccesful = CombatLogic.Instance.CalculateIfAttackHitOrMiss(caster, victim);
         // TO DO: below corotuine should be replaced with a shoot animation
         StartCoroutine(caster.AttackMovement(victim));
@@ -442,7 +484,15 @@ public class AbilityLogic : MonoBehaviour
             // TO DO IN FUTURE: method here should be something like CombatLogic.Instance.HandleMiss()
             StartCoroutine(VisualEffectManager.Instance.CreateStatusEffect(victim.transform.position, "Miss!", false));
         }
-        
+
+        // Remove dead eye
+        if (caster.myPassiveManager.DeadEye)
+        {
+            caster.currentAim -= 50;
+            caster.myPassiveManager.ModifyDeadEye(-caster.myPassiveManager.deadEyeStacks);
+        }
+
+
         OnAbilityUsed(shoot, caster);
         yield return null;
     }
@@ -749,9 +799,9 @@ public class AbilityLogic : MonoBehaviour
 
         Action moveAction = MovementLogic.Instance.MoveEntity(characterMoved, destination);
 
-        yield return new WaitUntil(() => moveAction.ActionResolved() == true);
+        OnAbilityUsed(move, characterMoved);
 
-        OnAbilityUsed(move, characterMoved);        
+        yield return new WaitUntil(() => moveAction.ActionResolved() == true);                
 
         action.actionResolved = true;
         yield return null;
@@ -774,28 +824,39 @@ public class AbilityLogic : MonoBehaviour
     }
 
     // Charge
-    public void PerformCharge(LivingEntity caster, LivingEntity target, TileScript destination)
+    public Action PerformCharge(LivingEntity caster, LivingEntity target, TileScript destination)
     {
-        StartCoroutine(PerformChargeCoroutine(caster, target, destination));
+        Action action = new Action();
+        StartCoroutine(PerformChargeCoroutine(caster, target, destination, action));
+        return action;
     }
-    public IEnumerator PerformChargeCoroutine(LivingEntity caster, LivingEntity target, TileScript destination)
+    public IEnumerator PerformChargeCoroutine(LivingEntity caster, LivingEntity target, TileScript destination, Action action)
     {
         Ability charge = caster.mySpellBook.GetAbilityByName("Charge");
 
         // Charge movement
-        Action action = MovementLogic.Instance.MoveEntity(caster, destination, 6);
+        Action chargeMovement = MovementLogic.Instance.MoveEntity(caster, destination, 6);
 
         // yield wait until movement complete
-        yield return new WaitUntil(() => action.ActionResolved() == true);
+        yield return new WaitUntil(() => chargeMovement.ActionResolved() == true);
 
         // Charge attack
         caster.StartCoroutine(caster.AttackMovement(target));
-        CombatLogic.Instance.HandleDamage(CombatLogic.Instance.CalculateDamage(charge.abilityPrimaryValue, target, caster, charge.abilityDamageType), caster, target);
 
-        // Apply exposed
-        target.myPassiveManager.ModifyExposed(charge.abilitySecondaryValue);
-
-        OnAbilityUsed(charge, caster);        
+        // Calculate hit or miss
+        bool attackSuccesful = CombatLogic.Instance.CalculateIfAttackHitOrMiss(caster, target);
+        if (attackSuccesful)
+        {
+            CombatLogic.Instance.HandleDamage(CombatLogic.Instance.CalculateDamage(WeaponLogic.Instance.CalculateRandomWeaponDamageValue(caster.myMeleeWeapon), target, caster, charge.abilityDamageType), caster, target);
+        }
+        else
+        {
+            // TO DO IN FUTURE: method here should be something like CombatLogic.Instance.HandleMiss()
+            StartCoroutine(VisualEffectManager.Instance.CreateStatusEffect(target.transform.position, "Miss!", false));
+        }       
+        
+        OnAbilityUsed(charge, caster);
+        action.actionResolved = true;
     }
 
     // Telekinesis

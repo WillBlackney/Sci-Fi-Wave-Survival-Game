@@ -8,7 +8,7 @@ public class LivingEntity : MonoBehaviour
 {   
     [SerializeField] public float speed;
     
-    public enum Class { None, SpaceShip, Warrior, Mage, Ranger, Priest, Rogue, Shaman, Warlock, Rifleman };
+    public enum Class { None, SpaceShip, Warrior, Mage, Ranger, Priest, Rogue, Shaman, Warlock, Rifleman, MachineGunner, Marksman };
     public Class myClass;
 
     [Header("Component References")]
@@ -71,6 +71,7 @@ public class LivingEntity : MonoBehaviour
 
     [Header("Miscealaneous Properties ")]
     public int moveActionsTakenThisTurn;
+    public int shootActionsTakenThisTurn;
     public int timesAttackedThisTurn;
 
 
@@ -290,6 +291,30 @@ public class LivingEntity : MonoBehaviour
     }
 
     // State related booleans and conditional checks.
+
+    public bool IsAbilityValid(Ability ability)
+    {
+        if(HasEnoughAP(currentAP,ability.abilityAPCost) == false)
+        {
+            return false;
+        }
+
+        else if (IsAbilityOffCooldown(ability.abilityCurrentCooldownTime) == false)
+        {
+            return false;
+        }
+        else if(myPassiveManager.HeavyWeapon && 
+            ability.usesRangedWeapon == true && 
+            myPassiveManager.Entrenched == false)
+        {
+            Debug.Log("Cannot use ability: Character has 'Heavy Weapon' and is not 'Entrenched'");
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
     public bool IsAbleToMove()
     {
         Enemy enemy = GetComponent<Enemy>();
@@ -325,7 +350,6 @@ public class LivingEntity : MonoBehaviour
             return false;
         }
     }
-
     public bool HasEnoughAP(int currentAP, int APCostOfAction)
     {
         if (currentAP >= APCostOfAction)
@@ -910,6 +934,7 @@ public class LivingEntity : MonoBehaviour
     public virtual IEnumerator OnTurnStart()
     {
         moveActionsTakenThisTurn = 0;
+        shootActionsTakenThisTurn = 0;
         timesAttackedThisTurn = 0;
         GainEnergyOnTurnStart();
         ReduceCooldownsOnTurnStart();
@@ -925,10 +950,15 @@ public class LivingEntity : MonoBehaviour
             ModifyCurrentStrength(myPassiveManager.growingStacks);
             yield return new WaitForSeconds(0.5f);
         }
+        if (myPassiveManager.DeadEye)
+        {
+            myPassiveManager.ModifyDeadEye(-myPassiveManager.deadEyeStacks);
+            yield return new WaitForSeconds(0.5f);
+        }
 
         if (myPassiveManager.Overwatch)
         {
-            myPassiveManager.ModifyOverwatch(myPassiveManager.overwatchStacks);
+            myPassiveManager.ModifyOverwatch(-myPassiveManager.overwatchStacks);
             yield return new WaitForSeconds(0.5f);
         }
         if (myPassiveManager.LightningShield)

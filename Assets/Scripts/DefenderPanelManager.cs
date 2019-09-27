@@ -12,32 +12,45 @@ public class DefenderPanelManager : Singleton<DefenderPanelManager>
     }
     public void PickDefender(DefenderButton defenderButton)
     {
-        // If player does not have enough gold
-        if (PlayerDataManager.Instance.currentGold < defenderButton.GoldPrice)
+        // if it is the enemies turn, prevent placement
+        if (!TurnManager.Instance.currentlyPlayersTurn)
         {
-            Debug.Log("Player does not have enough gold to purchase " + defenderButton.DefenderPrefab.name);
+            Debug.Log("Player cannot place new defenders during enemy turn...");
+        }
+
+        // If player does not have enough gold
+        if (PlayerDataManager.Instance.currentGold < defenderButton.goldCost)
+        {
+            Debug.Log("Player does not have enough gold to purchase " + defenderButton.defenderPrefab.name);
             return;
         }
         // If player does not have availble troop points
         if (PlayerDataManager.Instance.currentTroopCount + defenderButton.troopCost > PlayerDataManager.Instance.currentMaxTroopCount)
         {
-            Debug.Log("Can't recruit troop: recruting troop would bring player over the maximum troop count" + defenderButton.DefenderPrefab.name);
+            Debug.Log("Can't recruit troop: recruting troop would bring player over the maximum troop count" + defenderButton.defenderPrefab.name);
             return;
         }
 
+        LevelManager.Instance.HighlightTiles(LevelManager.Instance.GetSpaceShipControlZoneTile());
         Debug.Log("Defender button for " + defenderButton.name + " clicked on");
         ClickedDefender = defenderButton;
-        Hover.Instance.Activate(defenderButton.defenderPrefab.GetComponent<SpriteRenderer>().sprite);
+        Hover.Instance.Activate(defenderButton.Sprite);
     }
 
     // This method is called from TileScripts
     public void BuyDefender()
     {
-        if (PlayerDataManager.Instance.currentGold >= ClickedDefender.GoldPrice)
+        LevelManager.Instance.UnhighlightAllTiles();
+        PlayerDataManager.Instance.ModifyGold(-ClickedDefender.goldCost);
+        Hover.Instance.Deactivate();
+        /*
+        if (PlayerDataManager.Instance.currentGold >= ClickedDefender.goldCost)
         {
-            PlayerDataManager.Instance.ModifyGold(-ClickedDefender.GoldPrice);            
+            LevelManager.Instance.UnhighlightAllTiles();
+            PlayerDataManager.Instance.ModifyGold(-ClickedDefender.goldCost);            
             Hover.Instance.Deactivate();
         }
+        */
     }
 
     private void HandleEscape()
@@ -45,6 +58,7 @@ public class DefenderPanelManager : Singleton<DefenderPanelManager>
         if (Input.GetKeyDown(KeyCode.Escape) || 
             Input.GetKeyDown(KeyCode.Mouse1))
         {
+            LevelManager.Instance.UnhighlightAllTiles();
             Hover.Instance.Deactivate();
         }
     }    
