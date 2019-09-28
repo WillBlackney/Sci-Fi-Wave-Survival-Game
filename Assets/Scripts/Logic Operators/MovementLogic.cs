@@ -72,8 +72,13 @@ public class MovementLogic : Singleton<MovementLogic>
 
         // Commence movement
         while (hasCompletedMovement == false)
-        {           
-            
+        {
+            // prevent bugs caused by moving after dying from an overwatch shot
+            if (characterMoved.inDeathProcess)
+            {
+                action.actionResolved = true;
+                break;
+            }
             characterMoved.transform.position = Vector2.MoveTowards(characterMoved.transform.position, characterMoved.destination, speedOfThisMovement * Time.deltaTime);
 
             if (characterMoved.transform.position == characterMoved.destination)
@@ -668,11 +673,14 @@ public class MovementLogic : Singleton<MovementLogic>
                 ((entity.myPassiveManager.HeavyWeapon && entity.myPassiveManager.Entrenched) ||
                   entity.myPassiveManager.HeavyWeapon == false)
                     )
-                {
+            {
                     // All conditions for an overwatch attack have been met, perform an overwatch attack
+                    // pause the character moving's movement animation so they dont appear to walk on the spot
+                    characterMoved.myAnimator.enabled = false;
                     Action overwatchAction = AbilityLogic.Instance.PerformOverwatchShot(entity, characterMoved);
                     yield return new WaitUntil(() => overwatchAction.ActionResolved() == true);
-                }            
+                    characterMoved.myAnimator.enabled = true;
+            }            
         }
 
         action.actionResolved = true;

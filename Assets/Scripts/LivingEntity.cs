@@ -70,6 +70,7 @@ public class LivingEntity : MonoBehaviour
     public int poisonStacks;
 
     [Header("Miscealaneous Properties ")]
+    public bool inDeathProcess;
     public int moveActionsTakenThisTurn;
     public int shootActionsTakenThisTurn;
     public int timesAttackedThisTurn;
@@ -766,6 +767,7 @@ public class LivingEntity : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            //StopAllCoroutines();
             StartCoroutine(HandleDeath());
         }
     }
@@ -773,7 +775,11 @@ public class LivingEntity : MonoBehaviour
    
     public virtual IEnumerator HandleDeath()
     {
+        myAnimator.enabled = true;
         //LevelManager.Instance.SetTileAsUnoccupiedByEntity(TileCurrentlyOn);
+        DisableWorldSpaceCanvas();
+        PlayDeathAnimation();
+        inDeathProcess = true;
         TileCurrentlyOn.SetTileAsUnoccupiedByEntity();
         LivingEntityManager.Instance.allLivingEntities.Remove(this);
 
@@ -784,7 +790,6 @@ public class LivingEntity : MonoBehaviour
         {
             CombatLogic.Instance.CreateAoEAttackEvent(this, myPassiveManager.volatileStacks, TileCurrentlyOn, 1, true, true,AbilityDataSO.DamageType.None);
         }
-
         
         if (defender)
         {
@@ -799,8 +804,7 @@ public class LivingEntity : MonoBehaviour
             }
         }
 
-        DisableWorldSpaceCanvas();
-        PlayDeathAnimation();
+        
         yield return new WaitUntil(() => MyDeathAnimationFinished() == true);
 
         // Check all enemies are dead, end combat event

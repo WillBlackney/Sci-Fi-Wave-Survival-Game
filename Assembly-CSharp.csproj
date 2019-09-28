@@ -168,6 +168,7 @@
     <Compile Include="Assets\Scripts\Visual\CharacterInfoPanel.cs" />
     <Compile Include="Assets\Scripts\Visual\CharacterRoster.cs" />
     <Compile Include="Assets\Scripts\Visual\DamageEffect.cs" />
+    <Compile Include="Assets\Scripts\Visual\Portal.cs" />
     <Compile Include="Assets\Scripts\Visual\SpellToolTip.cs" />
     <Compile Include="Assets\Scripts\Visual\StatusIcon.cs" />
     <Compile Include="Assets\Scripts\Visual\StatusIconLibrary.cs" />

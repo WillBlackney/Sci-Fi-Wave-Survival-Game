@@ -276,7 +276,7 @@ MonoBehaviour:
   myCurrentMaxHealthTextStatBar: {fileID: 3524837548372140098}
   myCurrentDefenseStatText: {fileID: 3653619475357910508}
   myCurrentAimStatText: {fileID: 1566749179168456573}
-  myBaseTroopCost: 0
+  myBaseTroopCost: 3
   myCurrentTroopCost: 0
   awaitingMoveOrder: 0
   awaitingStrikeOrder: 0

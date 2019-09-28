@@ -112,6 +112,7 @@ public class TurnManager : Singleton<TurnManager>
 
         UIManager.Instance.EnableEndTurnButton();
         // turn on controls
+        CameraManager.Instance.mainCamera.GetComponent<CinemachineCameraController>().SetCameraControl(true);
         // re-enable end turn button
     }
 
@@ -121,6 +122,7 @@ public class TurnManager : Singleton<TurnManager>
         DefenderManager.Instance.ClearSelectedDefender();
         UIManager.Instance.DisableEndTurnButton();
         currentlyPlayersTurn = false;
+        CameraManager.Instance.mainCamera.GetComponent<CinemachineCameraController>().SetCameraControl(false);
         StartCoroutine(EndPlayerTurnCoroutine());
         // disable en turn button
         // turn off controls

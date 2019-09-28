@@ -30,26 +30,38 @@ public class EnemySpawner : Singleton<EnemySpawner>
 
     // Spawning + Instantiation
     #region
-    public void InstantiateEnemiesFromWave(EnemyWaveSO enemyWave, List<TileScript> spawnLocations)
+    public IEnumerator InstantiateEnemiesFromWave(EnemyWaveSO enemyWave, List<TileScript> spawnLocations)
     {
         foreach (EnemyGroup enemyGroup in enemyWave.enemyGroups)
         {
             int randomIndex = Random.Range(0, enemyGroup.enemyList.Count);
 
-            GameObject newEnemyGO = Instantiate(enemyGroup.enemyList[randomIndex]);
-
-            Enemy newEnemy = newEnemyGO.GetComponent<Enemy>();
             // Choose a random tile from the list of spawnable locations
             TileScript spawnLocation = LevelManager.Instance.GetRandomValidMoveableTileFromList(spawnLocations);
+
+            // Create Portal VFX object
+            GameObject portalVFX = Instantiate(PrefabHolder.Instance.PortalPrefab);
+            portalVFX.transform.position = spawnLocation.WorldPosition;
+            yield return new WaitForSeconds(0.1f);
+
+            // Instantiate enemy GO, get script
+            GameObject newEnemyGO = Instantiate(enemyGroup.enemyList[randomIndex]);
+            Enemy newEnemy = newEnemyGO.GetComponent<Enemy>();
+            
             // Run the enemy's constructor
             newEnemy.InitializeSetup(spawnLocation.GridPosition, spawnLocation);
+            yield return new WaitForSeconds(0.5f);
         }
     }
-    public void SpawnEnemyWave(EnemyWaveSO enemyWave)
+    public IEnumerator SpawnEnemyWave(EnemyWaveSO enemyWave, Action action)
     {
         TileScript spawnCentrePoint = GetRandomEnemyWaveCentrePoint();
-        List<TileScript> possibleSpawnLocations = GetValidSpawnLocationsWithinRangeOfCentrePoint(spawnCentrePoint, 5);
-        InstantiateEnemiesFromWave(enemyWave, possibleSpawnLocations);
+        CameraManager.Instance.SetCameraLookAtTarget(spawnCentrePoint.gameObject);
+        yield return new WaitForSeconds(2f);
+        List<TileScript> possibleSpawnLocations = GetValidSpawnLocationsWithinRangeOfCentrePoint(spawnCentrePoint, 3);
+        StartCoroutine(InstantiateEnemiesFromWave(enemyWave, possibleSpawnLocations));
+        yield return new WaitForSeconds(3f);
+        action.actionResolved = true;
 
     }
     public EnemyWaveSO GetRandomWave(EnemyWaveSO.WaveType waveType, int level)
@@ -68,8 +80,9 @@ public class EnemySpawner : Singleton<EnemySpawner>
         return possibleWaves[randomIndex];
 
     }
-    public void SpawnNextWave()
+    public Action SpawnNextWave()
     {
+        Action waveSpawn = new Action();
         List<int> levelOneTurns = new List<int> { 0, 3, 6 };
         List<int> levelTwoTurns = new List<int> { 9, 12, 15 };
         List<int> eliteTurns = new List<int> { 6, 15, 24, 33 };
@@ -90,7 +103,9 @@ public class EnemySpawner : Singleton<EnemySpawner>
         // Set wave type based on player current turn count
         if (eliteTurns.Contains(TurnManager.Instance.playerTurnCount))
         {
-            waveType = EnemyWaveSO.WaveType.Elite;
+            // uncomment when elite waves/enemies have been implemented
+            //waveType = EnemyWaveSO.WaveType.Elite;
+            waveType = EnemyWaveSO.WaveType.Basic;
         }
         else
         {
@@ -98,14 +113,14 @@ public class EnemySpawner : Singleton<EnemySpawner>
         }
 
         // stop spawning if this not a correct turn for spawning
-        if(level == 0)
+        if (level != 0)
         {
-            return;
+            StartCoroutine(SpawnEnemyWave(GetRandomWave(waveType, level), waveSpawn));
         }
-
-        SpawnEnemyWave(GetRandomWave(waveType, level));
-
+        
+        return waveSpawn;
     }
+   
     #endregion
 
 }

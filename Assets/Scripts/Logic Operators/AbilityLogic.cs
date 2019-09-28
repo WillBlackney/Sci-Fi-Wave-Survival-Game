@@ -66,6 +66,10 @@ public class AbilityLogic : MonoBehaviour
     }
     public IEnumerator PerformOverwatchShotCoroutine(LivingEntity attacker, LivingEntity victim, Action action)
     {
+        yield return new WaitForSeconds(1f);
+        Action cameraMovement = CameraManager.Instance.mainCamera.GetComponent<CinemachineCameraController>().MoveToOverwatchViewLocation(victim, attacker);
+        yield return new WaitUntil(() => cameraMovement.ActionResolved() == true);
+
         StartCoroutine(VisualEffectManager.Instance.CreateStatusEffect(attacker.transform.position, "Overwatch!", false));
         attacker.myPassiveManager.ModifyOverwatch(-1);
         yield return new WaitForSeconds(1f);

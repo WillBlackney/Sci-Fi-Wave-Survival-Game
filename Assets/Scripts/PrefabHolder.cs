@@ -37,4 +37,7 @@ public class PrefabHolder : Singleton<PrefabHolder>
     [Header("Enemy Related")]
     public GameObject ZombiePrefab;
 
+    [Header("VFX Prefabs")]
+    public GameObject PortalPrefab;
+
 }

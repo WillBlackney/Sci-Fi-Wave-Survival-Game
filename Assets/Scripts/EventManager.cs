@@ -51,6 +51,7 @@ public class EventManager : Singleton<EventManager>
     }
     public IEnumerator StartNewGameSequenceCoroutine()
     {
+        
         // Build a new world
         LevelManager.Instance.CreateLevel();
         // Set up control zone
@@ -63,21 +64,25 @@ public class EventManager : Singleton<EventManager>
         // Fade in scene
         Action fadeIn = BlackScreenManager.Instance.FadeIn(1);
         // wait until the fade in effect is finished
-        //yield return new WaitUntil(() => fadeIn.ActionResolved() == true);
+        yield return new WaitUntil(() => fadeIn.ActionResolved() == true);
         //yield return new WaitForSeconds(1.5f);
         // Create Space ship at world centre
         DefenderManager.Instance.CreateSpaceShip();
+        yield return new WaitForSeconds(1f);
         // Create Starting Defenders
         DefenderManager.Instance.CreateStartingDefenders();
+        yield return new WaitForSeconds(1f);
         // TO DO: 
         // Set camera to look at the centre tile
         // Play a brief animation of spaceship crashing
         // instantiate 4 rifleman and the warcaster around the space ship
 
         // Instantiate enemies
-        EnemySpawner.Instance.SpawnNextWave();
-        // TO DO: camera looks at the area where the enemys spawn as they spawn
-        // Camera then moves back to look at the spaceship and defenders
+        Action waveSpawn = EnemySpawner.Instance.SpawnNextWave();
+        yield return new WaitUntil(() => waveSpawn.ActionResolved() == true);
+        // Move camera back to space ship
+        CameraManager.Instance.SetCameraLookAtTarget(LevelManager.Instance.GetWorldCentreTile().gameObject);
+        yield return new WaitForSeconds(2f);
         // Start the players first turn
         StartCoroutine(TurnManager.Instance.StartPlayerTurn());
         yield return null;
