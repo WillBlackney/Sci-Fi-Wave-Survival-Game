@@ -16,6 +16,6 @@ MonoBehaviour:
     type: 3}
   weaponType: 1
   weaponName: Bone Nails
-  weaponRange: 0
+  weaponRange: 1
   weaponMinDamage: 4
   weaponMaxDamage: 6

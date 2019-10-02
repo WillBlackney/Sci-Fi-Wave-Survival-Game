@@ -20,23 +20,10 @@ public class Hover : Singleton<Hover>
 
     private void FollowMouse()
     {
-       // if (spriteRenderer.enabled)
-        //{
             if(LevelManager.Instance.mousedOverTile != null)
             {
                 transform.position = LevelManager.Instance.mousedOverTile.WorldPosition;
-            }
-            
-           // transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-           // transform.position = new Vector3(transform.position.x, transform.position.y, 0);
-
-            //Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            //transform.position = new Vector3(mousePos.x, mousePos.y, 0);
-
-            //Vector3 mousePos = Input.mousePosition;
-            //transform.position = new Vector3(mousePos.x, mousePos.y, 0);
-
-        //}        
+            }               
     }
 
     public void Activate(Sprite sprite)

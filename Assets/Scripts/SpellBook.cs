@@ -100,9 +100,9 @@ public class SpellBook : MonoBehaviour
     public void EnemyLearnAbility(string abilityName)
     {        
         Ability newAbility = gameObject.AddComponent<Ability>();
-        newAbility.SetupBaseProperties(AbilityLibrary.Instance.GetAbilityByName(abilityName));
-        PlaceAbilityOnNextAvailableSlot(newAbility);
         newAbility.myLivingEntity = myLivingEntity;
+        newAbility.SetupBaseProperties(AbilityLibrary.Instance.GetAbilityByName(abilityName));
+        PlaceAbilityOnNextAvailableSlot(newAbility);        
         myActiveAbilities.Add(newAbility);
         myLivingEntity.GetComponent<Enemy>().myInfoPanel.AddAbilityToolTipToView(newAbility);
     }

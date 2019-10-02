@@ -135,11 +135,9 @@ public class LivingEntity : MonoBehaviour
         currentHealth = baseStartingHealth;
         currentMaxAP = baseMaxAP;
         currentEnergy = baseEnergy;              
-        currentMeleeRange = baseMeleeRange;
-        //currentStrength = baseStrength;  
-        //ModifyCurrentStrength(baseStrength);
-        //ModifyCurrentDexterity(baseDexterity);
+        currentMeleeRange = baseMeleeRange;        
         myHealthBar.value = CalculateHealthBarPosition();
+        
         ModifyCurrentBlock(baseStartingBlock);
         ModifyCurrentAP(baseStartingAP);
         UpdateCurrentHealthText();
@@ -1339,6 +1337,7 @@ public class LivingEntity : MonoBehaviour
         if (defender)
         {
             defender.myCurrentHealthTextStatBar.text = currentHealth.ToString();
+            //defender.overlayHealthBar.value = CalculateHealthBarPosition();
         }
     }
 

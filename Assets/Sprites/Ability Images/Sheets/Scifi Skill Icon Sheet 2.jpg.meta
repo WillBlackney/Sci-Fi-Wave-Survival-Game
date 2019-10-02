@@ -1,0 +1,2789 @@
+fileFormatVersion: 2
+guid: 07fe5e0aa45d16e45b50a02741544d8f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5429463460318772543
+    second: Scifi Skill Icon Sheet 2_2
+  - first:
+      213: 2658915070603770802
+    second: Scifi Skill Icon Sheet 2_3
+  - first:
+      213: -1947593686227776374
+    second: Scifi Skill Icon Sheet 2_4
+  - first:
+      213: 169532522415131977
+    second: Scifi Skill Icon Sheet 2_5
+  - first:
+      213: -2958259227031223430
+    second: Scifi Skill Icon Sheet 2_6
+  - first:
+      213: -7337423550821853682
+    second: Scifi Skill Icon Sheet 2_7
+  - first:
+      213: -6572420394184518689
+    second: Scifi Skill Icon Sheet 2_8
+  - first:
+      213: 5249249950935742322
+    second: Scifi Skill Icon Sheet 2_9
+  - first:
+      213: -7629105112236585109
+    second: Scifi Skill Icon Sheet 2_10
+  - first:
+      213: -378776512120951763
+    second: Scifi Skill Icon Sheet 2_11
+  - first:
+      213: 3524553707306243313
+    second: Scifi Skill Icon Sheet 2_13
+  - first:
+      213: 859344021524057860
+    second: Scifi Skill Icon Sheet 2_14
+  - first:
+      213: 534262768442518843
+    second: Scifi Skill Icon Sheet 2_15
+  - first:
+      213: 7761259958283559779
+    second: Scifi Skill Icon Sheet 2_18
+  - first:
+      213: 6117311220783430670
+    second: Scifi Skill Icon Sheet 2_32
+  - first:
+      213: 4882171906917376840
+    second: Scifi Skill Icon Sheet 2_34
+  - first:
+      213: 7466173198980483178
+    second: Scifi Skill Icon Sheet 2_35
+  - first:
+      213: -968492111602139937
+    second: Scifi Skill Icon Sheet 2_36
+  - first:
+      213: -2802995181391296437
+    second: Scifi Skill Icon Sheet 2_37
+  - first:
+      213: 8578287452692462625
+    second: Scifi Skill Icon Sheet 2_38
+  - first:
+      213: 548780846698939882
+    second: Scifi Skill Icon Sheet 2_39
+  - first:
+      213: 8488975652925492721
+    second: Scifi Skill Icon Sheet 2_40
+  - first:
+      213: -5934546716693710139
+    second: Scifi Skill Icon Sheet 2_41
+  - first:
+      213: -2803267569865064764
+    second: Scifi Skill Icon Sheet 2_42
+  - first:
+      213: -1303967616985409119
+    second: Scifi Skill Icon Sheet 2_43
+  - first:
+      213: 7610133774353690179
+    second: Scifi Skill Icon Sheet 2_44
+  - first:
+      213: 5188105995827635547
+    second: Scifi Skill Icon Sheet 2_45
+  - first:
+      213: 4905661821453872424
+    second: Scifi Skill Icon Sheet 2_46
+  - first:
+      213: 1456834488409214009
+    second: Scifi Skill Icon Sheet 2_47
+  - first:
+      213: 3242520602074764579
+    second: Scifi Skill Icon Sheet 2_48
+  - first:
+      213: 787093680921690005
+    second: Scifi Skill Icon Sheet 2_49
+  - first:
+      213: -1634641655865438875
+    second: Scifi Skill Icon Sheet 2_50
+  - first:
+      213: -8296207584334733843
+    second: Scifi Skill Icon Sheet 2_51
+  - first:
+      213: 494554575659633838
+    second: Scifi Skill Icon Sheet 2_52
+  - first:
+      213: -2642869795673877457
+    second: Scifi Skill Icon Sheet 2_53
+  - first:
+      213: 7381817825785469079
+    second: Scifi Skill Icon Sheet 2_54
+  - first:
+      213: -7951376044367481662
+    second: Scifi Skill Icon Sheet 2_55
+  - first:
+      213: -2480070200348517429
+    second: Scifi Skill Icon Sheet 2_56
+  - first:
+      213: -7537671590264957863
+    second: Scifi Skill Icon Sheet 2_57
+  - first:
+      213: -2237617731487338218
+    second: Scifi Skill Icon Sheet 2_74
+  - first:
+      213: -8557636948660992207
+    second: Scifi Skill Icon Sheet 2_75
+  - first:
+      213: -5505680967684569016
+    second: Scifi Skill Icon Sheet 2_76
+  - first:
+      213: -1652786875695396212
+    second: Scifi Skill Icon Sheet 2_79
+  - first:
+      213: 4517386083969172540
+    second: Scifi Skill Icon Sheet 2_80
+  - first:
+      213: 6540888637069004437
+    second: Scifi Skill Icon Sheet 2_81
+  - first:
+      213: 5055641471059400020
+    second: Scifi Skill Icon Sheet 2_82
+  - first:
+      213: -4323083362199336851
+    second: Scifi Skill Icon Sheet 2_83
+  - first:
+      213: 5133844932424597536
+    second: Scifi Skill Icon Sheet 2_84
+  - first:
+      213: -4333755714744452417
+    second: Scifi Skill Icon Sheet 2_85
+  - first:
+      213: -8614438309750161456
+    second: Scifi Skill Icon Sheet 2_86
+  - first:
+      213: 672537347100206575
+    second: Scifi Skill Icon Sheet 2_87
+  - first:
+      213: -8459989611470137139
+    second: Scifi Skill Icon Sheet 2_88
+  - first:
+      213: -7717242344924947071
+    second: Scifi Skill Icon Sheet 2_89
+  - first:
+      213: -6904666494428152128
+    second: Scifi Skill Icon Sheet 2_90
+  - first:
+      213: -3826935336262046153
+    second: Scifi Skill Icon Sheet 2_91
+  - first:
+      213: -4835745481709966560
+    second: Scifi Skill Icon Sheet 2_92
+  - first:
+      213: 5687045361384854577
+    second: Scifi Skill Icon Sheet 2_93
+  - first:
+      213: 8456950555097497551
+    second: Scifi Skill Icon Sheet 2_94
+  - first:
+      213: 5961608471206385250
+    second: Scifi Skill Icon Sheet 2_95
+  - first:
+      213: -5930764448070505690
+    second: Scifi Skill Icon Sheet 2_96
+  - first:
+      213: -4200077592455328616
+    second: Scifi Skill Icon Sheet 2_97
+  - first:
+      213: 7065637944024426279
+    second: Scifi Skill Icon Sheet 2_98
+  - first:
+      213: -6140901010439835135
+    second: Scifi Skill Icon Sheet 2_99
+  - first:
+      213: -2644201713592341607
+    second: Scifi Skill Icon Sheet 2_100
+  - first:
+      213: -2860269663274940318
+    second: Scifi Skill Icon Sheet 2_101
+  - first:
+      213: -5207534316653189649
+    second: Scifi Skill Icon Sheet 2_102
+  - first:
+      213: -4247715271063915213
+    second: Scifi Skill Icon Sheet 2_103
+  - first:
+      213: -4057203059907148200
+    second: Scifi Skill Icon Sheet 2_104
+  - first:
+      213: -289324464645653398
+    second: Scifi Skill Icon Sheet 2_105
+  - first:
+      213: 6305940291292049282
+    second: Scifi Skill Icon Sheet 2_106
+  - first:
+      213: -7834864655774034799
+    second: Scifi Skill Icon Sheet 2_107
+  - first:
+      213: 4099328135859671869
+    second: Scifi Skill Icon Sheet 2_108
+  - first:
+      213: 2732881758853491103
+    second: Scifi Skill Icon Sheet 2_109
+  - first:
+      213: -1426061678373538701
+    second: Scifi Skill Icon Sheet 2_110
+  - first:
+      213: -5748337760445958676
+    second: Scifi Skill Icon Sheet 2_111
+  - first:
+      213: -2083325456480043744
+    second: Scifi Skill Icon Sheet 2_112
+  - first:
+      213: 8683975875227644480
+    second: Scifi Skill Icon Sheet 2_113
+  - first:
+      213: -1657513795202909625
+    second: Scifi Skill Icon Sheet 2_114
+  - first:
+      213: 2810490733792198283
+    second: Scifi Skill Icon Sheet 2_115
+  - first:
+      213: 3848646399381805203
+    second: Scifi Skill Icon Sheet 2_116
+  - first:
+      213: -2038622907607908498
+    second: Scifi Skill Icon Sheet 2_117
+  - first:
+      213: 4634028201902948697
+    second: Scifi Skill Icon Sheet 2_118
+  - first:
+      213: 5899541171365100973
+    second: Scifi Skill Icon Sheet 2_119
+  - first:
+      213: 3797572815463225760
+    second: Scifi Skill Icon Sheet 2_120
+  - first:
+      213: 59000342456855550
+    second: Scifi Skill Icon Sheet 2_121
+  - first:
+      213: 4459538744265831872
+    second: Scifi Skill Icon Sheet 2_122
+  - first:
+      213: -2971033948376870083
+    second: Scifi Skill Icon Sheet 2_123
+  - first:
+      213: 8488330288485948938
+    second: Scifi Skill Icon Sheet 2_124
+  - first:
+      213: -5833497083023144091
+    second: Scifi Skill Icon Sheet 2_125
+  - first:
+      213: -1964353100617154698
+    second: Scifi Skill Icon Sheet 2_126
+  - first:
+      213: 4222537868279665829
+    second: Scifi Skill Icon Sheet 2_127
+  - first:
+      213: -8639444670489277191
+    second: Scifi Skill Icon Sheet 2_128
+  - first:
+      213: -4732857480412680410
+    second: Scifi Skill Icon Sheet 2_129
+  - first:
+      213: 2871711685922022923
+    second: Scifi Skill Icon Sheet 2_130
+  - first:
+      213: -8551864793374871698
+    second: Scifi Skill Icon Sheet 2_131
+  - first:
+      213: 7368415476264430392
+    second: Scifi Skill Icon Sheet 2_132
+  - first:
+      213: -9051916122990168270
+    second: Scifi Skill Icon Sheet 2_133
+  - first:
+      213: -6088202337546233694
+    second: Scifi Skill Icon Sheet 2_134
+  - first:
+      213: 3466943384409343338
+    second: Scifi Skill Icon Sheet 2_135
+  - first:
+      213: -3428974671116244992
+    second: Scifi Skill Icon Sheet 2_136
+  - first:
+      213: -2683259545601135238
+    second: Scifi Skill Icon Sheet 2_137
+  - first:
+      213: -3991207760386475769
+    second: Scifi Skill Icon Sheet 2_138
+  - first:
+      213: -3423364842357680030
+    second: Scifi Skill Icon Sheet 2_139
+  - first:
+      213: -7291865370257275902
+    second: Scifi Skill Icon Sheet 2_140
+  - first:
+      213: -1999935045848329610
+    second: Scifi Skill Icon Sheet 2_141
+  - first:
+      213: -3792541510589380856
+    second: Scifi Skill Icon Sheet 2_142
+  - first:
+      213: -4730997325801497390
+    second: Scifi Skill Icon Sheet 2_143
+  - first:
+      213: -278563656724399603
+    second: Scifi Skill Icon Sheet 2_0
+  - first:
+      213: 3638939192301702181
+    second: Scifi Skill Icon Sheet 2_1
+  - first:
+      213: -966543281479864148
+    second: Scifi Skill Icon Sheet 2_12
+  - first:
+      213: -5604811437248514737
+    second: Scifi Skill Icon Sheet 2_16
+  - first:
+      213: 7932176667695866743
+    second: Scifi Skill Icon Sheet 2_17
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_2
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 957
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d224c5c33f1a9574eb1a709f5802520d
+      internalID: -5429463460318772543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_3
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 957
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d9c4c8098d76d4781cc5a95a455fd1
+      internalID: 2658915070603770802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_4
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 955
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0772079ef10c4954e8a8f58a313b4c1c
+      internalID: -1947593686227776374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_5
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 956
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e3a2e1562c28a74fb6e1ea6b66a299e
+      internalID: 169532522415131977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_6
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 956
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3a31094a6646d74b9ad8baf73042e84
+      internalID: -2958259227031223430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_7
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 958
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df2d437c914488a478a009c55eeb7d73
+      internalID: -7337423550821853682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_8
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 958
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e11883656bd6d4b45852bf370dd47431
+      internalID: -6572420394184518689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_9
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 956
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b03b1679111235341bb5579eeff60884
+      internalID: 5249249950935742322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_10
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 957
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa67b0f1cf32a5740b8c387882f47a3a
+      internalID: -7629105112236585109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_11
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 958
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a0649ef3bbe5504db00a315b8a3f1e5
+      internalID: -378776512120951763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_13
+      rect:
+        serializedVersion: 2
+        x: 1507
+        y: 957
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c54e4bae49d8e164c809f5b1c6af14fa
+      internalID: 3524553707306243313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_14
+      rect:
+        serializedVersion: 2
+        x: 1643
+        y: 957
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 562ee40ee57c9a5419ec65da72cb5f74
+      internalID: 859344021524057860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_15
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 959
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec7ab9b1136c9c0408510e3a86af6598
+      internalID: 534262768442518843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_18
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 823
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d42809d496c399f469d25afe426ca9f5
+      internalID: 7761259958283559779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_32
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 823
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc1e0acd2295e449a54b82131a47e03
+      internalID: 6117311220783430670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_34
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 820
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f84bbbcd3087f8040a2e5f243d141436
+      internalID: 4882171906917376840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_35
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 687
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 580bc3580f2250c4ab1096bea7886b26
+      internalID: 7466173198980483178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_36
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 821
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 830f8139037484d4aa6468bb5d9a46a6
+      internalID: -968492111602139937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_37
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 685
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 220e4882dfe4db94e9fd292b0c4970ac
+      internalID: -2802995181391296437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_38
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 823
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 535756292217c90438c88ef6e4165460
+      internalID: 8578287452692462625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_39
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 822
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a507f5d1ff9bc2d439e4035aab9657f7
+      internalID: 548780846698939882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_40
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 821
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23b4cc6913d0a4d419e9dfcf835aa17d
+      internalID: 8488975652925492721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_41
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 822
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e92e1c0e80345384a969fa6299672f45
+      internalID: -5934546716693710139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_42
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 822
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17bbdc82fd76eab4d832d35552fefbf2
+      internalID: -2803267569865064764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_43
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 821
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4336c25189e3a2b4897594807ae81a01
+      internalID: -1303967616985409119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_44
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 823
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60680a8e14be0d14da3159dbaf305540
+      internalID: 7610133774353690179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_45
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 821
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9823dc7c9a032044ba316d387e2741fc
+      internalID: 5188105995827635547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_46
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 820
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc50e4108e611474496f1ed57deeec45
+      internalID: 4905661821453872424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_47
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 822
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a863f35b020e10f47978705abfeca969
+      internalID: 1456834488409214009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_48
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 822
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd78bd18f00e404ca3bb54102b22ea1
+      internalID: 3242520602074764579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_49
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 823
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b24204a87b2a934d86ed9f60f15e934
+      internalID: 787093680921690005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_50
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 687
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85f2c1bc4788ab64c9cf9faea92c15cb
+      internalID: -1634641655865438875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_51
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 687
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c34258baadc414544bf3aadfdda652f7
+      internalID: -8296207584334733843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_52
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 687
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac24aa982ac394c4383eb500b9d2baf4
+      internalID: 494554575659633838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_53
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 686
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0fc93cab4396f546bd857fb0cc4abd7
+      internalID: -2642869795673877457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_54
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 684
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b63ea5957b6e2f4c9c3d63464671c3d
+      internalID: 7381817825785469079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_55
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 685
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f16315477925ca442aee9f2879eeb08a
+      internalID: -7951376044367481662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_56
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 686
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cde8a6fb52c913468c2ad7f7d1db230
+      internalID: -2480070200348517429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_57
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 685
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19b0a18781716bd4995f849180c13ef0
+      internalID: -7537671590264957863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_74
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 687
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c014f5591d286c42866072681ac51e5
+      internalID: -2237617731487338218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_75
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 686
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0764a7b33727b994187f27bb2895903e
+      internalID: -8557636948660992207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_76
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 685
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78c04e15673455344a532be869f66ef5
+      internalID: -5505680967684569016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_79
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 688
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d467c0ff1f08085459f71c09866c8821
+      internalID: -1652786875695396212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_80
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 551
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 795aa66216b843842aa7d0219f2ab690
+      internalID: 4517386083969172540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_81
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 550
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5832b6aed10d3b4cb0b4ef33c7f1144
+      internalID: 6540888637069004437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_82
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 550
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7120b36777e1c545aa2fc07aea3f052
+      internalID: 5055641471059400020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_83
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 548
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a1d67d3e4e9542449a3e28af1199c42
+      internalID: -4323083362199336851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_84
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 549
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: accffecf41cc11e478820e7ec236bb60
+      internalID: 5133844932424597536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_85
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 548
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84436a5ebae74d4408e1350cad62e5b8
+      internalID: -4333755714744452417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_86
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 550
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c1674a6074a2dd44bbab6cf1badb5be
+      internalID: -8614438309750161456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_87
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 549
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93639dff624c0ee42a88c7836c27d185
+      internalID: 672537347100206575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_88
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 548
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81f5cd666ee9423429537278709b3cb3
+      internalID: -8459989611470137139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_89
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 549
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 090dca144c408fe40a8dd6e41037f0fe
+      internalID: -7717242344924947071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_90
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 551
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e90efd0396dbabf47b33edc846f556a8
+      internalID: -6904666494428152128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_91
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 549
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fc25260799af3f419a891e4d7ba7155
+      internalID: -3826935336262046153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_92
+      rect:
+        serializedVersion: 2
+        x: 1645
+        y: 549
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d2469e831e3af24193a2df32289ee8b
+      internalID: -4835745481709966560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_93
+      rect:
+        serializedVersion: 2
+        x: 1779
+        y: 548
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07ec0c2b726b3404ea51b5862b402e3d
+      internalID: 5687045361384854577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_94
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 415
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d23038cece5351149962c52a197b3086
+      internalID: 8456950555097497551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_95
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 414
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2999fb5ca22ced4ca44909f74f28850
+      internalID: 5961608471206385250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_96
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 415
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf66e1496e0831f4583cf769f1700503
+      internalID: -5930764448070505690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_97
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 280
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dfb8d210c7a0e44ba6992c860b0b888
+      internalID: -4200077592455328616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_98
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 278
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7bacaf71bbc0f440bc4404c9a45ba17
+      internalID: 7065637944024426279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_99
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 279
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb8777f03e7a6fa438aa9aadead4ace3
+      internalID: -6140901010439835135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_100
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 279
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb4396e262070c048ac2523bad3304f7
+      internalID: -2644201713592341607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_101
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 415
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 358fa240f634cd849b06a5c51f80a492
+      internalID: -2860269663274940318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_102
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 415
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b78b2f4656ac0e2499b31e68740b82d5
+      internalID: -5207534316653189649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_103
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 415
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f0112cf6ca694943b77cfe28223e982
+      internalID: -4247715271063915213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_104
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 416
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceb53efc8ca7a854f846c5780b926128
+      internalID: -4057203059907148200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_105
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 415
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8449d0523cbc8bd4085f1f8eb1345a7b
+      internalID: -289324464645653398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_106
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 412
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0310aa59b768c74b9ff1a52a523ef14
+      internalID: 6305940291292049282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_107
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 414
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b03b8ebeab80fea459b9bd92756fe55c
+      internalID: -7834864655774034799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_108
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 413
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78c9c9a08fc430c4ea6f008c16329b4c
+      internalID: 4099328135859671869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_109
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 412
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21227154460c70c468e108562363a1c1
+      internalID: 2732881758853491103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_110
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 413
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad7bcf207bfa51b47872bb8751eafff6
+      internalID: -1426061678373538701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_111
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 415
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f5468e1e126c614293b0d646c2e8b91
+      internalID: -5748337760445958676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_112
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 142
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8809e2ec9109436478170b1f2c9305b0
+      internalID: -2083325456480043744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_113
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 7
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0018185c59f9234db10036fcde59d71
+      internalID: 8683975875227644480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_114
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 145
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89d9765937910164089432c8f10e15bf
+      internalID: -1657513795202909625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_115
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 7
+        width: 120
+        height: 120
+      alignment: 9
+      pivot: {x: 0.480512, y: 0.6169293}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b190dd07eb5d804e85720cf0f77dd86
+      internalID: 2810490733792198283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_116
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 280
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44bff31e9235bb94bbb554b082c0511e
+      internalID: 3848646399381805203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_117
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 278
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b38396ec8c2528045839026eb3ced0b5
+      internalID: -2038622907607908498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_118
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 280
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5439366fdc5940345bcac69efc363fe5
+      internalID: 4634028201902948697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_119
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 280
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18be0f595d53c7245a450697e067abc1
+      internalID: 5899541171365100973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_120
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 280
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4834f921de02ed40be24d8129c0da73
+      internalID: 3797572815463225760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_121
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 279
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91dc45dc48274d546b7fd6abdc3d8e26
+      internalID: 59000342456855550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_122
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 278
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97607ac6655c584469fb0c7df14e5ceb
+      internalID: 4459538744265831872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_123
+      rect:
+        serializedVersion: 2
+        x: 1507
+        y: 278
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd5712ab9d24b7408d6d0c0a011e1aa
+      internalID: -2971033948376870083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_124
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 279
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94364f049d7285f4ab0566ef134211c7
+      internalID: 8488330288485948938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_125
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 276
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7ebbde3f51a4df4295a3d0e21e7ade6
+      internalID: -5833497083023144091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_126
+      rect:
+        serializedVersion: 2
+        x: 1643
+        y: 143
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ac813c775f52044f9ca1e517c816ea8
+      internalID: -1964353100617154698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_127
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 143
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fa7658162c1b4946a3f5ba7ae47437f
+      internalID: 4222537868279665829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_128
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 142
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3024842bd8c6e46ba193ac3bf0b2b9
+      internalID: -8639444670489277191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_129
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 144
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6606c3e04e048ac48a81486d9f8256a0
+      internalID: -4732857480412680410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_130
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 141
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4df51f9d4d6f8eb49ab234ab992f66ab
+      internalID: 2871711685922022923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_131
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 7
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f7e088e96edffc4e957a3384263d268
+      internalID: -8551864793374871698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_132
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 143
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0d631fc4f490cf4d8ba0ee61c88a965
+      internalID: 7368415476264430392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_133
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 141
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b5ae9d87f113b04f88f3bd730106540
+      internalID: -9051916122990168270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_134
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 9
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b3ace754007e34c99a6c293bedac7e
+      internalID: -6088202337546233694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_135
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 143
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03da86bfaeab4eb47965f90f6ed2db08
+      internalID: 3466943384409343338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_136
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 10
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 150e8b9e0e63ff743869202488c559f6
+      internalID: -3428974671116244992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_137
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 8
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d7c590342fbb0b4abd2c0af6585c463
+      internalID: -2683259545601135238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_138
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 142
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64b203b275911b34c9e2ebf773dd4884
+      internalID: -3991207760386475769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_139
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 8
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae4b67060eee3ee489bdb1c31722010c
+      internalID: -3423364842357680030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_140
+      rect:
+        serializedVersion: 2
+        x: 1505
+        y: 9
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9efca75c011af1f4a84c0901ad69128e
+      internalID: -7291865370257275902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_141
+      rect:
+        serializedVersion: 2
+        x: 1643
+        y: 9
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d846eafc1edce9a4aaa83236916e98ed
+      internalID: -1999935045848329610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_142
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 9
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80629b972c1b7a04590d0e9940603e6b
+      internalID: -3792541510589380856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_143
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 145
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef7ae0c83f86394b9abd6f7a623bb7e
+      internalID: -4730997325801497390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_0
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 9
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b83339c31ada18846b0f480198bf1dc6
+      internalID: -278563656724399603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_1
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 9
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2161d9ecf25202a4fa1b0c48ea05cd29
+      internalID: 3638939192301702181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_12
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 144
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a186cd772ec303c46acda46509ea6e0c
+      internalID: -966543281479864148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_16
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 8
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59b17b0c8e103ef49b77a8a6b323638d
+      internalID: -5604811437248514737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scifi Skill Icon Sheet 2_17
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 7
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d96947533b972af478e4c92c0562dc6d
+      internalID: 7932176667695866743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 2c8ff04fa8afae14aa785bc3b60ba1cd
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

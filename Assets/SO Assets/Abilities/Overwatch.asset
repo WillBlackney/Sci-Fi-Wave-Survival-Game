@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c591e3c0f3bb384794b661f28c54c3f, type: 3}
   m_Name: Overwatch
   m_EditorClassIdentifier: 
-  abilityImage: {fileID: 21300000, guid: f12f77e2cf045f14b9ac703d6bd73499, type: 3}
+  abilityImage: {fileID: -354994203616717504, guid: bff67ff4c56b5a14ab31a13efb16e049,
+    type: 3}
   abilityName: Overwatch
   abilityDescription: Shoot at the next enemy that moves within your weapon range
     and LoS. Lasts 1 turn
@@ -23,3 +24,5 @@ MonoBehaviour:
   abilitySecondaryValue: 0
   abilityDamageType: 0
   abilityAttackType: 0
+  usesRangedWeapon: 0
+  usesMeleeWeapon: 0

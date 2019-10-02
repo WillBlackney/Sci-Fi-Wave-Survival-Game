@@ -346,9 +346,9 @@ public class CombatLogic : MonoBehaviour
     }
 
     // Method evaluates the difference between the attackers 'Aim' and the target's 'Defense', then returns the attackers hit probability as a percentage
-    public int CalculateHitChanceFromAimVsDefense(LivingEntity attacker, LivingEntity target)
+    public int CalculateHitChance(LivingEntity attacker, LivingEntity target)
     {
-        Debug.Log("CalculateHitChanceFromAimVsDefense() calculated hit probability between attacker " + attacker.name + " and " + target.name);
+        Debug.Log("CalculateHitChance() calculating hit probability between attacker " + attacker.name + " and " + target.name +"...");
         // Set up base hit chance properties
         int baseHitChance = 50;
         int attackerTotalAimValue = attacker.currentAim + baseHitChance;
@@ -400,7 +400,7 @@ public class CombatLogic : MonoBehaviour
     public bool CalculateIfAttackHitOrMiss(LivingEntity attacker, LivingEntity target)
     {
         Debug.Log("CombatLogic.CalculateIfAttackHitOrMiss() called...");
-        int hitChance = CalculateHitChanceFromAimVsDefense(attacker, target);
+        int hitChance = CalculateHitChance(attacker, target);
 
         int randomNumber = Random.Range(1, 101);
         Debug.Log("CombatLogic.CalculateIfAttackHitOrMiss() rolled a " + randomNumber.ToString());

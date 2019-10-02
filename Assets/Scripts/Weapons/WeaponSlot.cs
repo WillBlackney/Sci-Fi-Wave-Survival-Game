@@ -14,7 +14,11 @@ public class WeaponSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     public TextMeshProUGUI maxDamageText;
     public GameObject myInfoPanel;
     public Image myImage;
+    public CanvasGroup myCanvasGroup;
     public WeaponDataSO myWeaponData;
+
+    [Header("Properties")]
+    public bool fadingIn;
 
     // Initialization / Setup
     public void SetWeapon(WeaponDataSO data)
@@ -43,7 +47,31 @@ public class WeaponSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     public void SetInfoPanelVisibility(bool onOrOff)
     {
         myInfoPanel.SetActive(onOrOff);
+        if (onOrOff == true)
+        {
+            FadeInPanel();
+        }
+        else
+        {
+            fadingIn = false;
+            myCanvasGroup.alpha = 0;
+        }
+        
     }
 
-   
+    public void FadeInPanel()
+    {
+        StartCoroutine(FadeInPanelCoroutine());
+    }
+    public IEnumerator FadeInPanelCoroutine()
+    {
+        fadingIn = true;
+        while (myCanvasGroup.alpha < 1 && fadingIn == true)
+        {
+            myCanvasGroup.alpha += 0.2f;
+            yield return new WaitForEndOfFrame();
+        }
+    }
+
+
 }

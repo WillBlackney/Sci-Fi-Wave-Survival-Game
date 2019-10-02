@@ -16,6 +16,6 @@ MonoBehaviour:
     type: 3}
   weaponType: 1
   weaponName: Bone Claws
-  weaponRange: 0
+  weaponRange: 1
   weaponMinDamage: 5
   weaponMaxDamage: 7

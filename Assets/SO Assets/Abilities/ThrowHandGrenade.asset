@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c591e3c0f3bb384794b661f28c54c3f, type: 3}
   m_Name: ThrowHandGrenade
   m_EditorClassIdentifier: 
-  abilityImage: {fileID: 21300000, guid: 52d4efd25d275ad4e9d5479603d57ead, type: 3}
+  abilityImage: {fileID: 2034437731343633653, guid: bff67ff4c56b5a14ab31a13efb16e049,
+    type: 3}
   abilityName: Throw Hand Grenade
   abilityDescription: Deal 4 damage to all characters in a 3x3 area.
   abilityBaseCooldownTime: 4
@@ -22,3 +23,5 @@ MonoBehaviour:
   abilitySecondaryValue: 1
   abilityDamageType: 0
   abilityAttackType: 2
+  usesRangedWeapon: 0
+  usesMeleeWeapon: 0

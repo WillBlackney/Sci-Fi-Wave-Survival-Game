@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c591e3c0f3bb384794b661f28c54c3f, type: 3}
   m_Name: Dead Eye
   m_EditorClassIdentifier: 
-  abilityImage: {fileID: 21300000, guid: 17dbed4e4c884c24baf03c473446e29c, type: 3}
+  abilityImage: {fileID: -3944856907320740853, guid: 050a8b6439d568247ba54a6699ca9c8c,
+    type: 3}
   abilityName: Dead Eye
   abilityDescription: Gain +50 on your next 'Shoot' ability this turn
   abilityBaseCooldownTime: 5

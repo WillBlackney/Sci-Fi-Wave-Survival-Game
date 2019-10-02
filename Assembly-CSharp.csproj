@@ -118,6 +118,7 @@
     <Compile Include="Assets\Scripts\EventManager.cs" />
     <Compile Include="Assets\Scripts\GameSessionManager.cs" />
     <Compile Include="Assets\Scripts\GlobalSettings.cs" />
+    <Compile Include="Assets\Scripts\HitChanceHover.cs" />
     <Compile Include="Assets\Scripts\Hover.cs" />
     <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\Items\Inventory.cs" />

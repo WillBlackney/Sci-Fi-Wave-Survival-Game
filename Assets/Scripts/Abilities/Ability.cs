@@ -7,12 +7,22 @@ using TMPro;
 
 public class Ability : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
+    [Header("Component References ")]
     public LivingEntity myLivingEntity;
     public TextMeshProUGUI myCooldownText;
     public AbilityDataSO myAbilityData;
     public Sprite abilityImage;
     public CanvasGroup glowHighlightCG;
-    
+    public CanvasGroup myInfoPanelCanvasGroup;
+    public GameObject myInfoPanel;
+
+    [Header("Text References ")]
+    public TextMeshProUGUI cdText;
+    public TextMeshProUGUI rangeText;
+    public TextMeshProUGUI apCostText;
+    public TextMeshProUGUI descriptionText;
+    public TextMeshProUGUI nameText;
+
 
     public string abilityName;
     public string abilityDescription;
@@ -31,7 +41,8 @@ public class Ability : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler,
     public bool usesRangedWeapon;
     public bool usesMeleeWeapon;
 
-    public bool highlightButton;    
+    public bool highlightButton;
+    public bool fadingIn;
 
     public void SetupBaseProperties(AbilityDataSO abilityFromLibrary)
     {
@@ -59,6 +70,15 @@ public class Ability : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler,
         usesMeleeWeapon = abilityFromLibrary.usesMeleeWeapon;
         usesRangedWeapon = abilityFromLibrary.usesRangedWeapon;
 
+        // Set up info panel for defenders
+        if (myLivingEntity.GetComponent<Defender>())
+        {
+            cdText.text = abilityFromLibrary.abilityBaseCooldownTime.ToString();
+            rangeText.text = abilityFromLibrary.abilityRange.ToString();
+            apCostText.text = abilityFromLibrary.abilityAPCost.ToString();
+            nameText.text = abilityFromLibrary.abilityName.ToString();
+            descriptionText.text = abilityFromLibrary.abilityDescription.ToString();
+        }
     }
 
     public void OnButtonClick()
@@ -66,11 +86,7 @@ public class Ability : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler,
         myLivingEntity.GetComponent<Defender>().OnAbilityButtonClicked(abilityName);
     }    
 
-    public void OnMouseExit()
-    {
-        Debug.Log("Ability.OnMouseExit() called...");
-        SpellInfoBox.Instance.HideInfoBox();
-    }
+  
 
     public void ShowCooldownTimer()
     {
@@ -143,23 +159,54 @@ public class Ability : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler,
     {
         ModifyCurrentCooldown(-1);
     }
+    
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (myLivingEntity.GetComponent<Defender>())
         {
-            SpellInfoBox.Instance.ShowInfoBox(abilityName, abilityAPCost, abilityBaseCooldownTime, abilityRange, abilityDescription);
+            SetInfoPanelVisibility(true);
             highlightButton = true;
             StartCoroutine(HighLight());
         }        
     }
 
+
+    public void SetInfoPanelVisibility(bool onOrOff)
+    {
+        myInfoPanel.SetActive(onOrOff);
+        if(onOrOff == true)
+        {
+            FadeInInfoPanel();
+        }
+        else
+        {
+            fadingIn = false;
+            myInfoPanelCanvasGroup.alpha = 0;
+        }
+        
+    }
+    public void FadeInInfoPanel()
+    {
+        //gameObject.SetActive(true);        
+        StartCoroutine(FadeInInfoPanelCoroutine());
+    }
+
+    public IEnumerator FadeInInfoPanelCoroutine()
+    {
+        fadingIn = true;
+        while (myInfoPanelCanvasGroup.alpha < 1 && fadingIn)
+        {
+            myInfoPanelCanvasGroup.alpha += 0.2f;
+            yield return new WaitForEndOfFrame();
+        }
+    }
     public void OnPointerExit(PointerEventData eventData)
     {
         if (myLivingEntity.GetComponent<Defender>())
-        {
-            SpellInfoBox.Instance.HideInfoBox();
+        {            
             highlightButton = false;
+            SetInfoPanelVisibility(false);
             glowHighlightCG.alpha = 0f;
         }
            

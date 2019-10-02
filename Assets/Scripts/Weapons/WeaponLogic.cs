@@ -41,6 +41,7 @@ public class WeaponLogic : Singleton<WeaponLogic>
         if(entity.myClass == LivingEntity.Class.Rifleman)
         {
             AssignWeaponToEntity(entity, WeaponLibrary.Instance.GetWeaponByName("Assault Rifle"));
+            AssignWeaponToEntity(entity, WeaponLibrary.Instance.GetWeaponByName("Bowie Knife"));
         }
         else if (entity.myClass == LivingEntity.Class.Ranger)
         {
@@ -49,11 +50,14 @@ public class WeaponLogic : Singleton<WeaponLogic>
         }
         else if (entity.myClass == LivingEntity.Class.MachineGunner)
         {
-            AssignWeaponToEntity(entity, WeaponLibrary.Instance.GetWeaponByName("Machine Gun"));            
+            AssignWeaponToEntity(entity, WeaponLibrary.Instance.GetWeaponByName("Machine Gun"));
+            AssignWeaponToEntity(entity, WeaponLibrary.Instance.GetWeaponByName("Bowie Knife"));
+
         }
         else if (entity.myClass == LivingEntity.Class.Marksman)
         {
             AssignWeaponToEntity(entity, WeaponLibrary.Instance.GetWeaponByName("Sniper Rifle"));
+            AssignWeaponToEntity(entity, WeaponLibrary.Instance.GetWeaponByName("Bowie Knife"));
         }
     }
 

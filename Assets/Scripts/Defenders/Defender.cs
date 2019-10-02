@@ -4,6 +4,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Defender : LivingEntity
 {
@@ -13,6 +14,7 @@ public class Defender : LivingEntity
     public CharacterData myCharacterData;
     public WeaponSlot myRangedWeaponSlot;
     public WeaponSlot myMeleeWeaponSlot;
+    public Slider overlayHealthBar;
 
     public TextMeshProUGUI myCurrentAPText;
     public TextMeshProUGUI myCurrentMaxAPText;
@@ -93,7 +95,8 @@ public class Defender : LivingEntity
         UpdateCurrentAPStatText(currentEnergy);        
         UpdateCurrentStrengthStatText(currentStrength);
         UpdateCurrentMobilityStatText(currentMobility);
-        
+        defender.overlayHealthBar.value = CalculateHealthBarPosition();
+
     }
     public void RunSetupFromCharacterData()
     {

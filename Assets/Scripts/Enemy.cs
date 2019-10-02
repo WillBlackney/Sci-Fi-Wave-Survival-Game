@@ -431,17 +431,33 @@ public class Enemy : LivingEntity
 
     public void OnMouseOver()
     {
-        if(Input.GetMouseButtonDown(1))
+        Defender selectedDefender = DefenderManager.Instance.selectedDefender;
+
+        if (Input.GetMouseButtonDown(1))
         {
             myInfoPanel.EnablePanelView();
+        }        
+    }
+
+    public void OnMouseEnter()
+    {
+        Defender selectedDefender = DefenderManager.Instance.selectedDefender;
+
+        if (selectedDefender != null && selectedDefender.awaitingShootOrder == true)
+        {
+            HitChanceHover.Instance.StartNewShowHitChanceEvent(this, selectedDefender, selectedDefender.mySpellBook.GetAbilityByName("Shoot"), selectedDefender.myRangedWeapon);
         }
+    }
+
+    public void OnMouseExit()
+    {
+        HitChanceHover.Instance.SetVisibility(false);
     }
 
     // Visual + UI 
     public void StartAttackAnimation()
     {
         myAnimator.SetTrigger("Attack");
-
     }
    
 }
