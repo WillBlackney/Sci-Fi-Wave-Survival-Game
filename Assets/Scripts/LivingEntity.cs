@@ -74,6 +74,7 @@ public class LivingEntity : MonoBehaviour
     public int moveActionsTakenThisTurn;
     public int shootActionsTakenThisTurn;
     public int timesAttackedThisTurn;
+    
 
 
     [Header("Pathing + Location Related ")]
@@ -1235,6 +1236,25 @@ public class LivingEntity : MonoBehaviour
         {
             return false;
         }
+    }
+
+    public bool shootAnimationFinished = false;
+    public bool ShootAnimationFinished()
+    {
+        if (shootAnimationFinished == true)
+        {            
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
+    // called by animators
+    public void SetShootAnimationAsFinished()
+    {
+        shootAnimationFinished = true;
     }
 
     public virtual void GainEnergyOnTurnStart()

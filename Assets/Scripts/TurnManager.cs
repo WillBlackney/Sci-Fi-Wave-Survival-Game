@@ -94,15 +94,31 @@ public class TurnManager : Singleton<TurnManager>
         ModifyPlayerTurnCount(1);
         PlayerDataManager.Instance.GenerateIncomeOnPlayerTurnStart();
 
-        // Spawn a new enemy wave every 3 turns
-        
-        // to do in future: camera should move to focus on the area where the enemies spawned to show player
-        EnemySpawner.Instance.SpawnNextWave();
-        // yield return new WaitForSeconds(2f);        
+        // Spawn a new enemy wave every 3 turns        
+        Action waveSpawnAction = EnemySpawner.Instance.SpawnNextWave();
+        yield return new WaitUntil(() => waveSpawnAction.ActionResolved() == true);
 
+        // Reduce all lootbox timers
+        Action lootBoxCountDownReductions = LootBoxManager.Instance.ReduceAllLootBoxCountdowns();
+        yield return new WaitUntil(() => lootBoxCountDownReductions.ActionResolved() == true);
+
+        // Spawn a loot box every 2 turns
+        if (LootBoxManager.Instance.lootSpawnTurns.Contains(playerTurnCount))
+        {
+            Action lootBoxSpawn = LootBoxManager.Instance.StartNewLootBoxCreatedEvent();
+            yield return new WaitUntil(() => lootBoxSpawn.ActionResolved() == true);
+            yield return new WaitForSeconds(2f);
+        }        
+
+        // Move camera view to spaceship on every turn start
+        CameraManager.Instance.SetCameraLookAtTarget(LevelManager.Instance.GetWorldCentreTile().gameObject);
+        yield return new WaitForSeconds(2f);
+
+        // Display turn number overlay event
         StartCoroutine(DisplayTurnChangeNotification(true));
         yield return new WaitUntil(() => NotificationComplete() == true);
         
+        // Run all defender on turn start events
         currentlyPlayersTurn = true;
         foreach(Defender defender in DefenderManager.Instance.allDefenders)
         {
@@ -110,10 +126,12 @@ public class TurnManager : Singleton<TurnManager>
             defender.myOnTurnEndEffectsFinished = false;
         }
 
+        // Re-enable UI elements
         UIManager.Instance.EnableEndTurnButton();
-        // turn on controls
+
+        // Re-enable camera control
         CameraManager.Instance.mainCamera.GetComponent<CinemachineCameraController>().SetCameraControl(true);
-        // re-enable end turn button
+        
     }
 
     public void EndPlayerTurn()
@@ -123,10 +141,7 @@ public class TurnManager : Singleton<TurnManager>
         UIManager.Instance.DisableEndTurnButton();
         currentlyPlayersTurn = false;
         CameraManager.Instance.mainCamera.GetComponent<CinemachineCameraController>().SetCameraControl(false);
-        StartCoroutine(EndPlayerTurnCoroutine());
-        // disable en turn button
-        // turn off controls
-        // trigger on turn effects(bleed, poison etc)
+        StartCoroutine(EndPlayerTurnCoroutine());        
     }
 
     public IEnumerator EndPlayerTurnCoroutine()

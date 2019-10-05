@@ -98,13 +98,13 @@ MonoBehaviour:
   myTileType: 0
   myTileSetupType: 1
   myObject: {fileID: 0}
+  myEntity: {fileID: 0}
   originalColor:
     serializedVersion: 2
     rgba: 0
   highlightedColor:
     serializedVersion: 2
     rgba: 4294967295
-  isEmpty: 0
   isWalkable: 1
   isBuildable: 1
 --- !u!61 &61598905527099822

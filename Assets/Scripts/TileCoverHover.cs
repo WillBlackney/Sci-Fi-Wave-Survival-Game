@@ -56,41 +56,49 @@ public class TileCoverHover : Singleton<TileCoverHover>
             DisableAllIcons();
 
             // North Tile
-            if (PositionLogic.Instance.GetAdjacentNorthernTile(tileMousedOver).ProvidesHalfCover())
+            if (PositionLogic.Instance.GetAdjacentNorthernTile(tileMousedOver) != null &&
+                PositionLogic.Instance.GetAdjacentNorthernTile(tileMousedOver).ProvidesHalfCover())
             {
                 northHalfCoverIcon.SetActive(true);
             }
-            else if (PositionLogic.Instance.GetAdjacentNorthernTile(tileMousedOver).ProvidesFullCover())
+            else if (PositionLogic.Instance.GetAdjacentNorthernTile(tileMousedOver) != null &&
+                PositionLogic.Instance.GetAdjacentNorthernTile(tileMousedOver).ProvidesFullCover())
             {
                 northFullCoverIcon.SetActive(true);
             }
 
             // South Tile
-            if (PositionLogic.Instance.GetAdjacentSouthernTile(tileMousedOver).ProvidesHalfCover())
+            if (PositionLogic.Instance.GetAdjacentSouthernTile(tileMousedOver) != null &&
+                PositionLogic.Instance.GetAdjacentSouthernTile(tileMousedOver).ProvidesHalfCover())
             {
                 southHalfCoverIcon.SetActive(true);
             }
-            else if (PositionLogic.Instance.GetAdjacentSouthernTile(tileMousedOver).ProvidesFullCover())
+            else if (PositionLogic.Instance.GetAdjacentSouthernTile(tileMousedOver) != null &&
+                PositionLogic.Instance.GetAdjacentSouthernTile(tileMousedOver).ProvidesFullCover())
             {
                 southFullCoverIcon.SetActive(true);
             }
 
             // East Tile
-            if (PositionLogic.Instance.GetAdjacentEasternTile(tileMousedOver).ProvidesHalfCover())
+            if (PositionLogic.Instance.GetAdjacentEasternTile(tileMousedOver) != null &&
+                PositionLogic.Instance.GetAdjacentEasternTile(tileMousedOver).ProvidesHalfCover())
             {
                 eastHalfCoverIcon.SetActive(true);
             }
-            else if (PositionLogic.Instance.GetAdjacentEasternTile(tileMousedOver).ProvidesFullCover())
+            else if (PositionLogic.Instance.GetAdjacentEasternTile(tileMousedOver) != null &&
+                PositionLogic.Instance.GetAdjacentEasternTile(tileMousedOver).ProvidesFullCover())
             {
                 eastFullCoverIcon.SetActive(true);
             }
 
             // West Tile
-            if (PositionLogic.Instance.GetAdjacentWesternTile(tileMousedOver).ProvidesHalfCover())
+            if (PositionLogic.Instance.GetAdjacentWesternTile(tileMousedOver) != null &&
+                PositionLogic.Instance.GetAdjacentWesternTile(tileMousedOver).ProvidesHalfCover())
             {
                 westHalfCoverIcon.SetActive(true);
             }
-            else if (PositionLogic.Instance.GetAdjacentWesternTile(tileMousedOver).ProvidesFullCover())
+            else if (PositionLogic.Instance.GetAdjacentWesternTile(tileMousedOver) != null &&
+                PositionLogic.Instance.GetAdjacentWesternTile(tileMousedOver).ProvidesFullCover())
             {
                 westFullCoverIcon.SetActive(true);
             }

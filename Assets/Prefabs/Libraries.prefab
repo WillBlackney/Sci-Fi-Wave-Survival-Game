@@ -15,7 +15,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &404561289
 Transform:
@@ -52,6 +52,52 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0e9f59f68920fd744902ca69e597fa63, type: 2}
   - {fileID: 11400000, guid: f2c27034f9f61a8438cdf8254e06ac55, type: 2}
   - {fileID: 11400000, guid: 46bc88498508ecb4ab8097458380e82a, type: 2}
+  - {fileID: 11400000, guid: f202ee6da3acf7b40ac11c5715aab283, type: 2}
+  - {fileID: 11400000, guid: e592ff0d3c14df04184ed454043adf14, type: 2}
+--- !u!1 &432146910962950237
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8498241358058073686}
+  - component: {fileID: 3301088516645861160}
+  m_Layer: 0
+  m_Name: Loot Library
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8498241358058073686
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432146910962950237}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4676288073241910911}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3301088516645861160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432146910962950237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca912eb20a004d24abf27b05e4271459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allLootRewards: []
 --- !u!1 &4676288073241910910
 GameObject:
   m_ObjectHideFlags: 0
@@ -66,7 +112,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4676288073241910911
 Transform:
@@ -85,6 +131,7 @@ Transform:
   - {fileID: 4676288074583106509}
   - {fileID: 4676288073985712957}
   - {fileID: 404561289}
+  - {fileID: 8498241358058073686}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -103,7 +150,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4676288073577457592
 Transform:
@@ -158,7 +205,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4676288073585011275
 Transform:
@@ -235,6 +282,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e65c67754a7e30d44ad2b4d526f4d11c, type: 2}
   - {fileID: 11400000, guid: c4311530081e91149bdc4a1f9c95c9e4, type: 2}
   - {fileID: 11400000, guid: e9ca5250b000cb94189fd6de847bee24, type: 2}
+  - {fileID: 11400000, guid: 326b0a31d7838e241974c70a719b7a64, type: 2}
+  - {fileID: 11400000, guid: a5dbc3b51dd73634fbd409b2cbd408af, type: 2}
   moveImage: {fileID: 21300000, guid: f2fc880836bad7b4d8f1de44a202f40a, type: 3}
   moveName: Move
   moveDescription: Move to a tile within range of your mobility.
@@ -625,7 +674,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4676288073985712957
 Transform:
@@ -686,7 +735,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4676288074198292593
 Transform:
@@ -876,6 +925,18 @@ MonoBehaviour:
   overwatchStatusDescription: Shoot at the first enemy that moves within range. Expires
     on turn start
   overwatchStatusStacks: 0
+  heavyWeaponImage: {fileID: 21300000, guid: 60ebb24692318a04c89cd74f7baa0417, type: 3}
+  heavyWeaponStatusName: Heavy Weapon
+  heavyWeaponStatusDescription: Cannot attack with ranged weapon unless 'Entrenched'
+  heavyWeaponStatusStacks: 0
+  rapidFireImage: {fileID: 21300000, guid: 06f9d857755642d4d80ee6a4d6ef548b, type: 3}
+  rapidFireStatusName: Rapid Fire
+  rapidFireStatusDescription: Your first 'Shoot' ability each turn costs 0 AP.
+  rapidFireStatusStacks: 0
+  deadEyeImage: {fileID: 21300000, guid: 17dbed4e4c884c24baf03c473446e29c, type: 3}
+  deadEyeStatusName: Dead Eye
+  deadEyeStatusDescription: Your next 'Shoot' ability this turn has +50 aim
+  deadEyeStatusStacks: 0
 --- !u!95 &4676288074198292558
 Animator:
   serializedVersion: 3
@@ -910,7 +971,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4676288074583106509
 Transform:

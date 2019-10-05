@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 public class TileScript : MonoBehaviour
 {   
     [Header("Component References")]
-    private SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
     public Animator myAnimator;
 
     [Header("Properties")]
@@ -34,7 +34,7 @@ public class TileScript : MonoBehaviour
 
 
     // Setup Initialization
-    private void Start()
+    private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         myAnimator = GetComponent<Animator>();
@@ -119,18 +119,6 @@ public class TileScript : MonoBehaviour
         // TO DO: The tile colouring is currently disabled to fix highlighting moveable tiles, fix this
         if (!EventSystem.current.IsPointerOverGameObject() && DefenderPanelManager.Instance.ClickedDefender != null)
         {
-            //Hover.Instance.SetPosition(WorldPosition);
-
-            /*
-            if (IsEmpty && !Debugging)
-            {
-                //ColorTile(emptyColour);
-            }
-            if (!IsEmpty && !Debugging)
-            {
-                //ColorTile(fullColour);
-            }
-            */
             if (Input.GetMouseButtonDown(0))
             {
                 if (LevelManager.Instance.GetSpaceShipControlZoneTile().Contains(this) == false)

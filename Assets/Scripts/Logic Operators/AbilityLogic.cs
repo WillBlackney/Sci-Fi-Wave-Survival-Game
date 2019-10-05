@@ -477,7 +477,14 @@ public class AbilityLogic : MonoBehaviour
 
         bool attackSuccesful = CombatLogic.Instance.CalculateIfAttackHitOrMiss(caster, victim);
         // TO DO: below corotuine should be replaced with a shoot animation
-        StartCoroutine(caster.AttackMovement(victim));
+        if(caster.myClass == LivingEntity.Class.Rifleman)
+        {
+            Action shootAnimation = AttackAnimationManager.Instance.PlayAttackAnimation(caster, victim, shoot);
+        }
+        
+        
+        //yield return new WaitUntil(() => shootAnimation.ActionResolved() == true);
+        //StartCoroutine(caster.AttackMovement(victim));
 
         if (attackSuccesful)
         {

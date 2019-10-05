@@ -177,8 +177,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: d4d9aa871c0b90e47ad9aae86a8f3762, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 8456777460007596050, guid: 7bcf244e1172d4e46b9c6c0e7accdd17,
+    type: 3}
+  m_Color: {r: 0.3726415, g: 1, b: 0.39222717, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -211,7 +212,7 @@ Animator:
   m_GameObject: {fileID: 4487508947622428803}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: dc15c7cad678e614387848721bc11538, type: 2}
+  m_Controller: {fileID: 9100000, guid: 529482ec428727041acd60894b514450, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -287,6 +288,8 @@ MonoBehaviour:
   KnowsThrowHandGrenade: 0
   KnowsDigIn: 0
   KnowsOverwatch: 0
+  KnowsAreaSupression: 0
+  KnowsDeadEye: 0
 --- !u!114 &6696428958369245537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,6 +357,12 @@ MonoBehaviour:
   entrenchedStacks: 0
   Overwatch: 0
   overwatchStacks: 0
+  HeavyWeapon: 0
+  heavyWeaponStacks: 0
+  RapidFire: 0
+  rapidFireStacks: 0
+  DeadEye: 0
+  deadEyeStacks: 0
 --- !u!114 &-3177715637823320678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -417,15 +426,18 @@ MonoBehaviour:
   isCamoflaged: 0
   isPoisoned: 0
   poisonStacks: 0
+  inDeathProcess: 0
   moveActionsTakenThisTurn: 0
+  shootActionsTakenThisTurn: 0
   timesAttackedThisTurn: 0
   TileCurrentlyOn: {fileID: 0}
   myCurrentTarget: {fileID: 0}
   destination: {x: 0, y: 0, z: 0}
   facingRight: 0
-  spriteImportedFacingRight: 1
+  spriteImportedFacingRight: 0
   myDeathAnimationFinished: 0
   myOnTurnEndEffectsFinished: 0
+  shootAnimationFinished: 0
   myInfoPanel: {fileID: 2546341403559018098}
   myName: 
   currentlyActivated: 0
@@ -947,6 +959,16 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 559907439341463414, guid: e9dec7b36e2ddf94ea75c3559f4ff134,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 559907439341463414, guid: e9dec7b36e2ddf94ea75c3559f4ff134,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 559907437459523646, guid: e9dec7b36e2ddf94ea75c3559f4ff134,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1051,16 +1073,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 559907439341463414, guid: e9dec7b36e2ddf94ea75c3559f4ff134,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 559907439341463414, guid: e9dec7b36e2ddf94ea75c3559f4ff134,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2565807883649951148, guid: e9dec7b36e2ddf94ea75c3559f4ff134,
         type: 3}

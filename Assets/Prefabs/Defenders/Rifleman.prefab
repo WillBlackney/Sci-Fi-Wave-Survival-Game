@@ -263,6 +263,7 @@ MonoBehaviour:
   spriteImportedFacingRight: 1
   myDeathAnimationFinished: 0
   myOnTurnEndEffectsFinished: 0
+  shootAnimationFinished: 0
   myAbilityBar: {fileID: 3830488458113757589}
   myUIParent: {fileID: 6129256707308224232}
   myCharacterData: {fileID: 0}

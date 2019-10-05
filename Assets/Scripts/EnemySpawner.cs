@@ -117,6 +117,10 @@ public class EnemySpawner : Singleton<EnemySpawner>
         {
             StartCoroutine(SpawnEnemyWave(GetRandomWave(waveType, level), waveSpawn));
         }
+        else
+        {
+            waveSpawn.actionResolved = true;
+        }
         
         return waveSpawn;
     }

@@ -69,7 +69,13 @@ public class LevelManager : Singleton<LevelManager>
         //ToggleLevelBackgroundView(true);
         //Camera.main.transform.position = new Vector3(GetWorldCentreTile().WorldPosition.x, GetWorldCentreTile().WorldPosition.y, -10);
         //FindObjectOfType<CameraMovement>().cinemachineCamera.transform.position = new Vector3(GetWorldCentreTile().WorldPosition.x, GetWorldCentreTile().WorldPosition.y, -10);
-
+        foreach (TileScript tile in GetAllTilesFromCurrentLevelDictionary())
+        {
+            if(tile.myTileType == TileScript.TileType.Water)
+            {
+                TileSpriteManager.Instance.DetermineAndSetSprite(tile);
+            }
+        }
     }	
     public void CreateSpaceShipControlZone()
     {

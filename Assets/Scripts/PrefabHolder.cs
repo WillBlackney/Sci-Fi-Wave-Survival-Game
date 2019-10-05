@@ -29,7 +29,8 @@ public class PrefabHolder : Singleton<PrefabHolder>
     public GameObject ArtifactRewardButton;
     public GameObject ArtifactGO;
     public GameObject ItemCard;
-    public GameObject TreasureChest;
+    //public GameObject TreasureChest;
+    public GameObject LootBox;
 
     [Header("World/Level Related")]
     public GameObject LevelBG;

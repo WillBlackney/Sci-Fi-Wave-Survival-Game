@@ -79,7 +79,9 @@
     <Compile Include="Assets\Scripts\AStar\AStarDebugger.cs" />
     <Compile Include="Assets\Scripts\AStar\DebugTile.cs" />
     <Compile Include="Assets\Scripts\AStar\Node.cs" />
+    <Compile Include="Assets\Scripts\AttackAnimationManager.cs" />
     <Compile Include="Assets\Scripts\blankscript1.cs" />
+    <Compile Include="Assets\Scripts\BulletTracer.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraManager.cs" />
     <Compile Include="Assets\Scripts\Camera\CinemachineCameraController.cs" />
     <Compile Include="Assets\Scripts\Camera\UnityCameraController.cs" />
@@ -136,6 +138,11 @@
     <Compile Include="Assets\Scripts\Logic Operators\MovementLogic.cs" />
     <Compile Include="Assets\Scripts\Logic Operators\PositionLogic.cs" />
     <Compile Include="Assets\Scripts\Loot\GoldRewardButton.cs" />
+    <Compile Include="Assets\Scripts\Loot\LootBox.cs" />
+    <Compile Include="Assets\Scripts\Loot\LootBoxManager.cs" />
+    <Compile Include="Assets\Scripts\Loot\LootCard.cs" />
+    <Compile Include="Assets\Scripts\Loot\LootDataSO.cs" />
+    <Compile Include="Assets\Scripts\Loot\LootLibrary.cs" />
     <Compile Include="Assets\Scripts\Loot\TreasureChest.cs" />
     <Compile Include="Assets\Scripts\Menu\CharacterBox.cs" />
     <Compile Include="Assets\Scripts\Menu\MainMenuManager.cs" />
@@ -150,6 +157,7 @@
     <Compile Include="Assets\Scripts\PlayerDataManager.cs" />
     <Compile Include="Assets\Scripts\Point.cs" />
     <Compile Include="Assets\Scripts\PrefabHolder.cs" />
+    <Compile Include="Assets\Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\RewardScreen.cs" />
     <Compile Include="Assets\Scripts\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\ShopScreenManager.cs" />
@@ -162,6 +170,7 @@
     <Compile Include="Assets\Scripts\TalentTree.cs" />
     <Compile Include="Assets\Scripts\TileCoverHover.cs" />
     <Compile Include="Assets\Scripts\TileScript.cs" />
+    <Compile Include="Assets\Scripts\TileSpriteManager.cs" />
     <Compile Include="Assets\Scripts\TurnManager.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\Visual\BlackScreenManager.cs" />

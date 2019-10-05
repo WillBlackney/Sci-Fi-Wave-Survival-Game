@@ -30,7 +30,6 @@ public class PlayerDataManager : Singleton<PlayerDataManager>
         currentGold += goldGainedOrLost;
         currentGoldText.text = currentGold.ToString();
     }
-
     public void ModifyCurrentTroopCount(int troopCountGainedOrLost)
     {
         currentTroopCount += troopCountGainedOrLost;

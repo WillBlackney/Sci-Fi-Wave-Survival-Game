@@ -336,8 +336,8 @@ public class EventManager : Singleton<EventManager>
     public void CreateNewTreasureChest()
     {
         // create a treasure chest game object
-        GameObject newTreasureChest = Instantiate(PrefabHolder.Instance.TreasureChest);
-        newTreasureChest.GetComponent<TreasureChest>().InitializeSetup();
+       // GameObject newTreasureChest = Instantiate(PrefabHolder.Instance.TreasureChest);
+        //newTreasureChest.GetComponent<TreasureChest>().InitializeSetup();
         RewardScreen.Instance.CreateArtifactRewardButton();
     }
 

@@ -22,3 +22,5 @@ MonoBehaviour:
   abilitySecondaryValue: 0
   abilityDamageType: 0
   abilityAttackType: 0
+  usesRangedWeapon: 0
+  usesMeleeWeapon: 0

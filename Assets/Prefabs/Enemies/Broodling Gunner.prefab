@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7153366534238372337}
   - component: {fileID: 3730931670129912239}
   m_Layer: 0
-  m_Name: Hive Gunner
+  m_Name: Broodling Gunner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,8 +75,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: d4d9aa871c0b90e47ad9aae86a8f3762, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 8456777460007596050, guid: 7bcf244e1172d4e46b9c6c0e7accdd17,
+    type: 3}
+  m_Color: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -109,7 +110,7 @@ Animator:
   m_GameObject: {fileID: 138898840087619603}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: dc15c7cad678e614387848721bc11538, type: 2}
+  m_Controller: {fileID: 9100000, guid: 529482ec428727041acd60894b514450, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -182,6 +183,11 @@ MonoBehaviour:
   KnowsBless: 0
   KnowsSiphonLife: 0
   KnowsChaosBolt: 0
+  KnowsThrowHandGrenade: 0
+  KnowsDigIn: 0
+  KnowsOverwatch: 0
+  KnowsAreaSupression: 0
+  KnowsDeadEye: 0
 --- !u!114 &7153366534238372337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,6 +251,16 @@ MonoBehaviour:
   physicalImmunityStacks: 0
   Flanked: 0
   flankedStacks: 0
+  Entrenched: 0
+  entrenchedStacks: 0
+  Overwatch: 0
+  overwatchStacks: 0
+  HeavyWeapon: 0
+  heavyWeaponStacks: 0
+  RapidFire: 0
+  rapidFireStacks: 0
+  DeadEye: 0
+  deadEyeStacks: 0
 --- !u!114 &3730931670129912239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,15 +324,18 @@ MonoBehaviour:
   isCamoflaged: 0
   isPoisoned: 0
   poisonStacks: 0
+  inDeathProcess: 0
   moveActionsTakenThisTurn: 0
+  shootActionsTakenThisTurn: 0
   timesAttackedThisTurn: 0
   TileCurrentlyOn: {fileID: 0}
   myCurrentTarget: {fileID: 0}
   destination: {x: 0, y: 0, z: 0}
   facingRight: 1
-  spriteImportedFacingRight: 1
+  spriteImportedFacingRight: 0
   myDeathAnimationFinished: 0
   myOnTurnEndEffectsFinished: 0
+  shootAnimationFinished: 0
   myInfoPanel: {fileID: 2089052701237171938}
   myName: Hive Gunner
   currentlyActivated: 0
