@@ -71,10 +71,7 @@ public class LevelManager : Singleton<LevelManager>
         //FindObjectOfType<CameraMovement>().cinemachineCamera.transform.position = new Vector3(GetWorldCentreTile().WorldPosition.x, GetWorldCentreTile().WorldPosition.y, -10);
         foreach (TileScript tile in GetAllTilesFromCurrentLevelDictionary())
         {
-            if(tile.myTileType == TileScript.TileType.Water)
-            {
-                TileSpriteManager.Instance.DetermineAndSetSprite(tile);
-            }
+            TileSpriteManager.Instance.DetermineAndSetEdgeSprites(tile);
         }
     }	
     public void CreateSpaceShipControlZone()

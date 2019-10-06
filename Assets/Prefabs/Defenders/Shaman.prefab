@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: edd60446d68287a41a593110af8a623c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -111,6 +111,8 @@ MonoBehaviour:
   myStatusManager: {fileID: 6866375568425796981}
   mySpellBook: {fileID: 0}
   myPassiveManager: {fileID: 0}
+  myMeleeWeapon: {fileID: 0}
+  myRangedWeapon: {fileID: 0}
   defender: {fileID: 0}
   enemy: {fileID: 0}
   baseMobility: 3
@@ -123,6 +125,8 @@ MonoBehaviour:
   baseStrength: 0
   baseDexterity: 0
   baseStartingBlock: 0
+  baseDefense: 0
+  baseAim: 0
   currentMobility: 0
   currentMaxHealth: 0
   currentHealth: 0
@@ -133,6 +137,8 @@ MonoBehaviour:
   currentStrength: 0
   currentDexterity: 0
   currentBlock: 0
+  currentDefense: 0
+  currentAim: 0
   isKnockedDown: 0
   isPinned: 0
   isStunned: 0
@@ -143,7 +149,9 @@ MonoBehaviour:
   isCamoflaged: 0
   isPoisoned: 0
   poisonStacks: 0
+  inDeathProcess: 0
   moveActionsTakenThisTurn: 0
+  shootActionsTakenThisTurn: 0
   timesAttackedThisTurn: 0
   TileCurrentlyOn: {fileID: 0}
   myCurrentTarget: {fileID: 0}
@@ -152,9 +160,13 @@ MonoBehaviour:
   spriteImportedFacingRight: 1
   myDeathAnimationFinished: 0
   myOnTurnEndEffectsFinished: 0
+  shootAnimationFinished: 0
   myAbilityBar: {fileID: 5855655583004489644}
   myUIParent: {fileID: 3559156312427215057}
   myCharacterData: {fileID: 0}
+  myRangedWeaponSlot: {fileID: 0}
+  myMeleeWeaponSlot: {fileID: 0}
+  overlayHealthBar: {fileID: 0}
   myCurrentAPText: {fileID: 1047316793880910257}
   myCurrentMaxAPText: {fileID: 8992450869681535785}
   myCurrentStrengthStatText: {fileID: 804118636309754579}
@@ -162,6 +174,10 @@ MonoBehaviour:
   myCurrentAPStatText: {fileID: 7765895082661297261}
   myCurrentHealthTextStatBar: {fileID: 7261733582601329531}
   myCurrentMaxHealthTextStatBar: {fileID: 4083545991756894422}
+  myCurrentDefenseStatText: {fileID: 0}
+  myCurrentAimStatText: {fileID: 0}
+  myBaseTroopCost: 0
+  myCurrentTroopCost: 0
   awaitingMoveOrder: 0
   awaitingStrikeOrder: 0
   awaitingChargeTargetOrder: 0
@@ -196,6 +212,9 @@ MonoBehaviour:
   awaitingSanctityOrder: 0
   awaitingBlessOrder: 0
   awaitingSiphonLifeOrder: 0
+  awaitingChaosBoltOrder: 0
+  awaitingThrowHandGrenadeTarget: 0
+  awaitingAreaSupressionTarget: 0
 --- !u!65 &3558336318184339077
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -272,6 +291,12 @@ MonoBehaviour:
   KnowsSanctity: 0
   KnowsBless: 0
   KnowsSiphonLife: 0
+  KnowsChaosBolt: 0
+  KnowsThrowHandGrenade: 0
+  KnowsDigIn: 0
+  KnowsOverwatch: 0
+  KnowsAreaSupression: 0
+  KnowsDeadEye: 0
 --- !u!114 &8565765564203148057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,6 +358,18 @@ MonoBehaviour:
   magicImmunityStacks: 0
   PhysicalImmunity: 0
   physicalImmunityStacks: 0
+  Flanked: 0
+  flankedStacks: 0
+  Entrenched: 0
+  entrenchedStacks: 0
+  Overwatch: 0
+  overwatchStacks: 0
+  HeavyWeapon: 0
+  heavyWeaponStacks: 0
+  RapidFire: 0
+  rapidFireStacks: 0
+  DeadEye: 0
+  deadEyeStacks: 0
 --- !u!95 &8205874644602754131
 Animator:
   serializedVersion: 3
@@ -1311,15 +1348,15 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 7542611185386405209, guid: e9dec7b36e2ddf94ea75c3559f4ff134,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -81.1
-      objectReference: {fileID: 0}
     - target: {fileID: 2835375221690740220, guid: e9dec7b36e2ddf94ea75c3559f4ff134,
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 83.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7542611185386405209, guid: e9dec7b36e2ddf94ea75c3559f4ff134,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -81.1
       objectReference: {fileID: 0}
     - target: {fileID: 2565807883649951148, guid: e9dec7b36e2ddf94ea75c3559f4ff134,
         type: 3}

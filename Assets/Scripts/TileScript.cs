@@ -5,6 +5,7 @@ public class TileScript : MonoBehaviour
 {   
     [Header("Component References")]
     public SpriteRenderer spriteRenderer;
+    public SpriteRenderer edgeSpriteRenderer;
     public Animator myAnimator;
 
     [Header("Properties")]

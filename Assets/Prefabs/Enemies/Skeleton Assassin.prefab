@@ -101,7 +101,9 @@ MonoBehaviour:
   isCamoflaged: 0
   isPoisoned: 0
   poisonStacks: 0
+  inDeathProcess: 0
   moveActionsTakenThisTurn: 0
+  shootActionsTakenThisTurn: 0
   timesAttackedThisTurn: 0
   TileCurrentlyOn: {fileID: 0}
   myCurrentTarget: {fileID: 0}
@@ -110,6 +112,7 @@ MonoBehaviour:
   spriteImportedFacingRight: 1
   myDeathAnimationFinished: 0
   myOnTurnEndEffectsFinished: 0
+  shootAnimationFinished: 0
   myInfoPanel: {fileID: 2095069968850433237}
   myName: Skeleton Assassin
   currentlyActivated: 0
@@ -153,7 +156,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 5
   m_Sprite: {fileID: -290755551762243951, guid: 60fb83c54cac98346849850ad74bd818,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -262,6 +265,11 @@ MonoBehaviour:
   KnowsBless: 0
   KnowsSiphonLife: 0
   KnowsChaosBolt: 0
+  KnowsThrowHandGrenade: 0
+  KnowsDigIn: 0
+  KnowsOverwatch: 0
+  KnowsAreaSupression: 0
+  KnowsDeadEye: 0
 --- !u!114 &7109844203329741766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,6 +333,16 @@ MonoBehaviour:
   physicalImmunityStacks: 0
   Flanked: 0
   flankedStacks: 0
+  Entrenched: 0
+  entrenchedStacks: 0
+  Overwatch: 0
+  overwatchStacks: 0
+  HeavyWeapon: 0
+  heavyWeaponStacks: 0
+  RapidFire: 0
+  rapidFireStacks: 0
+  DeadEye: 0
+  deadEyeStacks: 0
 --- !u!1 &2185314035005042152
 GameObject:
   m_ObjectHideFlags: 0
@@ -1005,11 +1023,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy UI Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 8969435319264933648, guid: 5fc36fb899fb1834e80e5cdcd63ba5f4,
-        type: 3}
-      propertyPath: myEnemy
-      value: 
-      objectReference: {fileID: 8436321203685556223}
     - target: {fileID: 366622057908382504, guid: 5fc36fb899fb1834e80e5cdcd63ba5f4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1115,6 +1128,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8969435319264933648, guid: 5fc36fb899fb1834e80e5cdcd63ba5f4,
+        type: 3}
+      propertyPath: myEnemy
+      value: 
+      objectReference: {fileID: 8436321203685556223}
     - target: {fileID: 5733015482831789483, guid: 5fc36fb899fb1834e80e5cdcd63ba5f4,
         type: 3}
       propertyPath: m_AnchorMax.x

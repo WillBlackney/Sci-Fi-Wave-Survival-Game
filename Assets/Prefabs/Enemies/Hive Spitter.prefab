@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: efea6a713d9f6634295b340d248a935c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -185,6 +185,8 @@ MonoBehaviour:
   KnowsThrowHandGrenade: 0
   KnowsDigIn: 0
   KnowsOverwatch: 0
+  KnowsAreaSupression: 0
+  KnowsDeadEye: 0
 --- !u!114 &7704034602258099520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,6 +254,12 @@ MonoBehaviour:
   entrenchedStacks: 0
   Overwatch: 0
   overwatchStacks: 0
+  HeavyWeapon: 0
+  heavyWeaponStacks: 0
+  RapidFire: 0
+  rapidFireStacks: 0
+  DeadEye: 0
+  deadEyeStacks: 0
 --- !u!114 &1221400415033088133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,7 +323,9 @@ MonoBehaviour:
   isCamoflaged: 0
   isPoisoned: 0
   poisonStacks: 0
+  inDeathProcess: 0
   moveActionsTakenThisTurn: 0
+  shootActionsTakenThisTurn: 0
   timesAttackedThisTurn: 0
   TileCurrentlyOn: {fileID: 0}
   myCurrentTarget: {fileID: 0}
@@ -324,6 +334,7 @@ MonoBehaviour:
   spriteImportedFacingRight: 1
   myDeathAnimationFinished: 0
   myOnTurnEndEffectsFinished: 0
+  shootAnimationFinished: 0
   myInfoPanel: {fileID: 1536334456365038163}
   myName: Hive Spitter
   currentlyActivated: 0
@@ -648,6 +659,16 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 559907439341463414, guid: e9dec7b36e2ddf94ea75c3559f4ff134,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 559907439341463414, guid: e9dec7b36e2ddf94ea75c3559f4ff134,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 559907437459523646, guid: e9dec7b36e2ddf94ea75c3559f4ff134,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -752,16 +773,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 559907439341463414, guid: e9dec7b36e2ddf94ea75c3559f4ff134,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 559907439341463414, guid: e9dec7b36e2ddf94ea75c3559f4ff134,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2565807883649951148, guid: e9dec7b36e2ddf94ea75c3559f4ff134,
         type: 3}

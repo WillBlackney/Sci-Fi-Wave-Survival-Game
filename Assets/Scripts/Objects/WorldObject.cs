@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class WorldObject : MonoBehaviour
 {
+    public enum ObjectType { Tree, Rubble, RockWall, SandBag };
     [Header("Component References")]
     public SpriteRenderer spriteRenderer;
     public Animator myAnimator;
     public TileScript myTile;
 
-    [Header("Properties")]    
+    [Header("Properties")]
+    public ObjectType objectType;
     public bool canBeMovedThrough;
     public bool preventsOccupation;
     public bool blocksLOS;

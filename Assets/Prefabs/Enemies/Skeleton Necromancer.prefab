@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: f8a9e5e4fa6956245956aeadaf2ff418, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -181,6 +181,12 @@ MonoBehaviour:
   KnowsSanctity: 0
   KnowsBless: 0
   KnowsSiphonLife: 0
+  KnowsChaosBolt: 0
+  KnowsThrowHandGrenade: 0
+  KnowsDigIn: 0
+  KnowsOverwatch: 0
+  KnowsAreaSupression: 0
+  KnowsDeadEye: 0
 --- !u!114 &406101746738285374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,6 +248,18 @@ MonoBehaviour:
   magicImmunityStacks: 0
   PhysicalImmunity: 0
   physicalImmunityStacks: 0
+  Flanked: 0
+  flankedStacks: 0
+  Entrenched: 0
+  entrenchedStacks: 0
+  Overwatch: 0
+  overwatchStacks: 0
+  HeavyWeapon: 0
+  heavyWeaponStacks: 0
+  RapidFire: 0
+  rapidFireStacks: 0
+  DeadEye: 0
+  deadEyeStacks: 0
 --- !u!114 &4612963927037466110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,6 +285,8 @@ MonoBehaviour:
   myStatusManager: {fileID: 2592445971339363775}
   mySpellBook: {fileID: 0}
   myPassiveManager: {fileID: 0}
+  myMeleeWeapon: {fileID: 0}
+  myRangedWeapon: {fileID: 0}
   defender: {fileID: 0}
   enemy: {fileID: 0}
   baseMobility: 2
@@ -279,6 +299,8 @@ MonoBehaviour:
   baseStrength: 0
   baseDexterity: 0
   baseStartingBlock: 0
+  baseDefense: 0
+  baseAim: 0
   currentMobility: 0
   currentMaxHealth: 0
   currentHealth: 0
@@ -289,6 +311,8 @@ MonoBehaviour:
   currentStrength: 0
   currentDexterity: 0
   currentBlock: 0
+  currentDefense: 0
+  currentAim: 0
   isKnockedDown: 0
   isPinned: 0
   isStunned: 0
@@ -299,7 +323,9 @@ MonoBehaviour:
   isCamoflaged: 0
   isPoisoned: 0
   poisonStacks: 0
+  inDeathProcess: 0
   moveActionsTakenThisTurn: 0
+  shootActionsTakenThisTurn: 0
   timesAttackedThisTurn: 0
   TileCurrentlyOn: {fileID: 0}
   myCurrentTarget: {fileID: 0}
@@ -308,6 +334,7 @@ MonoBehaviour:
   spriteImportedFacingRight: 1
   myDeathAnimationFinished: 0
   myOnTurnEndEffectsFinished: 0
+  shootAnimationFinished: 0
   myInfoPanel: {fileID: 1490631549828721525}
   myName: Skeleton Necromancer
   currentlyActivated: 0

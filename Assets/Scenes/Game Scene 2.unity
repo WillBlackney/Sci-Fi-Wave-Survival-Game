@@ -192,22 +192,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52c177a3c6b9c3b45827d7b2031ec74d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waterNorthTiles:
-  - {fileID: 21300000, guid: 72e13fd7747302949aa5d77c7f303067, type: 3}
-  waterSouthTiles:
-  - {fileID: 21300000, guid: c3c042302cae12d4892f7a545302d501, type: 3}
-  waterEastTiles:
-  - {fileID: 21300000, guid: d03b50d270bfec24f8816b6c76dacd6d, type: 3}
-  waterWestTiles:
-  - {fileID: 21300000, guid: 1dfb65a65d517a549ae2e754c5191bff, type: 3}
-  waterNorthEastTiles:
-  - {fileID: 21300000, guid: d6a301f69693cd741adbd58e23961442, type: 3}
-  waterNorthWestTiles:
-  - {fileID: 21300000, guid: 3b6d7e8e43e496a4db91e98e95629223, type: 3}
-  waterSouthEastTiles:
-  - {fileID: 21300000, guid: 68b4bafb2456c9c4b95d8f5d70caca3e, type: 3}
-  waterSouthWestTiles:
-  - {fileID: 21300000, guid: db8d31df5bebb69458ec5a392109b0c3, type: 3}
+  edgePrefabGO: {fileID: 2803489147119031965, guid: 1fc402084d4ce5d4b862b946586e756a,
+    type: 3}
+  waterCentreTiles:
+  - {fileID: 21300000, guid: 3d01944161d7df640827ab4a24b9364b, type: 3}
+  - {fileID: 21300000, guid: ca1d41344063ed54d80588393892e4ef, type: 3}
+  - {fileID: 21300000, guid: 5da3b485c4d422847a86a34ce4bd2a53, type: 3}
+  dirtCentreTiles:
+  - {fileID: 21300000, guid: 4440d0e70f5024c4fa5958d190041db6, type: 3}
+  - {fileID: 21300000, guid: abd427d37b74b744dbfa59cda3b1ddd7, type: 3}
+  - {fileID: 21300000, guid: b849afac261cce94fbeafbe0c538b17e, type: 3}
+  - {fileID: 21300000, guid: 4c4b1da1a19a0434993fb91ba1876d8f, type: 3}
+  rubbleSprites:
+  - {fileID: 21300000, guid: 9714917b48ff9bb4c9e5fcfeb1f738e3, type: 3}
+  - {fileID: 21300000, guid: c4b07b8190c17d848b3242ae07d501d8, type: 3}
+  - {fileID: 21300000, guid: c1dd9571bce13834bb09a1031631182d, type: 3}
+  treeSprites:
+  - {fileID: 2572236292851511218, guid: d737c7a5f3f43594eb115e320b0816cc, type: 3}
+  - {fileID: -8911251428918342384, guid: d737c7a5f3f43594eb115e320b0816cc, type: 3}
+  rockWallSprites:
+  - {fileID: -7149995037987761781, guid: 6c869bfd2c1dd4f4c97772eead9b8cf1, type: 3}
+  northEdge: {fileID: 21300000, guid: 61899c00654d0be47aa2138ef794fa94, type: 3}
+  southEdge: {fileID: 21300000, guid: 59b4b99b37fe59e468b9268d1c75e34a, type: 3}
+  westEdge: {fileID: 21300000, guid: fc188ac8fd83d1c49a71cf40b293713b, type: 3}
+  eastEdge: {fileID: 21300000, guid: 75a20e5310a22cf4e97d60eb1f5bb862, type: 3}
+  northEastEdge: {fileID: 21300000, guid: 6d8c4ad86d8a3dc4d8a508e4f4ddea69, type: 3}
+  northWestEdge: {fileID: 21300000, guid: cdfb79c260f040342b80527bb6447038, type: 3}
+  southEastEdge: {fileID: 21300000, guid: adcc0ce061512e6448e281293d850ecf, type: 3}
+  southWestEdge: {fileID: 21300000, guid: 664e075eb1886bd4eadda52a05aa0d91, type: 3}
 --- !u!4 &20741831
 Transform:
   m_ObjectHideFlags: 0

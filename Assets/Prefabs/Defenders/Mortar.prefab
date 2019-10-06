@@ -99,17 +99,20 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
+    m_SelectedTrigger: Highlighted
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 764076765022551371}
@@ -443,17 +446,20 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
+    m_SelectedTrigger: Highlighted
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 764076766838576756}
@@ -623,7 +629,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: c3d097ad8c98a3643b6b728383a114df, type: 3}
   m_Color: {r: 1, g: 0.0039215684, b: 0.6689023, a: 1}
   m_FlipX: 0
@@ -660,23 +666,123 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c927225bc6511478fef40e8ad67878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myUIParent: {fileID: 764076765418432076}
+  speed: 3
+  myClass: 0
   myHealthBar: {fileID: 764076765046923760}
+  myWorldSpaceCanvasParent: {fileID: 0}
+  myBlockIcon: {fileID: 0}
+  myBlockText: {fileID: 0}
+  myCurrentHealthText: {fileID: 0}
+  myCurrentMaxHealthText: {fileID: 0}
+  myAnimator: {fileID: 0}
+  mySpriteRenderer: {fileID: 0}
+  myStatusManager: {fileID: 0}
+  mySpellBook: {fileID: 0}
+  myPassiveManager: {fileID: 0}
+  myMeleeWeapon: {fileID: 0}
+  myRangedWeapon: {fileID: 0}
+  defender: {fileID: 0}
+  enemy: {fileID: 0}
   baseMobility: 3
   baseMaxHealth: 10
-  baseShootDamage: 10
-  baseShootRange: 20
+  baseStartingHealth: 0
+  baseEnergy: 0
+  baseStartingAP: 0
+  baseMaxAP: 0
+  baseMeleeRange: 0
+  baseStrength: 0
+  baseDexterity: 0
+  baseStartingBlock: 0
+  baseDefense: 0
+  baseAim: 0
   currentMobility: 0
   currentMaxHealth: 0
   currentHealth: 0
-  currentShootDamage: 0
-  currentShootRange: 0
-  speed: 3
-  readyToMove: 0
+  currentMaxAP: 0
+  currentEnergy: 0
+  currentAP: 0
+  currentMeleeRange: 0
+  currentStrength: 0
+  currentDexterity: 0
+  currentBlock: 0
+  currentDefense: 0
+  currentAim: 0
+  isKnockedDown: 0
+  isPinned: 0
+  isStunned: 0
+  hasBarrier: 0
+  currentBarrierStacks: 0
+  isSleeping: 0
+  currentSleepingStacks: 0
+  isCamoflaged: 0
+  isPoisoned: 0
+  poisonStacks: 0
+  inDeathProcess: 0
+  moveActionsTakenThisTurn: 0
+  shootActionsTakenThisTurn: 0
+  timesAttackedThisTurn: 0
+  TileCurrentlyOn: {fileID: 0}
+  myCurrentTarget: {fileID: 0}
+  destination: {x: 0, y: 0, z: 0}
+  facingRight: 0
+  spriteImportedFacingRight: 0
+  myDeathAnimationFinished: 0
+  myOnTurnEndEffectsFinished: 0
+  shootAnimationFinished: 0
+  myAbilityBar: {fileID: 0}
+  myUIParent: {fileID: 764076765418432076}
+  myCharacterData: {fileID: 0}
+  myRangedWeaponSlot: {fileID: 0}
+  myMeleeWeaponSlot: {fileID: 0}
+  overlayHealthBar: {fileID: 0}
+  myCurrentAPText: {fileID: 0}
+  myCurrentMaxAPText: {fileID: 0}
+  myCurrentStrengthStatText: {fileID: 0}
+  myCurrentMobilityStatText: {fileID: 0}
+  myCurrentAPStatText: {fileID: 0}
+  myCurrentHealthTextStatBar: {fileID: 0}
+  myCurrentMaxHealthTextStatBar: {fileID: 0}
+  myCurrentDefenseStatText: {fileID: 0}
+  myCurrentAimStatText: {fileID: 0}
+  myBaseTroopCost: 0
+  myCurrentTroopCost: 0
   awaitingMoveOrder: 0
+  awaitingStrikeOrder: 0
+  awaitingChargeTargetOrder: 0
+  awaitingChargeLocationOrder: 0
+  awaitingInspireOrder: 0
+  awaitingGuardOrder: 0
   awaitingShootOrder: 0
-  hasMovedThisTurn: 0
-  hasShotThisTurn: 0
+  awaitingMeteorOrder: 0
+  awaitingTelekinesisTargetOrder: 0
+  awaitingTelekinesisLocationOrder: 0
+  awaitingFrostBoltOrder: 0
+  awaitingFireBallOrder: 0
+  awaitingRapidFireOrder: 0
+  awaitingImpalingBoltOrder: 0
+  awaitingForestMedicineOrder: 0
+  awaitingInvigorateOrder: 0
+  awaitingHolyFireOrder: 0
+  awaitingVoidBombOrder: 0
+  awaitingNightmareOrder: 0
+  awaitingTwinStrikeOrder: 0
+  awaitingDashOrder: 0
+  awaitingSliceAndDiceOrder: 0
+  awaitingPoisonDartOrder: 0
+  awaitingChemicalReactionOrder: 0
+  awaitingGetDownOrder: 0
+  awaitingSmashOrder: 0
+  awaitingLightningShieldOrder: 0
+  awaitingChainLightningOrder: 0
+  awaitingPrimalBlastOrder: 0
+  awaitingPrimalRageOrder: 0
+  awaitingPhaseShiftOrder: 0
+  awaitingSanctityOrder: 0
+  awaitingBlessOrder: 0
+  awaitingSiphonLifeOrder: 0
+  awaitingChaosBoltOrder: 0
+  awaitingThrowHandGrenadeTarget: 0
+  awaitingAreaSupressionTarget: 0
 --- !u!1 &6536856621755809652
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,6 +889,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 607153600964093736}
     m_Modifications:
+    - target: {fileID: 559907437459523645, guid: e9dec7b36e2ddf94ea75c3559f4ff134,
+        type: 3}
+      propertyPath: m_Name
+      value: Health Bar
+      objectReference: {fileID: 0}
     - target: {fileID: 559907437459523646, guid: e9dec7b36e2ddf94ea75c3559f4ff134,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -887,11 +998,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 559907437459523645, guid: e9dec7b36e2ddf94ea75c3559f4ff134,
-        type: 3}
-      propertyPath: m_Name
-      value: Health Bar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9dec7b36e2ddf94ea75c3559f4ff134, type: 3}

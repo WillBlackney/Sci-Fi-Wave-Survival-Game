@@ -44,9 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 822f479ec5b8766448e2ac09d27fe2e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 5622605144567398988}
   myAnimator: {fileID: 0}
   myTile: {fileID: 0}
+  objectType: 0
   canBeMovedThrough: 0
   preventsOccupation: 1
   blocksLOS: 1
