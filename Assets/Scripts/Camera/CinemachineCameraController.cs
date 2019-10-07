@@ -13,7 +13,7 @@ public class CinemachineCameraController : MonoBehaviour
     [Header("Properties")]
     public float cameraMoveSpeed;
     public float cameraZoomSpeed;
-    public float smoothSpeed = 0.01f;
+    public float smoothSpeed = 0.10f;
     public float currentOrthoSize;
     public float minOrthoSize;
     public float maxOrthoSize;
@@ -29,11 +29,7 @@ public class CinemachineCameraController : MonoBehaviour
 
     // Start + Update
     #region
-    private void Update()
-    {
-        //HandleZoomInput();
-        //MoveTowardsZoomPosition();
-    }
+    
     void LateUpdate()
     {
         LookAtTarget();
@@ -44,7 +40,7 @@ public class CinemachineCameraController : MonoBehaviour
     void Start()
     {
         offset = new Vector3(0, 0, -10);
-        cinemachineCamera.transform.position = new Vector3(25, -25, -10);
+        cinemachineCamera.transform.position = new Vector3(24.5f, -24.5f, -10);
         //mainCamera = Camera.main;        
         SetCameraControl(false);
     }

@@ -4775,7 +4775,7 @@ MonoBehaviour:
   CamerasParent: {fileID: 2026908570}
   cameraMoveSpeed: 5
   cameraZoomSpeed: 8
-  smoothSpeed: 0.05
+  smoothSpeed: 0.1
   currentOrthoSize: 0
   minOrthoSize: 2
   maxOrthoSize: 10
@@ -5802,6 +5802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allWaves:
   - {fileID: 11400000, guid: 97dedcea4c4b36845b0351f677ec6f4a, type: 2}
+  - {fileID: 11400000, guid: d9d1b3c0ba67c6d4f91ceb4d06c2d63f, type: 2}
   waveSpawnCentrePoints: []
 --- !u!4 &1819091608
 Transform:

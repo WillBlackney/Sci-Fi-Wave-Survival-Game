@@ -51,7 +51,8 @@ public class EventManager : Singleton<EventManager>
     }
     public IEnumerator StartNewGameSequenceCoroutine()
     {
-        
+        // Black outscreen, hide level creation view from player
+        BlackScreenManager.Instance.canvasGroup.alpha = 1;
         // Build a new world
         Action levelCreation = LevelManager.Instance.CreateLevel();
         yield return new WaitUntil(() => levelCreation.ActionResolved() == true);
