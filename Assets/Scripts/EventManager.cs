@@ -53,7 +53,8 @@ public class EventManager : Singleton<EventManager>
     {
         
         // Build a new world
-        LevelManager.Instance.CreateLevel();
+        Action levelCreation = LevelManager.Instance.CreateLevel();
+        yield return new WaitUntil(() => levelCreation.ActionResolved() == true);
         // Set up control zone
         LevelManager.Instance.CreateSpaceShipControlZone();
         // Populate Spawn Locations around the map
@@ -61,6 +62,7 @@ public class EventManager : Singleton<EventManager>
         // Centre the camera in the middle of the world
         //CameraManager.Instance.LookAtTarget(LevelManager.Instance.GetWorldCentreTile().gameObject);
         CameraManager.Instance.SetCameraLookAtTarget(LevelManager.Instance.GetWorldCentreTile().gameObject);
+        yield return new WaitUntil(() => CameraManager.Instance.IsCameraWithinRangeOfTarget(LevelManager.Instance.GetWorldCentreTile().gameObject) == true);
         // Fade in scene
         Action fadeIn = BlackScreenManager.Instance.FadeIn(1);
         // wait until the fade in effect is finished
@@ -71,21 +73,15 @@ public class EventManager : Singleton<EventManager>
         yield return new WaitForSeconds(1f);
         // Create Starting Defenders
         DefenderManager.Instance.CreateStartingDefenders();
-        yield return new WaitForSeconds(1f);
-        // TO DO: 
-        // Set camera to look at the centre tile
-        // Play a brief animation of spaceship crashing
-        // instantiate 4 rifleman and the warcaster around the space ship
-
+        yield return new WaitForSeconds(1f);        
         // Instantiate enemies
         Action waveSpawn = EnemySpawner.Instance.SpawnNextWave();
         yield return new WaitUntil(() => waveSpawn.ActionResolved() == true);
         // Move camera back to space ship
         CameraManager.Instance.SetCameraLookAtTarget(LevelManager.Instance.GetWorldCentreTile().gameObject);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitUntil(() => CameraManager.Instance.IsCameraWithinRangeOfTarget(LevelManager.Instance.GetWorldCentreTile().gameObject) == true);
         // Start the players first turn
-        StartCoroutine(TurnManager.Instance.StartPlayerTurn());
-        yield return null;
+        StartCoroutine(TurnManager.Instance.StartPlayerTurn());        
         
     }
     public void StartNewBasicEncounterEvent()

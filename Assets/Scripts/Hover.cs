@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Hover : Singleton<Hover>
 {
+    public GameObject blankTile;
     private SpriteRenderer spriteRenderer;
 	
 	void Start ()
@@ -26,15 +27,20 @@ public class Hover : Singleton<Hover>
             }               
     }
 
+    public void SetBlankTileHoverVisibility(bool onOrOff)
+    {
+        blankTile.SetActive(onOrOff);
+    }
+
     public void Activate(Sprite sprite)
     {
-        this.spriteRenderer.sprite = sprite;
-        this.spriteRenderer.enabled = true;        
+        spriteRenderer.sprite = sprite;
+        spriteRenderer.enabled = true;        
     }
 
     public void Deactivate()
     {
-        this.spriteRenderer.enabled = false;
+        spriteRenderer.enabled = false;
         DefenderPanelManager.Instance.ClickedDefender = null;
     }
 

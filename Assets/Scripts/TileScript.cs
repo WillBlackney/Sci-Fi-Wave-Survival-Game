@@ -38,7 +38,7 @@ public class TileScript : MonoBehaviour
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        myAnimator = GetComponent<Animator>();
+        //myAnimator = GetComponent<Animator>();
         originalColor = spriteRenderer.color;
     }
     public void Setup(Point gridPos, Vector3 worldPos, Transform parent)

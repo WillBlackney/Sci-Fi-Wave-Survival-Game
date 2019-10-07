@@ -16,6 +16,6 @@ MonoBehaviour:
     type: 3}
   weaponType: 0
   weaponName: Spike Rifle
-  weaponRange: 8
+  weaponRange: 5
   weaponMinDamage: 3
   weaponMaxDamage: 5

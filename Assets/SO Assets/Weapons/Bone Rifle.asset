@@ -16,6 +16,6 @@ MonoBehaviour:
     type: 3}
   weaponType: 0
   weaponName: Bone Rifle
-  weaponRange: 10
+  weaponRange: 8
   weaponMinDamage: 4
   weaponMaxDamage: 6

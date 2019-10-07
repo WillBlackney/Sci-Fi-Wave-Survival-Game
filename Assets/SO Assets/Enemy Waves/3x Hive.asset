@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd1bf0b56234af4c808b8522b29dcbf, type: 3}
   m_Name: 3x Hive
   m_EditorClassIdentifier: 
-  level: 2
+  level: 1
   waveType: 1
   enemyGroups:
   - enemyList:

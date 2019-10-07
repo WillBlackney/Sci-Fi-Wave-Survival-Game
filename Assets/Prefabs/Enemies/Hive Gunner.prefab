@@ -74,9 +74,10 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 5cba7475a5da4cd4aa2c6e0a04f69112, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_SortingOrder: 11
+  m_Sprite: {fileID: -855342927585753391, guid: 81be81c452e410143bf5ef66fb6bbd5a,
+    type: 3}
+  m_Color: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -109,7 +110,7 @@ Animator:
   m_GameObject: {fileID: 5210104506958411162}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 34ddc5660a6caae40986fdea26d32b42, type: 2}
+  m_Controller: {fileID: 9100000, guid: 96d23eae70e59a742a651a64351f9cde, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -331,7 +332,7 @@ MonoBehaviour:
   myCurrentTarget: {fileID: 0}
   destination: {x: 0, y: 0, z: 0}
   facingRight: 0
-  spriteImportedFacingRight: 1
+  spriteImportedFacingRight: 0
   myDeathAnimationFinished: 0
   myOnTurnEndEffectsFinished: 0
   shootAnimationFinished: 0

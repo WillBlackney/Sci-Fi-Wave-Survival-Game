@@ -18,7 +18,7 @@ MonoBehaviour:
   abilityDescription: Deal 4 damage to all characters in a 3x3 area.
   abilityBaseCooldownTime: 4
   abilityAPCost: 3
-  abilityRange: 8
+  abilityRange: 5
   abilityPrimaryValue: 4
   abilitySecondaryValue: 1
   abilityDamageType: 0

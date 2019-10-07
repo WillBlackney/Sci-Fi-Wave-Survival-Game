@@ -30,7 +30,7 @@ public class LootBoxManager : Singleton<LootBoxManager>
 
         // Move camera to look at location
         CameraManager.Instance.SetCameraLookAtTarget(spawnLocation.gameObject);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitUntil(() => CameraManager.Instance.IsCameraWithinRangeOfTarget(spawnLocation.gameObject) == true);
 
         // Create Portal VFX object
         GameObject portalVFX = Instantiate(PrefabHolder.Instance.PortalPrefab);

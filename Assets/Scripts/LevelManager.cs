@@ -33,8 +33,15 @@ public class LevelManager : Singleton<LevelManager>
 
     // Initialization / Level Generation
     #region
-    public void CreateLevel()
+    public Action CreateLevel()
     {
+        Action action = new Action();
+        StartCoroutine(CreateLevelCoroutine(action));
+        return action;
+    }
+
+    public IEnumerator CreateLevelCoroutine(Action action)
+    {        
         Tiles = new Dictionary<Point, TileScript>();
 
         string[] mapData = ReadLevelText();
@@ -46,8 +53,7 @@ public class LevelManager : Singleton<LevelManager>
 
         Vector3 maxTile = Vector3.zero;
 
-        //Vector3 worldStart = Camera.main.ScreenToWorldPoint(new Vector3(0, Screen.height));
-        Vector3 worldStart = new Vector3( 0,0,0);
+        Vector3 worldStart = new Vector3(0, 0, 0);
 
         for (int y = 0; y < mapY; y++) // the y positions
         {
@@ -55,25 +61,20 @@ public class LevelManager : Singleton<LevelManager>
 
             for (int x = 0; x < mapX; x++) // the x positions
             {
-                PlaceTile(newTiles[x].ToString(), x,y, worldStart);
+                PlaceTile(newTiles[x].ToString(), x, y, worldStart);
             }
         }
 
         maxTile = Tiles[new Point(mapX - 1, mapY - 1)].transform.position;
 
-        Debug.Log("Tiles currently in existence = " + FindObjectsOfType<TileScript>().Length);
-        // create a new combat scene BG GO from prefab
-        // GameObject bg = Instantiate(combatBGPrefab);
-        // bg.transform.position = GetWorldCentreTile().WorldPosition;
-        // position camera on centre tile
-        //ToggleLevelBackgroundView(true);
-        //Camera.main.transform.position = new Vector3(GetWorldCentreTile().WorldPosition.x, GetWorldCentreTile().WorldPosition.y, -10);
-        //FindObjectOfType<CameraMovement>().cinemachineCamera.transform.position = new Vector3(GetWorldCentreTile().WorldPosition.x, GetWorldCentreTile().WorldPosition.y, -10);
+        Debug.Log("Tiles currently in existence = " + FindObjectsOfType<TileScript>().Length); 
         foreach (TileScript tile in GetAllTilesFromCurrentLevelDictionary())
         {
             TileSpriteManager.Instance.DetermineAndSetEdgeSprites(tile);
         }
-    }	
+        yield return null;
+        action.actionResolved = true;
+    }
     public void CreateSpaceShipControlZone()
     {
         spaceShipControlZone = GetTilesWithinRange(GlobalSettings.Instance.spaceShipControlZoneSize, GetWorldCentreTile());
@@ -671,6 +672,7 @@ public class LevelManager : Singleton<LevelManager>
     #region
     public void HighlightTiles(List<TileScript> tilesToHighlight)
     {
+        Hover.Instance.SetBlankTileHoverVisibility(true);
         Debug.Log("Highlighting tiles");
         foreach (TileScript tile in tilesToHighlight)
         {
@@ -695,7 +697,8 @@ public class LevelManager : Singleton<LevelManager>
     }    
     public void UnhighlightAllTiles()
     {
-        foreach(TileScript tile in HighlightedTiles)
+        Hover.Instance.SetBlankTileHoverVisibility(false);
+        foreach (TileScript tile in HighlightedTiles)
         {
             tile.myAnimator.SetBool("Highlight", false);
         }

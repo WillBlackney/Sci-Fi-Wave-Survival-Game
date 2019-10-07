@@ -57,7 +57,8 @@ public class EnemySpawner : Singleton<EnemySpawner>
     {
         TileScript spawnCentrePoint = GetRandomEnemyWaveCentrePoint();
         CameraManager.Instance.SetCameraLookAtTarget(spawnCentrePoint.gameObject);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitUntil(() => CameraManager.Instance.IsCameraWithinRangeOfTarget(spawnCentrePoint.gameObject) == true);
+        //yield return new WaitForSeconds(2f);
         List<TileScript> possibleSpawnLocations = GetValidSpawnLocationsWithinRangeOfCentrePoint(spawnCentrePoint, 3);
         StartCoroutine(InstantiateEnemiesFromWave(enemyWave, possibleSpawnLocations));
         yield return new WaitForSeconds(3f);

@@ -16,6 +16,7 @@ public class TileSpriteManager : Singleton<TileSpriteManager>
     public List<Sprite> rubbleSprites;
     public List<Sprite> treeSprites;
     public List<Sprite> rockWallSprites;
+    public List<Sprite> grassyElementSprites;
 
     [Header("Tile Edge Sprites")]
     public Sprite northEdge;
@@ -26,8 +27,6 @@ public class TileSpriteManager : Singleton<TileSpriteManager>
     public Sprite northWestEdge;
     public Sprite southEastEdge;
     public Sprite southWestEdge;    
-
-
 
     // Edge + position checks
     #region
@@ -133,13 +132,25 @@ public class TileSpriteManager : Singleton<TileSpriteManager>
     #region
     public void DetermineAndSetEdgeSprites(TileScript tile)
     {
-        // Set centre tile image
-        if (tile.myTileType == TileScript.TileType.Dirt)
-        {
-            tile.spriteRenderer.sprite = GetRandomSpriteFromList(dirtCentreTiles);
-        }
 
-        else if (tile.myTileType == TileScript.TileType.Water)
+        if (tile.myTileSetupType == TileScript.TileSetupType.Dirt)
+        {            
+            return;
+        }
+            /*
+            // Set centre tile image
+            if (tile.myTileSetupType == TileScript.TileSetupType.Dirt)
+            {
+                tile.spriteRenderer.sprite = GetRandomSpriteFromList(dirtCentreTiles);
+                int randomNumber = Random.Range(0, 100);
+                if(randomNumber < 20)
+                {
+                    CreateSpriteOverTile(tile, GetRandomSpriteFromList(grassyElementSprites));
+                }
+            }
+            */
+
+        if (tile.myTileType == TileScript.TileType.Water)
         {
             tile.spriteRenderer.sprite = GetRandomSpriteFromList(waterCentreTiles);
         }
@@ -147,41 +158,41 @@ public class TileSpriteManager : Singleton<TileSpriteManager>
         // Set edge sprites
         if (NorthEdge(tile))
         {
-            CreateEdgeSprite(tile, northEdge);
+            CreateSpriteOverTile(tile, northEdge);
         }
         if (SouthEdge(tile))
         {
-            CreateEdgeSprite(tile, southEdge);
+            CreateSpriteOverTile(tile, southEdge);
         }
         if (WestEdge(tile))
         {
-            CreateEdgeSprite(tile, westEdge);
+            CreateSpriteOverTile(tile, westEdge);
         }
         if (EastEdge(tile))
         {
-            CreateEdgeSprite(tile, eastEdge);
+            CreateSpriteOverTile(tile, eastEdge);
         }
         if (NorthEastEdge(tile))
         {
-            CreateEdgeSprite(tile, northEastEdge);
+            CreateSpriteOverTile(tile, northEastEdge);
         }
         if (SouthEastEdge(tile))
         {
-            CreateEdgeSprite(tile, southEastEdge);
+            CreateSpriteOverTile(tile, southEastEdge);
         }
         if (NorthWestEdge(tile))
         {
-            CreateEdgeSprite(tile, northWestEdge);
+            CreateSpriteOverTile(tile, northWestEdge);
         }
         if (SouthWestEdge(tile))
         {
-            CreateEdgeSprite(tile, southWestEdge);
+            CreateSpriteOverTile(tile, southWestEdge);
         }
     }
-    public void CreateEdgeSprite(TileScript location, Sprite edgeSprite)
+    public void CreateSpriteOverTile(TileScript location, Sprite edgeSprite)
     {
         GameObject newEdgeSprite = Instantiate(edgePrefabGO);
-        edgePrefabGO.transform.position = location.transform.position;
+        edgePrefabGO.transform.position = location.WorldPosition;
         edgePrefabGO.GetComponent<SpriteRenderer>().sprite = edgeSprite;        
         
     }
@@ -206,6 +217,7 @@ public class TileSpriteManager : Singleton<TileSpriteManager>
         }
        
     }
+    
     #endregion
 
     // Legacy methods
