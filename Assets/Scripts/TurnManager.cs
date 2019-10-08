@@ -112,7 +112,7 @@ public class TurnManager : Singleton<TurnManager>
 
         // Move camera view to spaceship on every turn start
         CameraManager.Instance.SetCameraLookAtTarget(LevelManager.Instance.GetWorldCentreTile().gameObject);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitUntil(() => CameraManager.Instance.IsCameraWithinRangeOfTarget(LevelManager.Instance.GetWorldCentreTile().gameObject) == true);
 
         // Display turn number overlay event
         StartCoroutine(DisplayTurnChangeNotification(true));

@@ -113,7 +113,7 @@ public static class AStar
         //GameObject.Find("AStarDebugger").GetComponent<AStarDebugger>().DebugPath(openList, closedList, finalPath);
     }
 
-    // Prevents enemies moving diagonally between two towers
+    // Prevents enemies moving diagonally between two obstructions
     private static bool ConnectedDiagonally(Node currentNode, Node neighbourNode)
     {
         Point direction = neighbourNode.GridPosition - currentNode.GridPosition;

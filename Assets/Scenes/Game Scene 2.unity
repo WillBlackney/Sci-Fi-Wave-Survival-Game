@@ -229,6 +229,30 @@ MonoBehaviour:
   northWestEdge: {fileID: 21300000, guid: cdfb79c260f040342b80527bb6447038, type: 3}
   southEastEdge: {fileID: 21300000, guid: adcc0ce061512e6448e281293d850ecf, type: 3}
   southWestEdge: {fileID: 21300000, guid: 664e075eb1886bd4eadda52a05aa0d91, type: 3}
+  sandbagIsolated: {fileID: 8344309548199642738, guid: 9c539383e85d1d44ca49636b76c3a624,
+    type: 3}
+  sandbagSurrounded: {fileID: -5941295044966925919, guid: 9c539383e85d1d44ca49636b76c3a624,
+    type: 3}
+  sandbagNoEastOrWest: {fileID: 6784660959967125344, guid: 9c539383e85d1d44ca49636b76c3a624,
+    type: 3}
+  sandbagNoNorthOrSouth: {fileID: 8020878040224649701, guid: 9c539383e85d1d44ca49636b76c3a624,
+    type: 3}
+  sandbagNorthWestCorner: {fileID: -5104464933187726155, guid: 9c539383e85d1d44ca49636b76c3a624,
+    type: 3}
+  sandbagNorthEastCorner: {fileID: 2318154880897547806, guid: 9c539383e85d1d44ca49636b76c3a624,
+    type: 3}
+  sandbagSouthWestCorner: {fileID: 4911963600976266194, guid: 9c539383e85d1d44ca49636b76c3a624,
+    type: 3}
+  sandbagSouthEastCorner: {fileID: -8459044827352580687, guid: 9c539383e85d1d44ca49636b76c3a624,
+    type: 3}
+  sandbagSouthTipCorner: {fileID: 4746341235904985265, guid: 9c539383e85d1d44ca49636b76c3a624,
+    type: 3}
+  sandbagNorthTipCorner: {fileID: 1483779010544262065, guid: 9c539383e85d1d44ca49636b76c3a624,
+    type: 3}
+  sandbagWestTipCorner: {fileID: -5039016517998615671, guid: 9c539383e85d1d44ca49636b76c3a624,
+    type: 3}
+  sandbagEastTipCorner: {fileID: 3775467272803347305, guid: 9c539383e85d1d44ca49636b76c3a624,
+    type: 3}
 --- !u!4 &20741831
 Transform:
   m_ObjectHideFlags: 0
@@ -2631,6 +2655,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8883065429652425117, guid: fc134e40316e2294b97f5f4a5be7b751,
         type: 3}
+    - target: {fileID: 8230548189762907345, guid: 3a6916c1a1333274f992b1b658a93f29,
+        type: 3}
+      propertyPath: sandBagPrefab
+      value: 
+      objectReference: {fileID: 724241643193406223, guid: f3b80db3b2cec924581566c77e1ff7dc,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a6916c1a1333274f992b1b658a93f29, type: 3}
 --- !u!1 &836638364
@@ -4775,7 +4805,7 @@ MonoBehaviour:
   CamerasParent: {fileID: 2026908570}
   cameraMoveSpeed: 5
   cameraZoomSpeed: 8
-  smoothSpeed: 0.1
+  smoothSpeed: 0.15
   currentOrthoSize: 0
   minOrthoSize: 2
   maxOrthoSize: 10
@@ -4865,6 +4895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a99f58cd0008349afac6f167ebf538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allWorldObjects: []
 --- !u!114 &1461783207 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1461783207, guid: a65b64bad8327064b9af4aa4b9b3c61e,
@@ -5134,6 +5165,7 @@ MonoBehaviour:
   - {fileID: 1943341086875006, guid: eb91241d0d2052045b276b8aef96bfab, type: 3}
   - {fileID: 1717127756916970, guid: ebd2dba0630fa7d43af6b69dc8b12d90, type: 3}
   - {fileID: 1717127756916970, guid: 2fcaf039bf69802438c02d5ddcfeb6d4, type: 3}
+  - {fileID: 2835728012499448145, guid: f7e64742be6564d40a61a7fbab630cf2, type: 3}
   TileParent: {fileID: 1715402481}
   mapTextFiles:
   - {fileID: 4900000, guid: b0f6cf28c275dd14dbbfddd556019545, type: 3}

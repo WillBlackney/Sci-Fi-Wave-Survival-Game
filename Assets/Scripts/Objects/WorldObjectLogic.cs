@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WorldObjectLogic : Singleton<WorldObjectLogic>
-{   
-    public void CreateObjectAtLocation(GameObject objectPrefab, TileScript location)
+{
+    public List<WorldObject> allWorldObjects = new List<WorldObject>();
+    public void CreateObjectAtLocation(GameObject objectPrefab, TileScript location, bool setSprite = false)
     {
         GameObject newWorldObject = Instantiate(objectPrefab, location.transform);
         WorldObject newWorldObjectScript = newWorldObject.GetComponent<WorldObject>();
@@ -17,6 +18,12 @@ public class WorldObjectLogic : Singleton<WorldObjectLogic>
         
         location.SetTileAsOccupiedByObject(newWorldObjectScript);
         newWorldObjectScript.myTile = location;
-        TileSpriteManager.Instance.DetermineAndSetWorldObjectSprite(newWorldObjectScript);
+        allWorldObjects.Add(newWorldObjectScript);
+        if (setSprite == true)
+        {
+            TileSpriteManager.Instance.DetermineAndSetWorldObjectSprite(newWorldObjectScript);
+        }
+        
+        
     }
 }

@@ -26,7 +26,21 @@ public class TileSpriteManager : Singleton<TileSpriteManager>
     public Sprite northEastEdge;
     public Sprite northWestEdge;
     public Sprite southEastEdge;
-    public Sprite southWestEdge;    
+    public Sprite southWestEdge;
+
+    [Header("Sand Bag Sprites")]
+    public Sprite sandbagIsolated;
+    public Sprite sandbagSurrounded;
+    public Sprite sandbagNoEastOrWest;
+    public Sprite sandbagNoNorthOrSouth;
+    public Sprite sandbagNorthWestCorner;
+    public Sprite sandbagNorthEastCorner;
+    public Sprite sandbagSouthWestCorner;
+    public Sprite sandbagSouthEastCorner;
+    public Sprite sandbagSouthTipCorner;
+    public Sprite sandbagNorthTipCorner;
+    public Sprite sandbagWestTipCorner;
+    public Sprite sandbagEastTipCorner;
 
     // Edge + position checks
     #region
@@ -203,6 +217,14 @@ public class TileSpriteManager : Singleton<TileSpriteManager>
     }
     public void DetermineAndSetWorldObjectSprite(WorldObject worldObject)
     {
+        Debug.Log("DetermineAndSetWorldObjectSprite() called for " + worldObject.name);
+        // for testing
+        if (worldObject.myTile == null)
+        {
+            Debug.Log("The myTile property of " + worldObject.name + " is null");
+            return;
+        }
+
         if(worldObject.objectType == WorldObject.ObjectType.Rubble)
         {
             worldObject.spriteRenderer.sprite = GetRandomSpriteFromList(rubbleSprites);
@@ -215,9 +237,345 @@ public class TileSpriteManager : Singleton<TileSpriteManager>
         {
             worldObject.spriteRenderer.sprite = GetRandomSpriteFromList(rockWallSprites);
         }
-       
+        else if (worldObject.objectType == WorldObject.ObjectType.SandBag)
+        {
+            if (IsolatedObject(worldObject))
+            {
+                worldObject.spriteRenderer.sprite = sandbagIsolated;
+            }
+            else if (SurroundedObject(worldObject))
+            {
+                worldObject.spriteRenderer.sprite = sandbagSurrounded;
+            }
+            else if (NoMatchingObjectNorthOrSouth(worldObject))
+            {
+                worldObject.spriteRenderer.sprite = sandbagNoNorthOrSouth;
+            }
+            else if (NoMatchingObjectEastOrWest(worldObject))
+            {
+                worldObject.spriteRenderer.sprite = sandbagNoEastOrWest;
+            }
+            else if (NorthWestCorner(worldObject))
+            {
+                worldObject.spriteRenderer.sprite = sandbagNorthWestCorner;
+            }
+            else if (NorthEastCorner(worldObject))
+            {
+                worldObject.spriteRenderer.sprite = sandbagNorthEastCorner;
+            }
+            else if (SouthWestCorner(worldObject))
+            {
+                worldObject.spriteRenderer.sprite = sandbagSouthWestCorner;
+            }
+            else if (SouthEastCorner(worldObject))
+            {
+                worldObject.spriteRenderer.sprite = sandbagSouthEastCorner;
+            }
+            else if (SouthTip(worldObject))
+            {
+                worldObject.spriteRenderer.sprite = sandbagSouthTipCorner;
+            }
+            else if (NorthTip(worldObject))
+            {
+                worldObject.spriteRenderer.sprite = sandbagNorthTipCorner;
+            }
+            else if (EastTip(worldObject))
+            {
+                worldObject.spriteRenderer.sprite = sandbagEastTipCorner;
+            }
+            else if (WestTip(worldObject))
+            {
+                worldObject.spriteRenderer.sprite = sandbagWestTipCorner;
+            }
+        }
+
     }
-    
+    #endregion
+
+    // Directional Logic and Calculators for world objects
+    #region
+    public bool IsolatedObject(WorldObject worldObject)
+    {
+
+        if (PositionLogic.Instance.GetAdjacentNorthernTile(worldObject.myTile) != null &&
+            PositionLogic.Instance.GetAdjacentNorthernTile(worldObject.myTile).myObject != null &&
+           PositionLogic.Instance.GetAdjacentNorthernTile(worldObject.myTile).myObject.objectType != worldObject.objectType &&
+           PositionLogic.Instance.GetAdjacentSouthernTile(worldObject.myTile) != null &&
+           PositionLogic.Instance.GetAdjacentSouthernTile(worldObject.myTile).myObject != null &&
+           PositionLogic.Instance.GetAdjacentSouthernTile(worldObject.myTile).myObject.objectType != worldObject.objectType &&
+           PositionLogic.Instance.GetAdjacentEasternTile(worldObject.myTile) != null &&
+           PositionLogic.Instance.GetAdjacentEasternTile(worldObject.myTile).myObject != null &&
+           PositionLogic.Instance.GetAdjacentEasternTile(worldObject.myTile).myObject.objectType != worldObject.objectType &&
+           PositionLogic.Instance.GetAdjacentWesternTile(worldObject.myTile) != null &&
+           PositionLogic.Instance.GetAdjacentWesternTile(worldObject.myTile).myObject != null &&
+           PositionLogic.Instance.GetAdjacentWesternTile(worldObject.myTile).myObject.objectType != worldObject.objectType &&
+           PositionLogic.Instance.GetAdjacentNorthWestTile(worldObject.myTile) != null &&
+           PositionLogic.Instance.GetAdjacentNorthWestTile(worldObject.myTile).myObject != null &&
+           PositionLogic.Instance.GetAdjacentNorthWestTile(worldObject.myTile).myObject.objectType != worldObject.objectType &&
+           PositionLogic.Instance.GetAdjacentNorthEastTile(worldObject.myTile) != null &&
+           PositionLogic.Instance.GetAdjacentNorthEastTile(worldObject.myTile).myObject != null &&
+           PositionLogic.Instance.GetAdjacentNorthEastTile(worldObject.myTile).myObject.objectType != worldObject.objectType &&
+           PositionLogic.Instance.GetAdjacentSouthEastTile(worldObject.myTile) != null &&
+           PositionLogic.Instance.GetAdjacentSouthEastTile(worldObject.myTile).myObject != null &&
+           PositionLogic.Instance.GetAdjacentSouthEastTile(worldObject.myTile).myObject.objectType != worldObject.objectType &&
+           PositionLogic.Instance.GetAdjacentSouthWestTile(worldObject.myTile) != null &&
+           PositionLogic.Instance.GetAdjacentSouthWestTile(worldObject.myTile).myObject != null &&
+           PositionLogic.Instance.GetAdjacentSouthWestTile(worldObject.myTile).myObject.objectType != worldObject.objectType)
+        {
+            return true;
+        }
+        else
+        {
+            Debug.Log(worldObject.name + " is not isolated");
+            return false;
+        }
+    }
+    public bool SurroundedObject(WorldObject worldObject)
+    {
+        if (PositionLogic.Instance.GetAdjacentNorthernTile(worldObject.myTile) != null &&
+            PositionLogic.Instance.GetAdjacentNorthernTile(worldObject.myTile).myObject != null &&
+           PositionLogic.Instance.GetAdjacentNorthernTile(worldObject.myTile).myObject.objectType == worldObject.objectType &&
+           PositionLogic.Instance.GetAdjacentSouthernTile(worldObject.myTile) != null &&
+           PositionLogic.Instance.GetAdjacentSouthernTile(worldObject.myTile).myObject != null &&
+           PositionLogic.Instance.GetAdjacentSouthernTile(worldObject.myTile).myObject.objectType == worldObject.objectType &&
+           PositionLogic.Instance.GetAdjacentEasternTile(worldObject.myTile) != null &&
+           PositionLogic.Instance.GetAdjacentEasternTile(worldObject.myTile).myObject != null &&
+           PositionLogic.Instance.GetAdjacentEasternTile(worldObject.myTile).myObject.objectType == worldObject.objectType &&
+           PositionLogic.Instance.GetAdjacentWesternTile(worldObject.myTile) != null &&
+           PositionLogic.Instance.GetAdjacentWesternTile(worldObject.myTile).myObject != null &&
+           PositionLogic.Instance.GetAdjacentWesternTile(worldObject.myTile).myObject.objectType == worldObject.objectType &&
+           PositionLogic.Instance.GetAdjacentNorthWestTile(worldObject.myTile) != null &&
+           PositionLogic.Instance.GetAdjacentNorthWestTile(worldObject.myTile).myObject != null &&
+           PositionLogic.Instance.GetAdjacentNorthWestTile(worldObject.myTile).myObject.objectType == worldObject.objectType &&
+           PositionLogic.Instance.GetAdjacentNorthEastTile(worldObject.myTile) != null &&
+           PositionLogic.Instance.GetAdjacentNorthEastTile(worldObject.myTile).myObject != null &&
+           PositionLogic.Instance.GetAdjacentNorthEastTile(worldObject.myTile).myObject.objectType == worldObject.objectType &&
+           PositionLogic.Instance.GetAdjacentSouthEastTile(worldObject.myTile) != null &&
+           PositionLogic.Instance.GetAdjacentSouthEastTile(worldObject.myTile).myObject != null &&
+           PositionLogic.Instance.GetAdjacentSouthEastTile(worldObject.myTile).myObject.objectType == worldObject.objectType &&
+           PositionLogic.Instance.GetAdjacentSouthWestTile(worldObject.myTile) != null &&
+           PositionLogic.Instance.GetAdjacentSouthWestTile(worldObject.myTile).myObject != null &&
+           PositionLogic.Instance.GetAdjacentSouthWestTile(worldObject.myTile).myObject.objectType == worldObject.objectType)
+        {
+            return true;
+        }
+        else
+        {
+            Debug.Log(worldObject.name + " is not surrounded");
+            return false;
+        }
+    }
+    public bool NoMatchingObjectNorthOrSouth(WorldObject worldObject)
+    {
+        
+        if (/*
+            PositionLogic.Instance.GetAdjacentNorthernTile(worldObject.myTile) != null &&
+            PositionLogic.Instance.GetAdjacentNorthernTile(worldObject.myTile).myObject != null &&
+           PositionLogic.Instance.GetAdjacentNorthernTile(worldObject.myTile).myObject.objectType != worldObject.objectType &&
+           PositionLogic.Instance.GetAdjacentSouthernTile(worldObject.myTile) != null &&
+           PositionLogic.Instance.GetAdjacentSouthernTile(worldObject.myTile).myObject != null &&
+           PositionLogic.Instance.GetAdjacentSouthernTile(worldObject.myTile).myObject.objectType != worldObject.objectType &&
+           */
+           PositionLogic.Instance.GetAdjacentEasternTile(worldObject.myTile) != null &&
+           PositionLogic.Instance.GetAdjacentEasternTile(worldObject.myTile).myObject != null &&
+           PositionLogic.Instance.GetAdjacentEasternTile(worldObject.myTile).myObject.objectType == worldObject.objectType &&
+           PositionLogic.Instance.GetAdjacentWesternTile(worldObject.myTile) != null &&
+           PositionLogic.Instance.GetAdjacentWesternTile(worldObject.myTile).myObject != null &&
+           PositionLogic.Instance.GetAdjacentWesternTile(worldObject.myTile).myObject.objectType == worldObject.objectType)
+        {
+            return true;
+        }
+        else
+        {
+            Debug.Log(worldObject.name + " has no matching object north or south");
+            return false;
+        }
+    }
+    public bool NoMatchingObjectEastOrWest(WorldObject worldObject)
+    {
+        if (PositionLogic.Instance.GetAdjacentNorthernTile(worldObject.myTile) != null &&
+            PositionLogic.Instance.GetAdjacentNorthernTile(worldObject.myTile).myObject != null &&
+           PositionLogic.Instance.GetAdjacentNorthernTile(worldObject.myTile).myObject.objectType == worldObject.objectType &&
+           PositionLogic.Instance.GetAdjacentSouthernTile(worldObject.myTile) != null &&
+           PositionLogic.Instance.GetAdjacentSouthernTile(worldObject.myTile).myObject != null &&
+           PositionLogic.Instance.GetAdjacentSouthernTile(worldObject.myTile).myObject.objectType == worldObject.objectType 
+           /*
+           PositionLogic.Instance.GetAdjacentEasternTile(worldObject.myTile) != null &&
+           PositionLogic.Instance.GetAdjacentEasternTile(worldObject.myTile).myObject != null &&
+           PositionLogic.Instance.GetAdjacentEasternTile(worldObject.myTile).myObject.objectType != worldObject.objectType &&
+           PositionLogic.Instance.GetAdjacentWesternTile(worldObject.myTile) != null &&
+           PositionLogic.Instance.GetAdjacentWesternTile(worldObject.myTile).myObject != null &&
+           PositionLogic.Instance.GetAdjacentWesternTile(worldObject.myTile).myObject.objectType != worldObject.objectType
+           */
+           )
+        {
+            return true;
+        }
+        else
+        {
+            Debug.Log(worldObject.name + " has no matching object east or west");
+            return false;
+        }
+    }
+    public bool NorthWestCorner(WorldObject worldObject)
+    {
+        if(PositionLogic.Instance.GetAdjacentSouthernTile(worldObject.myTile) != null)
+        {
+            Debug.Log("GetAdjacentSouthernTile(worldObject.myTile) != null is a true statment");
+        }
+        if(PositionLogic.Instance.GetAdjacentSouthernTile(worldObject.myTile).myObject != null)
+        {
+            Debug.Log("GetAdjacentSouthernTile(worldObject.myTile).myObject != null is a true statment");
+            if (PositionLogic.Instance.GetAdjacentSouthernTile(worldObject.myTile).myObject.objectType == worldObject.objectType)
+            {
+                Debug.Log("GetAdjacentSouthernTile(worldObject.myTile).myObject.objectType == worldObject.objectType is a true statment");
+            }
+        }
+        if (PositionLogic.Instance.GetAdjacentEasternTile(worldObject.myTile) != null)
+        {
+            Debug.Log("GetAdjacentEasternTile(worldObject.myTile) != null is a true statment");
+        }
+        if (PositionLogic.Instance.GetAdjacentEasternTile(worldObject.myTile).myObject != null)
+        {
+            Debug.Log("GetAdjacentEasternTile(worldObject.myTile).myObject != null is a true statment");
+            if (PositionLogic.Instance.GetAdjacentEasternTile(worldObject.myTile).myObject.objectType == worldObject.objectType)
+            {
+                Debug.Log("GetAdjacentEasernTile(worldObject.myTile).myObject.objectType == worldObject.objectType is a true statment");
+            }
+        }
+
+        if (PositionLogic.Instance.GetAdjacentSouthernTile(worldObject.myTile) != null &&
+            PositionLogic.Instance.GetAdjacentSouthernTile(worldObject.myTile).myObject != null &&
+            PositionLogic.Instance.GetAdjacentSouthernTile(worldObject.myTile).myObject.objectType == worldObject.objectType &&
+            PositionLogic.Instance.GetAdjacentEasternTile(worldObject.myTile) != null &&
+            PositionLogic.Instance.GetAdjacentEasternTile(worldObject.myTile).myObject != null &&
+            PositionLogic.Instance.GetAdjacentEasternTile(worldObject.myTile).myObject.objectType == worldObject.objectType 
+            //PositionLogic.Instance.GetAdjacentNorthernTile(worldObject.myTile) != null &&
+           // PositionLogic.Instance.GetAdjacentNorthernTile(worldObject.myTile).myObject != null &&
+            //PositionLogic.Instance.GetAdjacentNorthernTile(worldObject.myTile).myObject.objectType != worldObject.objectType &&
+            //PositionLogic.Instance.GetAdjacentWesternTile(worldObject.myTile) != null &&
+            //PositionLogic.Instance.GetAdjacentWesternTile(worldObject.myTile).myObject != null &&
+           // PositionLogic.Instance.GetAdjacentWesternTile(worldObject.myTile).myObject.objectType != worldObject.objectType
+           )
+        {
+            return true;
+        }
+        else
+        {
+            Debug.Log(worldObject.name + " is not a north west corner");
+            return false;
+        }
+    }
+    public bool NorthEastCorner(WorldObject worldObject)
+    {
+        if (PositionLogic.Instance.GetAdjacentSouthernTile(worldObject.myTile) != null &&
+            PositionLogic.Instance.GetAdjacentSouthernTile(worldObject.myTile).myObject != null &&
+            PositionLogic.Instance.GetAdjacentSouthernTile(worldObject.myTile).myObject.objectType == worldObject.objectType &&            
+            PositionLogic.Instance.GetAdjacentWesternTile(worldObject.myTile) != null &&
+            PositionLogic.Instance.GetAdjacentWesternTile(worldObject.myTile).myObject != null &&
+            PositionLogic.Instance.GetAdjacentWesternTile(worldObject.myTile).myObject.objectType == worldObject.objectType)
+        {
+            return true;
+        }
+        else
+        {
+            Debug.Log(worldObject.name + " is not a north east corner");
+            return false;
+        }
+    }
+    public bool SouthWestCorner(WorldObject worldObject)
+    {
+        if (
+            PositionLogic.Instance.GetAdjacentEasternTile(worldObject.myTile) != null &&
+            PositionLogic.Instance.GetAdjacentEasternTile(worldObject.myTile).myObject != null &&
+            PositionLogic.Instance.GetAdjacentEasternTile(worldObject.myTile).myObject.objectType == worldObject.objectType &&
+            PositionLogic.Instance.GetAdjacentNorthernTile(worldObject.myTile) != null &&
+            PositionLogic.Instance.GetAdjacentNorthernTile(worldObject.myTile).myObject != null &&
+            PositionLogic.Instance.GetAdjacentNorthernTile(worldObject.myTile).myObject.objectType == worldObject.objectType )
+            
+        {
+            return true;
+        }
+        else
+        {
+            Debug.Log(worldObject.name + " is not a south west corner");
+            return false;
+        }
+    }
+    public bool SouthEastCorner(WorldObject worldObject)
+    {
+        if (
+            PositionLogic.Instance.GetAdjacentNorthernTile(worldObject.myTile) != null &&
+            PositionLogic.Instance.GetAdjacentNorthernTile(worldObject.myTile).myObject != null &&
+            PositionLogic.Instance.GetAdjacentNorthernTile(worldObject.myTile).myObject.objectType == worldObject.objectType &&
+            PositionLogic.Instance.GetAdjacentWesternTile(worldObject.myTile) != null &&
+            PositionLogic.Instance.GetAdjacentWesternTile(worldObject.myTile).myObject != null &&
+            PositionLogic.Instance.GetAdjacentWesternTile(worldObject.myTile).myObject.objectType == worldObject.objectType)
+        {
+            return true;
+        }
+        else
+        {
+            Debug.Log(worldObject.name + " is not a south east corner");
+            return false;
+        }
+    }
+    public bool SouthTip(WorldObject worldObject)
+    {
+        if (
+            PositionLogic.Instance.GetAdjacentNorthernTile(worldObject.myTile) != null &&
+            PositionLogic.Instance.GetAdjacentNorthernTile(worldObject.myTile).myObject != null &&
+            PositionLogic.Instance.GetAdjacentNorthernTile(worldObject.myTile).myObject.objectType == worldObject.objectType)            
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public bool NorthTip(WorldObject worldObject)
+    {
+        if (PositionLogic.Instance.GetAdjacentSouthernTile(worldObject.myTile) != null &&
+            PositionLogic.Instance.GetAdjacentSouthernTile(worldObject.myTile).myObject != null &&
+            PositionLogic.Instance.GetAdjacentSouthernTile(worldObject.myTile).myObject.objectType == worldObject.objectType )
+            
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public bool EastTip(WorldObject worldObject)
+    {
+        if (
+            PositionLogic.Instance.GetAdjacentWesternTile(worldObject.myTile) != null &&
+            PositionLogic.Instance.GetAdjacentWesternTile(worldObject.myTile).myObject != null &&
+            PositionLogic.Instance.GetAdjacentWesternTile(worldObject.myTile).myObject.objectType == worldObject.objectType)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public bool WestTip(WorldObject worldObject)
+    {
+        if (PositionLogic.Instance.GetAdjacentEasternTile(worldObject.myTile) != null &&
+            PositionLogic.Instance.GetAdjacentEasternTile(worldObject.myTile).myObject != null &&
+            PositionLogic.Instance.GetAdjacentEasternTile(worldObject.myTile).myObject.objectType == worldObject.objectType 
+            )
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
     #endregion
 
     // Legacy methods

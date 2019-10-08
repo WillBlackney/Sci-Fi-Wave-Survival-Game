@@ -42,7 +42,7 @@ public class EventManager : Singleton<EventManager>
         }
 
         CameraManager.Instance.SetCameraLookAtTarget(LevelManager.Instance.GetWorldCentreTile().gameObject);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitUntil(() => CameraManager.Instance.IsCameraWithinRangeOfTarget(LevelManager.Instance.GetWorldCentreTile().gameObject) == true);
         UIManager.Instance.SetGameOverCanvasVisibility(true);
     }
     public void StartNewGameSequence()
@@ -62,8 +62,8 @@ public class EventManager : Singleton<EventManager>
         EnemySpawner.Instance.PopulateEnemyWaveCentrePoints();
         // Centre the camera in the middle of the world
         //CameraManager.Instance.LookAtTarget(LevelManager.Instance.GetWorldCentreTile().gameObject);
-        CameraManager.Instance.SetCameraLookAtTarget(LevelManager.Instance.GetWorldCentreTile().gameObject);
-        yield return new WaitUntil(() => CameraManager.Instance.IsCameraWithinRangeOfTarget(LevelManager.Instance.GetWorldCentreTile().gameObject) == true);
+        //CameraManager.Instance.SetCameraLookAtTarget(LevelManager.Instance.GetWorldCentreTile().gameObject);
+        //yield return new WaitUntil(() => CameraManager.Instance.IsCameraWithinRangeOfTarget(LevelManager.Instance.GetWorldCentreTile().gameObject) == true);
         // Fade in scene
         Action fadeIn = BlackScreenManager.Instance.FadeIn(1);
         // wait until the fade in effect is finished

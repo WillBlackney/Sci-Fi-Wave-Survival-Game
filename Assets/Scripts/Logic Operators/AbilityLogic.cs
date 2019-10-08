@@ -75,6 +75,8 @@ public class AbilityLogic : MonoBehaviour
         yield return new WaitForSeconds(1f);
         Ability shoot = attacker.mySpellBook.GetAbilityByName("Shoot");
         attacker.StartCoroutine(attacker.AttackMovement(victim));
+        // Apply overwatch aim penalty
+        attacker.ModifyCurrentAim(-20);
 
         bool attackSuccesful = CombatLogic.Instance.CalculateIfAttackHitOrMiss(attacker, victim);
 
@@ -86,8 +88,10 @@ public class AbilityLogic : MonoBehaviour
         {
             // TO DO IN FUTURE: method here should be something like CombatLogic.Instance.HandleMiss()
             StartCoroutine(VisualEffectManager.Instance.CreateStatusEffect(victim.transform.position, "Miss!", false));
-        }       
-        
+        }
+
+        // remove overwatch aim penalty
+        attacker.ModifyCurrentAim(20);
         yield return new WaitForSeconds(1f);
         action.actionResolved = true;
     }

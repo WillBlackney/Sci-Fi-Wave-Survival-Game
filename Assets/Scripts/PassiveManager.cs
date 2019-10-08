@@ -212,7 +212,11 @@ public class PassiveManager : MonoBehaviour
         }
 
         myLivingEntity.myStatusManager.StartAddStatusProcess(overwatch, stacks);
-        StartCoroutine(VisualEffectManager.Instance.CreateStatusEffect(transform.position, "Overwatch", false));
+        if(stacks > 0)
+        {
+            StartCoroutine(VisualEffectManager.Instance.CreateStatusEffect(transform.position, "Overwatch", false));
+        }
+           
     }
     public void ModifyDeadEye(int stacks)
     {

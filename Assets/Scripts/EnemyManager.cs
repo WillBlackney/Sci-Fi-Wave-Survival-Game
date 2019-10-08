@@ -162,6 +162,7 @@ public class EnemyManager : Singleton<EnemyManager>
         foreach(Enemy enemy in enemiesActivatingThisTurn)
         {
             CameraManager.Instance.SetCameraLookAtTarget(enemy.gameObject);
+            yield return new WaitUntil(() => CameraManager.Instance.IsCameraWithinRangeOfTarget(enemy.gameObject) == true);
             enemy.StartMyActivation();
             yield return new WaitUntil(() => enemy.ActivationFinished() == true);
         }

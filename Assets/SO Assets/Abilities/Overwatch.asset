@@ -17,7 +17,7 @@ MonoBehaviour:
   abilityName: Overwatch
   abilityDescription: Shoot at the next enemy that moves within your weapon range
     and LoS. Lasts 1 turn
-  abilityBaseCooldownTime: 3
+  abilityBaseCooldownTime: 2
   abilityAPCost: 2
   abilityRange: 0
   abilityPrimaryValue: 1

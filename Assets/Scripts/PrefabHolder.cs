@@ -22,6 +22,7 @@ public class PrefabHolder : Singleton<PrefabHolder>
     public GameObject treePrefab;
     public GameObject rockWallPrefab;
     public GameObject rubblePrefab;
+    public GameObject sandBagPrefab;
 
     [Header("Loot Related")]
     public GameObject GoldRewardButton;

@@ -25,11 +25,36 @@ public static class AILogic
 
         if(pathFromMeToIdealTile.Count < movePoints)
         {
-            return pathFromMeToIdealTile.ElementAt(pathFromMeToIdealTile.Count - 1).TileRef;
+            // if the ideal tile cant be occupied, try the the 2nd, then the 3rd if 2nd also not possible
+            if(pathFromMeToIdealTile.ElementAt(pathFromMeToIdealTile.Count - 1).TileRef.CanBeOccupied())
+            {
+                return pathFromMeToIdealTile.ElementAt(pathFromMeToIdealTile.Count - 1).TileRef;
+            }
+            else if (pathFromMeToIdealTile.ElementAt(pathFromMeToIdealTile.Count - 2).TileRef.CanBeOccupied())
+            {
+                return pathFromMeToIdealTile.ElementAt(pathFromMeToIdealTile.Count - 2).TileRef;
+            }
+            else
+            {
+                return pathFromMeToIdealTile.ElementAt(pathFromMeToIdealTile.Count - 3).TileRef;
+            }
+                
         }
         else
         {
-            return pathFromMeToIdealTile.ElementAt(movePoints - 1).TileRef;
+            if(pathFromMeToIdealTile.ElementAt(movePoints - 1).TileRef.CanBeOccupied())
+            {
+                return pathFromMeToIdealTile.ElementAt(movePoints - 1).TileRef;
+            }
+            else if (pathFromMeToIdealTile.ElementAt(movePoints - 2).TileRef.CanBeOccupied())
+            {
+                return pathFromMeToIdealTile.ElementAt(movePoints - 2).TileRef;
+            }
+            else
+            {
+                return pathFromMeToIdealTile.ElementAt(movePoints - 3).TileRef;
+            }
+
         }
     }
 

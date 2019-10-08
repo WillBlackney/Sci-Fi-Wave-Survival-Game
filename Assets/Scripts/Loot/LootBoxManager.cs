@@ -223,7 +223,7 @@ public class LootBoxManager : Singleton<LootBoxManager>
             // only select valid tiles that are more then 10 tiles away from the space ship
             if(tile.CanBeMovedThrough() &&
                tile.CanBeOccupied() &&
-               !LevelManager.Instance.GetTilesWithinRange(10, LevelManager.Instance.GetWorldCentreTile()).Contains(tile))
+               !LevelManager.Instance.GetTilesWithinRange(5, LevelManager.Instance.GetWorldCentreTile()).Contains(tile))
             {
                 validLocations.Add(tile);
             } 

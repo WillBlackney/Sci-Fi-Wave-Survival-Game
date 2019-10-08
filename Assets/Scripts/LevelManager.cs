@@ -72,6 +72,11 @@ public class LevelManager : Singleton<LevelManager>
         {
             TileSpriteManager.Instance.DetermineAndSetEdgeSprites(tile);
         }
+        
+        foreach(WorldObject worldObject in WorldObjectLogic.Instance.allWorldObjects) 
+        {
+            TileSpriteManager.Instance.DetermineAndSetWorldObjectSprite(worldObject);
+        } 
         yield return null;
         action.actionResolved = true;
     }

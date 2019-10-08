@@ -152,7 +152,6 @@
     <Compile Include="Assets\Scripts\Objects\Objects\Tree.cs" />
     <Compile Include="Assets\Scripts\Objects\WorldObject.cs" />
     <Compile Include="Assets\Scripts\Objects\WorldObjectLogic.cs" />
-    <Compile Include="Assets\Scripts\Objects\WorldObjectManager.cs" />
     <Compile Include="Assets\Scripts\PassiveManager.cs" />
     <Compile Include="Assets\Scripts\PlayerDataManager.cs" />
     <Compile Include="Assets\Scripts\Point.cs" />

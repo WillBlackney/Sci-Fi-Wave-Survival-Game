@@ -30,7 +30,7 @@ public class TileScript : MonoBehaviour
     public Point GridPosition { get; set; }
 
     // Enum declarations
-    public enum TileSetupType { None, Dirt, DirtTree, DirtRock, DirtRubble, DirtGoldNode, DirtSteelNode, Grass, GrassTree, Rock, Water };
+    public enum TileSetupType { None, Dirt, DirtTree, DirtRock, DirtRubble, DirtSandBag, DirtGoldNode, DirtSteelNode, Grass, GrassTree, Rock, Water };
     public enum TileType { None, Dirt, Grass, Forest, Rock, Water };
 
 
@@ -59,6 +59,10 @@ public class TileScript : MonoBehaviour
         else if (myTileSetupType == TileSetupType.DirtRubble)
         {
             RunDirtRubbleTileSetup();
+        }
+        else if (myTileSetupType == TileSetupType.DirtSandBag)
+        {
+            RunDirtSandBagTileSetup();
         }
         else if (myTileSetupType == TileSetupType.Grass)
         {
@@ -99,6 +103,11 @@ public class TileScript : MonoBehaviour
     {
         isWalkable = true;        
         WorldObjectLogic.Instance.CreateObjectAtLocation(PrefabHolder.Instance.rubblePrefab, this);
+    }
+    public void RunDirtSandBagTileSetup()
+    {
+        isWalkable = true;
+        WorldObjectLogic.Instance.CreateObjectAtLocation(PrefabHolder.Instance.sandBagPrefab, this);
     }
     public void RunGrassTileSetup()
     {

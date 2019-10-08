@@ -1330,11 +1330,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Defender UI Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 5645168817146067825, guid: 955a655e1bbbbb246b029b5e3fb67dec,
-        type: 3}
-      propertyPath: m_Value
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5387453392301389968, guid: 955a655e1bbbbb246b029b5e3fb67dec,
         type: 3}
       propertyPath: myDefender
