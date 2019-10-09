@@ -21,7 +21,7 @@ public class LootBox : WorldObject
     #region
     public bool HasDefenderInRange()
     {
-        return true;
+       
         bool boolReturned = false;
         List<TileScript> adjacentTiles = LevelManager.Instance.GetTilesWithinRange(1, myTile);
 

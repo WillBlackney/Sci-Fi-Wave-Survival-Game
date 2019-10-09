@@ -804,6 +804,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Defender UI Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5387453392301389968, guid: 955a655e1bbbbb246b029b5e3fb67dec,
+        type: 3}
+      propertyPath: myDefender
+      value: 
+      objectReference: {fileID: 272167796521841829}
     - target: {fileID: 5305560094089221287, guid: 955a655e1bbbbb246b029b5e3fb67dec,
         type: 3}
       propertyPath: m_textInfo.characterCount

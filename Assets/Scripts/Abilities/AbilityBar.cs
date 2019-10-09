@@ -35,8 +35,6 @@ public class AbilityBar : MonoBehaviour
     {
         if (myDefender.mySpellBook.AbilityOne == null)
         {
-            //CreateButton(abilityName, AbilityOneParent, myDefender.mySpellBook.AbilityOne);
-
             
             GameObject newAbilityGO = Instantiate(PrefabHolder.Instance.AbilityButtonPrefab, AbilityOneParent.transform);
             myDefender.mySpellBook.AbilityOne = newAbilityGO.GetComponent<Ability>();

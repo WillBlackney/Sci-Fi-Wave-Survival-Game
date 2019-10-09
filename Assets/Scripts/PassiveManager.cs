@@ -100,6 +100,9 @@ public class PassiveManager : MonoBehaviour
     public bool DeadEye;
     public int deadEyeStacks;
 
+    public bool TrueSight;
+    public int trueSightStacks;
+
     public void InitializeSetup()
     {
         myLivingEntity = GetComponent<LivingEntity>();
@@ -474,6 +477,24 @@ public class PassiveManager : MonoBehaviour
         else if (rapidFireStacks <= 0)
         {
             RapidFire = false;
+        }
+
+        myLivingEntity.myStatusManager.StartAddStatusProcess(iconData, stacks);
+    }
+
+    public void ModifyTrueSight(int stacks)
+    {
+        StatusIcon iconData = StatusIconLibrary.Instance.GetStatusIconByName("True Sight");
+
+        trueSightStacks += stacks;
+
+        if (trueSightStacks > 0)
+        {
+            TrueSight = true;
+        }
+        else if (trueSightStacks <= 0)
+        {
+            TrueSight = false;
         }
 
         myLivingEntity.myStatusManager.StartAddStatusProcess(iconData, stacks);

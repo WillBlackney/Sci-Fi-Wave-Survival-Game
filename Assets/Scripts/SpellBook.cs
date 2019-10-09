@@ -357,7 +357,7 @@ public class SpellBook : MonoBehaviour
         {
             LearnMove();
             LearnShoot();
-            LearnDigIn();
+            LearnStrike();
             LearnCharge();
             LearnDash();
         }

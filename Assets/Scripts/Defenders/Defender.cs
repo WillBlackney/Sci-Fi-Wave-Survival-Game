@@ -538,6 +538,7 @@ public class Defender : LivingEntity
         awaitingThrowHandGrenadeTarget = false;        
 
         TileCoverHover.Instance.SetVisibility(false);
+        HitChanceHover.Instance.SetVisibility(false);
         LevelManager.Instance.UnhighlightAllTiles();
 
         myCurrentTarget = null;
@@ -1224,7 +1225,7 @@ public class Defender : LivingEntity
         if (MovementLogic.Instance.IsLocationMoveable(destination, this, currentMobility))
         {
             Debug.Log("Selected tile is valid, starting move...");
-            awaitingMoveOrder = false;
+            awaitingMoveOrder = false;            
             AbilityLogic.Instance.PerformMove(this, destination);        
         }
     }

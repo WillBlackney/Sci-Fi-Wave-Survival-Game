@@ -50,6 +50,9 @@ public class MovementLogic : Singleton<MovementLogic>
     {
         Debug.Log("Running MovementLogic.MoveEntityCoroutine() coroutine...");
 
+        // Disable cover hover
+        TileCoverHover.Instance.SetVisibility(false);
+
         // Set properties
         float originalSpeed = characterMoved.speed;
         float speedOfThisMovement = speed;
@@ -667,9 +670,15 @@ public class MovementLogic : Singleton<MovementLogic>
         foreach (LivingEntity entity in enemiesWithOverwatch)
         {
             // if there is LoS AND the attacker actually has a ranged weapon AND the character moving is in range of the attackers ranged weapon
-            if (PositionLogic.Instance.IsThereLosFromAtoB(entity.TileCurrentlyOn, characterMoved.TileCurrentlyOn) &&
+            if ( // Check attacker can draw LoS to target
+                PositionLogic.Instance.IsThereLosFromAtoB(entity.TileCurrentlyOn, characterMoved.TileCurrentlyOn) &&
+                // Check target is not camoflaged, OR target is camoflaged, but attacker has true sight
+                ((characterMoved.isCamoflaged == false) || characterMoved.isCamoflaged && entity.myPassiveManager.TrueSight) &&
+                // Check character actually has a ranged weapon
                 entity.myRangedWeapon != null &&
+                // Check the the target is in range of the weapon
                 entity.IsTargetInRange(characterMoved, entity.myRangedWeapon.weaponRange) &&
+                // Check for conditions that would prevent shooting (weapon is heavy but attacker is not entrenched, etc)
                 ((entity.myPassiveManager.HeavyWeapon && entity.myPassiveManager.Entrenched) ||
                   entity.myPassiveManager.HeavyWeapon == false)
                     )

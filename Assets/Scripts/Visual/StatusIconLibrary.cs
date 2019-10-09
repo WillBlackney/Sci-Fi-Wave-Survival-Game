@@ -54,6 +54,7 @@ public class StatusIconLibrary : MonoBehaviour
         CreateHeavyWeaponIconData();
         CreateRapidFireIconData();
         CreateDeadEyeIconData();
+        CreateTrueSightIconData();
     }
 
     public StatusIcon GetStatusIconByName(string name)
@@ -462,6 +463,15 @@ public class StatusIconLibrary : MonoBehaviour
         deadEye.statusStacks = deadEyeStatusStacks;
         allIcons.Add(deadEye);
     }
+    public void CreateTrueSightIconData()
+    {
+        StatusIcon trueSight = gameObject.AddComponent<StatusIcon>();
+        trueSight.statusImage = trueSightImage;
+        trueSight.statusName = trueSightStatusName;
+        trueSight.statusDescription = trueSightStatusDescription;
+        trueSight.statusStacks = trueSightStatusStacks;
+        allIcons.Add(trueSight);
+    }
 
 
     [Header("Knockdown Icon Data")]
@@ -703,5 +713,11 @@ public class StatusIconLibrary : MonoBehaviour
     public string deadEyeStatusName;
     public string deadEyeStatusDescription;
     public int deadEyeStatusStacks;
+
+    [Header("True Sight Icon Data")]
+    public Sprite trueSightImage;
+    public string trueSightStatusName;
+    public string trueSightStatusDescription;
+    public int trueSightStatusStacks;
 
 }

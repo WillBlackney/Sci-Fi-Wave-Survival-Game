@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96e55414c4155834f9e2777e46dba748, type: 3}
   m_Name: Gold Supplies
   m_EditorClassIdentifier: 
-  lootImage: {fileID: -7717242344924947071, guid: 07fe5e0aa45d16e45b50a02741544d8f,
+  lootImage: {fileID: -1827348805931167637, guid: 050a8b6439d568247ba54a6699ca9c8c,
     type: 3}
   lootName: Gold Supplies
   lootDescription: Gain 5 Gold

@@ -6,7 +6,7 @@ public class InputManager : MonoBehaviour
 {    
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape))
         {
             UnselecteDefender();
         }

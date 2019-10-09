@@ -728,6 +728,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: baae4d831a6b90c4f9176178fa531191,
         type: 2}
+    - target: {fileID: 4676288074198292592, guid: cb6ae539c7ee5604ca6f79eb85dd8e62,
+        type: 3}
+      propertyPath: trueSightStatusName
+      value: True Sight
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676288074198292592, guid: cb6ae539c7ee5604ca6f79eb85dd8e62,
+        type: 3}
+      propertyPath: trueSightStatusDescription
+      value: This character ignores Camoflage and Stealth when attacking
+      objectReference: {fileID: 0}
+    - target: {fileID: 4676288074198292592, guid: cb6ae539c7ee5604ca6f79eb85dd8e62,
+        type: 3}
+      propertyPath: trueSightImage
+      value: 
+      objectReference: {fileID: -9033087954006251061, guid: 050a8b6439d568247ba54a6699ca9c8c,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb6ae539c7ee5604ca6f79eb85dd8e62, type: 3}
 --- !u!1 &93998689
@@ -4626,7 +4642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingGold: 0
-  startingMaxTroopCount: 10
+  startingMaxTroopCount: 12
   passiveGoldIncome: 1
   spaceShipControlZoneSize: 3
 --- !u!1 &1349363442

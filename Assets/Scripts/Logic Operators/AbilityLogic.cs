@@ -810,6 +810,8 @@ public class AbilityLogic : MonoBehaviour
     }
     public IEnumerator PerformMoveCoroutine(LivingEntity characterMoved, TileScript destination, Action action)
     {
+        
+
         Ability move = characterMoved.mySpellBook.GetAbilityByName("Move");
 
         Action moveAction = MovementLogic.Instance.MoveEntity(characterMoved, destination);

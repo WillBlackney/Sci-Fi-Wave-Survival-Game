@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1366
     height: 635
-  m_MinSize: {x: 885, y: 494}
-  m_MaxSize: {x: 16010, y: 14044}
+  m_MinSize: {x: 883, y: 344}
+  m_MaxSize: {x: 16008, y: 8044}
   vertical: 0
-  controlID: 1225
+  controlID: 1508
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -127,10 +127,10 @@ MonoBehaviour:
     y: 0
     width: 901
     height: 635
-  m_MinSize: {x: 608, y: 494}
-  m_MaxSize: {x: 12008, y: 14044}
+  m_MinSize: {x: 608, y: 344}
+  m_MaxSize: {x: 12008, y: 8044}
   vertical: 1
-  controlID: 1226
+  controlID: 1509
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_MinSize: {x: 608, y: 222}
   m_MaxSize: {x: 12008, y: 4022}
   vertical: 0
-  controlID: 1227
+  controlID: 1510
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -176,8 +176,8 @@ MonoBehaviour:
     y: 0
     width: 202
     height: 356
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 222}
+  m_MaxSize: {x: 4002, y: 4022}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -214,7 +214,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 8efbfffffe520000
+      m_ExpandedIDs: 74fbffff7afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -703,10 +703,10 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 8193cff5269439b4ab3e384c2c254bab,
+  m_AnimatorController: {fileID: 9100000, guid: 1bf3d531a8177d449a10dc51cbc319d4,
     type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 2604466461270764387, guid: 8193cff5269439b4ab3e384c2c254bab,
+  - m_Target: {fileID: 5189901221251653899, guid: 1bf3d531a8177d449a10dc51cbc319d4,
       type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
@@ -874,7 +874,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 101172
+  m_LastSelectedObjectID: -1192
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -920,14 +920,14 @@ MonoBehaviour:
     y: 356
     width: 901
     height: 279
-  m_MinSize: {x: 232, y: 272}
-  m_MaxSize: {x: 10002, y: 10022}
-  m_ActualView: {fileID: 15}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
   - {fileID: 15}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -992,20 +992,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Sprites/Ability Images
   m_ViewMode: 1
   m_StartGridSize: 68
   m_LastFolders:
-  - Assets
+  - Assets/Sprites/Ability Images
   m_LastFoldersGridSize: 68
   m_LastProjectPath: C:\Users\Will\Desktop\Unity Projects\Sci-Fi-Wave-Survival-Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 982d0000
-    m_LastClickedID: 11672
-    m_ExpandedIDs: 00000000982d0000fe2d0000582e000088300000e6300000f43000000431000070310000ea310000e4320000b83300000e3400001a3400004e3900006c390000983900009e390000ae390000543a0000bc3a00004e3c0000383e0000d0410000e2420000024400001247000016470000744a00005a4e0000464f000000ca9a3b
+    scrollPos: {x: 0, y: 1807}
+    m_SelectedIDs: 6e3a0000
+    m_LastClickedID: 14958
+    m_ExpandedIDs: 00000000b22d0000182e0000722e0000a2300000003100000e3100001e3100008a31000004320000fe320000d233000028340000343400006839000086390000b2390000b8390000c83900006e3a0000d63a0000683c0000523e0000ea410000fc4200001c4400002c470000304700008e4a0000744e0000604f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1033,7 +1033,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000982d0000fe2d0000582e000088300000e6300000f43000000431000070310000ea310000e4320000b83300000e3400001a3400004e3900006c390000983900009e390000ae390000543a0000bc3a00004e3c0000383e0000d0410000e2420000024400001247000016470000744a00005a4e0000464f000000ca9a3b
+    m_ExpandedIDs: 00000000b22d0000182e0000722e0000a2300000003100000e3100001e3100008a31000004320000fe320000d233000028340000343400006839000086390000b2390000b8390000c83900006e3a0000d63a0000683c0000523e0000ea410000fc4200001c4400002c470000304700008e4a0000744e0000604f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1061,7 +1061,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: 52380000b63b0000063600000c3d0000b2340000c63b0000307d0000c83500001e360000003300008c31000024310000fe300000d2360000143300008c3500007c3300005c2e0000c2800000582f00002e2e000058370000d48500008c3e00005c3700008e3000005a370000ce2e0000b2a600005682000002a70000149d0000203e000020330000b03f0000723100004232000054330000b2300000582d00003c340000a6310000d83700005a360000e83300004c3900000c3f0000103f0000e63000003e38000050a30000943300003c39000084440000e0400000b6330000623a0000963700004a3c00009c1f0300e4300000ca450000fe390000943e0000ce3700004a3f00008640000072150100103a0000e24500003445000026da0000123600001e340000e8350000064500002637000040470000544500006c470000cc7f030080340000723200002c450000743a00008c3d0000cc2f000086390000bc430000703b000056e30000984a00006048000094e40000d0e4000000000000f65103002a3d0000384b000052370000b648000026430000a8e50000d24700003e3b0000c2470000a4420000983d00009e2d0000329e0100583000002e4c000058330000de4600005c330000
+    m_ExpandedInstanceIDs: 52380000b63b0000063600000c3d0000b2340000c63b0000307d0000c83500001e360000003300008c31000024310000fe300000d2360000143300008c3500007c3300005c2e0000c2800000582f00002e2e000058370000d48500008c3e00005c3700008e3000005a370000ce2e0000b2a600005682000002a70000149d0000203e000020330000b03f0000723100004232000054330000b2300000582d00003c340000a6310000d83700005a360000e83300004c3900000c3f0000103f0000e63000003e38000050a30000943300003c39000084440000e0400000b6330000623a0000963700004a3c00009c1f0300e4300000ca450000fe390000943e0000ce3700004a3f00008640000072150100103a0000e24500003445000026da0000123600001e340000e8350000064500002637000040470000544500006c470000cc7f030080340000723200002c450000743a00008c3d0000cc2f000086390000bc430000703b000056e30000984a00006048000094e40000d0e4000000000000f65103002a3d0000384b000052370000b648000026430000a8e50000d24700003e3b0000c2470000a4420000983d00009e2d0000329e0100583000002e4c000058330000de4600005c330000dc3c0000263800007635000034440000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1085,7 +1085,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 841}
     m_GridSize: 68
   m_DirectoriesAreaWidth: 206
 --- !u!114 &16
@@ -1107,8 +1107,8 @@ MonoBehaviour:
     y: 0
     width: 465
     height: 635
-  m_MinSize: {x: 277, y: 72}
-  m_MaxSize: {x: 4002, y: 4022}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
