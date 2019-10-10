@@ -85,8 +85,8 @@ public class EnemySpawner : Singleton<EnemySpawner>
     {
         Action waveSpawn = new Action();
         List<int> levelOneTurns = new List<int> { 0, 3, 6 };
-        List<int> levelTwoTurns = new List<int> { 9, 12, 15 };
-        List<int> eliteTurns = new List<int> { 6, 15, 24, 33 };
+        List<int> levelTwoTurns = new List<int> { 9, 12, 15, 18, 21, 24, 27, 30, 33};
+        List<int> eliteTurns = new List<int> { 7, 16, 25, 34 };
 
         int level = 0;
         EnemyWaveSO.WaveType waveType;
@@ -105,17 +105,23 @@ public class EnemySpawner : Singleton<EnemySpawner>
         if (eliteTurns.Contains(TurnManager.Instance.playerTurnCount))
         {
             // uncomment when elite waves/enemies have been implemented
-            //waveType = EnemyWaveSO.WaveType.Elite;
-            waveType = EnemyWaveSO.WaveType.Basic;
+            waveType = EnemyWaveSO.WaveType.Elite;            
         }
         else
         {
             waveType = EnemyWaveSO.WaveType.Basic;
         }
 
+        // uncomment in future 
+        if (waveType == EnemyWaveSO.WaveType.Elite)
+        {
+            level = 1;
+        }
+
         // stop spawning if this not a correct turn for spawning
         if (level != 0)
         {
+
             StartCoroutine(SpawnEnemyWave(GetRandomWave(waveType, level), waveSpawn));
         }
         else

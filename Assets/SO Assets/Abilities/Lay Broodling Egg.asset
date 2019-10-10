@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c591e3c0f3bb384794b661f28c54c3f, type: 3}
+  m_Name: Lay Broodling Egg
+  m_EditorClassIdentifier: 
+  abilityImage: {fileID: -7536910200807506960, guid: bff67ff4c56b5a14ab31a13efb16e049,
+    type: 3}
+  abilityName: Lay Broodling Egg
+  abilityDescription: Create a broodling egg on a random adjacent tile
+  abilityBaseCooldownTime: 1
+  abilityAPCost: 2
+  abilityRange: 1
+  abilityPrimaryValue: 1
+  abilitySecondaryValue: 0
+  abilityDamageType: 0
+  abilityAttackType: 0
+  usesRangedWeapon: 0
+  usesMeleeWeapon: 0

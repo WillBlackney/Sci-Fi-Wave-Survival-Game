@@ -363,6 +363,8 @@ MonoBehaviour:
   rapidFireStacks: 0
   DeadEye: 0
   deadEyeStacks: 0
+  TrueSight: 0
+  trueSightStacks: 0
 --- !u!114 &-3177715637823320678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -393,8 +395,8 @@ MonoBehaviour:
   defender: {fileID: 0}
   enemy: {fileID: 0}
   baseMobility: 4
-  baseMaxHealth: 6
-  baseStartingHealth: 6
+  baseMaxHealth: 5
+  baseStartingHealth: 5
   baseEnergy: 4
   baseStartingAP: 0
   baseMaxAP: 6
@@ -439,7 +441,7 @@ MonoBehaviour:
   myOnTurnEndEffectsFinished: 0
   shootAnimationFinished: 0
   myInfoPanel: {fileID: 2546341403559018098}
-  myName: 
+  myName: Broodling Spitter
   currentlyActivated: 0
   attackFinished: 0
   attackAnimationFinished: 0

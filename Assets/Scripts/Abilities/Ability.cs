@@ -15,6 +15,7 @@ public class Ability : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler,
     public CanvasGroup glowHighlightCG;
     public CanvasGroup myInfoPanelCanvasGroup;
     public GameObject myInfoPanel;
+    public TextMeshProUGUI abilityNumberText;
 
     [Header("Text References ")]
     public TextMeshProUGUI cdText;
@@ -85,9 +86,7 @@ public class Ability : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler,
     {
         myLivingEntity.GetComponent<Defender>().OnAbilityButtonClicked(abilityName);
     }    
-
-  
-
+    
     public void ShowCooldownTimer()
     {
         Defender defender = myLivingEntity.GetComponent<Defender>();

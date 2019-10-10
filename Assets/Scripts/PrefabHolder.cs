@@ -38,6 +38,10 @@ public class PrefabHolder : Singleton<PrefabHolder>
 
     [Header("Enemy Related")]
     public GameObject ZombiePrefab;
+    public GameObject broodlingEggPrefab;
+    public GameObject broodlingChargerPrefab;
+    public GameObject broodlingSpitterPrefab;
+    public GameObject broodlingGunnerPrefab;
 
     [Header("VFX Prefabs")]
     public GameObject PortalPrefab;

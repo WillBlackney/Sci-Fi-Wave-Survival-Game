@@ -265,7 +265,7 @@ MonoBehaviour:
   myOnTurnEndEffectsFinished: 0
   shootAnimationFinished: 0
   myAbilityBar: {fileID: 3929550997357212834}
-  myUIParent: {fileID: 133899434839867294}
+  myUIParent: {fileID: 6246298870650895327}
   myCharacterData: {fileID: 0}
   myRangedWeaponSlot: {fileID: 5297026387005209197}
   myMeleeWeaponSlot: {fileID: 232266777536543736}
@@ -473,6 +473,8 @@ MonoBehaviour:
   rapidFireStacks: 0
   DeadEye: 0
   deadEyeStacks: 0
+  TrueSight: 0
+  trueSightStacks: 0
 --- !u!95 &6960028130153700474
 Animator:
   serializedVersion: 3
@@ -1592,6 +1594,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 955a655e1bbbbb246b029b5e3fb67dec, type: 3}
+--- !u!114 &1039001670172535875 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8225757772125380721, guid: 955a655e1bbbbb246b029b5e3fb67dec,
+    type: 3}
+  m_PrefabInstance: {fileID: 8956680676885318706}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8946416038551768795 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 28297459254330089, guid: 955a655e1bbbbb246b029b5e3fb67dec,
@@ -1724,24 +1738,18 @@ MonoBehaviour:
   m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &6246298870650895327 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3090536031754860525, guid: 955a655e1bbbbb246b029b5e3fb67dec,
+    type: 3}
+  m_PrefabInstance: {fileID: 8956680676885318706}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6246298870650895320 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3090536031754860522, guid: 955a655e1bbbbb246b029b5e3fb67dec,
     type: 3}
   m_PrefabInstance: {fileID: 8956680676885318706}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1039001670172535875 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8225757772125380721, guid: 955a655e1bbbbb246b029b5e3fb67dec,
-    type: 3}
-  m_PrefabInstance: {fileID: 8956680676885318706}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &301810562886655806 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8682019260413448972, guid: 955a655e1bbbbb246b029b5e3fb67dec,

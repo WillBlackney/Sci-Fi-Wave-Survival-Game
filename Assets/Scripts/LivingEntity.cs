@@ -413,7 +413,7 @@ public class LivingEntity : MonoBehaviour
 
     public bool IsTargetValid(LivingEntity target)
     {
-        List<TileScript> tilesWithinStealthSight = LevelManager.Instance.GetTilesWithinRange(5, TileCurrentlyOn);
+        List<TileScript> tilesWithinStealthSight = LevelManager.Instance.GetTilesWithinRange(3, TileCurrentlyOn);
 
         if (tilesWithinStealthSight.Contains(target.TileCurrentlyOn) == false && 
             (target.isCamoflaged || target.myPassiveManager.Stealth)

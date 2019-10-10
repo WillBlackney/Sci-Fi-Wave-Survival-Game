@@ -10,6 +10,42 @@ public class InputManager : MonoBehaviour
         {
             UnselecteDefender();
         }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            if (DefenderManager.Instance.selectedDefender != null)
+            {
+                DefenderManager.Instance.selectedDefender.mySpellBook.AbilityOne.OnButtonClick();
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            if (DefenderManager.Instance.selectedDefender != null)
+            {
+                DefenderManager.Instance.selectedDefender.mySpellBook.AbilityTwo.OnButtonClick();
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            if (DefenderManager.Instance.selectedDefender != null)
+            {
+                DefenderManager.Instance.selectedDefender.mySpellBook.AbilityThree.OnButtonClick();
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            if (DefenderManager.Instance.selectedDefender != null)
+            {
+                DefenderManager.Instance.selectedDefender.mySpellBook.AbilityFour.OnButtonClick();
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            if (DefenderManager.Instance.selectedDefender != null)
+            {
+                DefenderManager.Instance.selectedDefender.mySpellBook.AbilityFive.OnButtonClick();
+            }
+        }
     }
 
     public void UnselecteDefender()

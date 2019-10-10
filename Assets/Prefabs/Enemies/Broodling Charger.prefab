@@ -363,6 +363,8 @@ MonoBehaviour:
   rapidFireStacks: 0
   DeadEye: 0
   deadEyeStacks: 0
+  TrueSight: 0
+  trueSightStacks: 0
 --- !u!114 &9098177251287980384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -393,8 +395,8 @@ MonoBehaviour:
   defender: {fileID: 0}
   enemy: {fileID: 0}
   baseMobility: 5
-  baseMaxHealth: 6
-  baseStartingHealth: 6
+  baseMaxHealth: 5
+  baseStartingHealth: 5
   baseEnergy: 4
   baseStartingAP: 0
   baseMaxAP: 6

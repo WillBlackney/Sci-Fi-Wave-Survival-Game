@@ -40,7 +40,7 @@ public class AbilityBar : MonoBehaviour
             myDefender.mySpellBook.AbilityOne = newAbilityGO.GetComponent<Ability>();
             myDefender.mySpellBook.AbilityOne.myLivingEntity = myDefender;
             myDefender.mySpellBook.AbilityOne.SetupBaseProperties(AbilityLibrary.Instance.GetAbilityByName(abilityName));
-            
+            newAbilityGO.GetComponent<Ability>().abilityNumberText.text = "1";
             myDefender.mySpellBook.myActiveAbilities.Add(myDefender.mySpellBook.AbilityOne);
             
             
@@ -53,10 +53,9 @@ public class AbilityBar : MonoBehaviour
             myDefender.mySpellBook.AbilityTwo = newAbilityGO.GetComponent<Ability>();
             myDefender.mySpellBook.AbilityTwo.myLivingEntity = myDefender;
             myDefender.mySpellBook.AbilityTwo.SetupBaseProperties(AbilityLibrary.Instance.GetAbilityByName(abilityName));
-            
+            newAbilityGO.GetComponent<Ability>().abilityNumberText.text = "2";
             myDefender.mySpellBook.myActiveAbilities.Add(myDefender.mySpellBook.AbilityTwo);
 
-            //CreateButton(abilityName, AbilityTwoParent, myDefender.mySpellBook.AbilityTwo);
         }
 
         else if (myDefender.mySpellBook.AbilityThree == null)
@@ -66,10 +65,9 @@ public class AbilityBar : MonoBehaviour
             myDefender.mySpellBook.AbilityThree = newAbilityGO.GetComponent<Ability>();
             myDefender.mySpellBook.AbilityThree.myLivingEntity = myDefender;
             myDefender.mySpellBook.AbilityThree.SetupBaseProperties(AbilityLibrary.Instance.GetAbilityByName(abilityName));
-            
+            newAbilityGO.GetComponent<Ability>().abilityNumberText.text = "3";
             myDefender.mySpellBook.myActiveAbilities.Add(myDefender.mySpellBook.AbilityThree);
 
-            //CreateButton(abilityName, AbilityThreeParent, myDefender.mySpellBook.AbilityThree);
         }
 
         
@@ -78,11 +76,10 @@ public class AbilityBar : MonoBehaviour
             GameObject newAbilityGO = Instantiate(PrefabHolder.Instance.AbilityButtonPrefab, AbilityFourParent.transform);
             myDefender.mySpellBook.AbilityFour = newAbilityGO.GetComponent<Ability>();
             myDefender.mySpellBook.AbilityFour.myLivingEntity = myDefender;
-            myDefender.mySpellBook.AbilityFour.SetupBaseProperties(AbilityLibrary.Instance.GetAbilityByName(abilityName));            
-
+            myDefender.mySpellBook.AbilityFour.SetupBaseProperties(AbilityLibrary.Instance.GetAbilityByName(abilityName));
+            newAbilityGO.GetComponent<Ability>().abilityNumberText.text = "4";
             myDefender.mySpellBook.myActiveAbilities.Add(myDefender.mySpellBook.AbilityFour);
 
-            //CreateButton(abilityName, AbilityFourParent, myDefender.mySpellBook.AbilityFour);
         }
 
         else if (myDefender.mySpellBook.AbilityFive == null)
@@ -91,10 +88,9 @@ public class AbilityBar : MonoBehaviour
             myDefender.mySpellBook.AbilityFive = newAbilityGO.GetComponent<Ability>();
             myDefender.mySpellBook.AbilityFive.myLivingEntity = myDefender;
             myDefender.mySpellBook.AbilityFive.SetupBaseProperties(AbilityLibrary.Instance.GetAbilityByName(abilityName));
-            
+            newAbilityGO.GetComponent<Ability>().abilityNumberText.text = "5";
             myDefender.mySpellBook.myActiveAbilities.Add(myDefender.mySpellBook.AbilityFive);
 
-            //CreateButton(abilityName, AbilityFiveParent, myDefender.mySpellBook.AbilityFive);
         }
 
         else if (myDefender.mySpellBook.AbilitySix == null)

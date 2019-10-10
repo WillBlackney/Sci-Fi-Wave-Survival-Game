@@ -40,8 +40,7 @@ public class CinemachineCameraController : MonoBehaviour
     void Start()
     {
         offset = new Vector3(0, 0, -10);
-        cinemachineCamera.transform.position = new Vector3(24f, -24f, -10);
-        //mainCamera = Camera.main;        
+        cinemachineCamera.transform.position = new Vector3(24.5f, -24.5f, -10);            
         SetCameraControl(false);
     }
     #endregion

@@ -1002,6 +1002,64 @@ public class AbilityLogic : MonoBehaviour
         yield return null;
     }
 
+    // Lay Broodling Egg
+    public Action PerformLayBroodlingEgg(LivingEntity caster)
+    {
+        Action action = new Action();
+        StartCoroutine(PerformLayBroodlingEggCoroutine(caster, action));
+        return action;
+    }
+    public IEnumerator PerformLayBroodlingEggCoroutine(LivingEntity caster, Action action)
+    {
+        Ability layBroodlingEgg = caster.mySpellBook.GetAbilityByName("Lay Broodling Egg");
+
+        List<TileScript> allPossibleSpawnLocations = LevelManager.Instance.GetValidMoveableTilesWithinRange(1, caster.TileCurrentlyOn);
+        int randomIndex = Random.Range(0, allPossibleSpawnLocations.Count);
+        TileScript spawnLocation = allPossibleSpawnLocations[randomIndex];
+
+        GameObject newBroodlingEgg = Instantiate(PrefabHolder.Instance.broodlingEggPrefab);
+        Enemy newBroodlingEggScript = newBroodlingEgg.GetComponent<Enemy>();
+        newBroodlingEggScript.InitializeSetup(spawnLocation.GridPosition, spawnLocation);      
+
+        OnAbilityUsed(layBroodlingEgg, caster);
+        action.actionResolved = true;
+
+        yield return null;
+    }
+
+    // Hatch Broodling
+    public Action PerformHatchBroodling(LivingEntity caster)
+    {
+        Action action = new Action();
+        StartCoroutine(PerformHatchBroodlingCoroutine(caster, action));
+        return action;
+    }
+    public IEnumerator PerformHatchBroodlingCoroutine(LivingEntity caster, Action action)
+    {
+        Ability hatchBroodling = caster.mySpellBook.GetAbilityByName("Hatch Broodling");
+        TileScript spawnLocation = caster.TileCurrentlyOn;
+
+        List<GameObject> broodlingPrefabs = new List<GameObject>()
+        {
+            PrefabHolder.Instance.broodlingChargerPrefab,
+            PrefabHolder.Instance.broodlingGunnerPrefab,
+            PrefabHolder.Instance.broodlingSpitterPrefab
+        };
+
+        GameObject randomBroodling = broodlingPrefabs[Random.Range(0, broodlingPrefabs.Count)];
+
+        StartCoroutine(caster.HandleDeath());
+        
+        GameObject newBroodling = Instantiate(randomBroodling);
+        Enemy newBroodlingScript = newBroodling.GetComponent<Enemy>();
+
+        newBroodlingScript.InitializeSetup(spawnLocation.GridPosition, spawnLocation);
+
+        action.actionResolved = true;
+
+        yield return null;
+
+    }
     // Healing Light
     public void PerformHealingLight(LivingEntity caster, LivingEntity target)
     {
