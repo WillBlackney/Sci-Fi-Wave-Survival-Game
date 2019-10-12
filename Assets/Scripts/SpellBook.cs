@@ -104,7 +104,7 @@ public class SpellBook : MonoBehaviour
         newAbility.SetupBaseProperties(AbilityLibrary.Instance.GetAbilityByName(abilityName));
         PlaceAbilityOnNextAvailableSlot(newAbility);        
         myActiveAbilities.Add(newAbility);
-        myLivingEntity.GetComponent<Enemy>().myInfoPanel.AddAbilityToolTipToView(newAbility);
+        myLivingEntity.GetComponent<Enemy>().myInfoPanel.AddAbilityToolTipToView(newAbility.myAbilityData);
     }
 
     public void DefenderLearnAbility(string abilityName)

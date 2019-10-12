@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Abilities\AbilityButtonPrefabHolder.cs" />
     <Compile Include="Assets\Scripts\Abilities\AbilityDataSO.cs" />
     <Compile Include="Assets\Scripts\Abilities\AbilityLibrary.cs" />
+    <Compile Include="Assets\Scripts\Abilities\AbilityTab.cs" />
     <Compile Include="Assets\Scripts\Action.cs" />
     <Compile Include="Assets\Scripts\AILogic.cs" />
     <Compile Include="Assets\Scripts\Artifacts\ArtifactDataSO.cs" />

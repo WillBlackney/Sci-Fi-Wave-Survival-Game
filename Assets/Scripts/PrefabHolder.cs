@@ -7,6 +7,7 @@ public class PrefabHolder : Singleton<PrefabHolder>
     [Header("Buttons")]
     public GameObject AbilityButtonPrefab;
     public GameObject spellInfoPrefab;
+    public GameObject abilityTabPrefab;
 
     [Header("Defender Prefabs")]
     public GameObject spaceShipPrefab;

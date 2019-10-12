@@ -52,7 +52,7 @@ public class StatusManager : MonoBehaviour
         Debug.Log("AddNewStatusProcess() called");
         GameObject newIconGO = Instantiate(statusIconPrefab, gameObject.transform);
         StatusIcon newStatus = newIconGO.GetComponent<StatusIcon>();
-        newStatus.SetUpProperties(StatusIconLibrary.Instance.GetStatusIconByName(iconData.statusName));
+        newStatus.InitializeSetup(StatusIconLibrary.Instance.GetStatusIconByName(iconData.statusName));
         newStatus.ModifyStatusIconStacks(stacksGained);
         myStatusIcons.Add(newStatus);
 

@@ -2735,6 +2735,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4352700390732593705, guid: 90c7b110a9d08764893ef7b3982da3e1,
         type: 3}
+    - target: {fileID: 8230548189762907345, guid: 3a6916c1a1333274f992b1b658a93f29,
+        type: 3}
+      propertyPath: abilityTabPrefab
+      value: 
+      objectReference: {fileID: 1027146141831990375, guid: bcd57c09bda03bb409ae98a844a3a4d0,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a6916c1a1333274f992b1b658a93f29, type: 3}
 --- !u!1 &836638364
@@ -5907,10 +5913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allWaves:
-  - {fileID: 11400000, guid: 97dedcea4c4b36845b0351f677ec6f4a, type: 2}
-  - {fileID: 11400000, guid: d9d1b3c0ba67c6d4f91ceb4d06c2d63f, type: 2}
-  - {fileID: 11400000, guid: 99e5527da46066a448ec14596c01dc44, type: 2}
-  - {fileID: 11400000, guid: 52c73bb4362837c4abcf091185a13efa, type: 2}
+  - {fileID: 11400000, guid: a925a91cb3c75e64cadf1f518e9a621e, type: 2}
   waveSpawnCentrePoints: []
 --- !u!4 &1819091608
 Transform:

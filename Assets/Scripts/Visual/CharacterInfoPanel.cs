@@ -8,25 +8,33 @@ public class CharacterInfoPanel : MonoBehaviour
 {
     public Enemy myEnemy;
     public TextMeshProUGUI nameText;
-    public Image myCharacterSprite;
+    public Image myCharacterImage;
     public GameObject panelParent;
-    public GameObject spellToolTipParent;
-
-    public TextMeshProUGUI healthText;
+    public GameObject abilityTabParent;
+    public GameObject abilitiesParent;
+    public GameObject descriptionParent;
+    
     public TextMeshProUGUI energyText;
     public TextMeshProUGUI mobilityText;
-    public TextMeshProUGUI strengthText;
+    public TextMeshProUGUI aimText;
+    public TextMeshProUGUI defenseText;
 
     public void InitializeSetup(Enemy enemyParent)
     {
         myEnemy = enemyParent;
         nameText.text = myEnemy.myName;
-        myCharacterSprite.sprite = myEnemy.mySpriteRenderer.sprite;
-
-        healthText.text = myEnemy.baseMaxHealth.ToString();
+        myCharacterImage.sprite = myEnemy.mySpriteRenderer.sprite;
+        
         energyText.text = myEnemy.baseEnergy.ToString();
         mobilityText.text = myEnemy.baseMobility.ToString();
-        strengthText.text = myEnemy.baseStrength.ToString();
+        aimText.text = myEnemy.baseAim.ToString();
+        defenseText.text = myEnemy.baseDefense.ToString();
+
+    }
+
+    public void SetPanelViewState(bool onOrOff)
+    {
+        panelParent.SetActive(onOrOff);
     }
     public void EnablePanelView()
     {
@@ -38,15 +46,21 @@ public class CharacterInfoPanel : MonoBehaviour
         panelParent.SetActive(false);
     }
 
-    public void AddAbilityToolTipToView(Ability ability)
+    public void OnDescriptionButtonClicked()
     {
-        GameObject newToolTip = Instantiate(PrefabHolder.Instance.spellInfoPrefab, spellToolTipParent.transform);
-        SpellToolTip tooltipData = newToolTip.GetComponent<SpellToolTip>();
+        abilitiesParent.SetActive(false);
+        descriptionParent.SetActive(true);
+    }
 
-        tooltipData.spellIcon.sprite = ability.abilityImage;
-        tooltipData.spellNameText.text = ability.abilityName;
-        tooltipData.apCostText.text = ability.abilityAPCost.ToString();
-        tooltipData.cdText.text = ability.abilityBaseCooldownTime.ToString();
-        tooltipData.descriptionText.text = ability.abilityDescription;
+    public void OnAbilitiesButtonClicked()
+    {
+        abilitiesParent.SetActive(true);
+        descriptionParent.SetActive(false);
+    }
+
+    public void AddAbilityToolTipToView(AbilityDataSO ability)
+    {
+        GameObject newAbilityTabGO = Instantiate(PrefabHolder.Instance.abilityTabPrefab, abilityTabParent.transform);
+        newAbilityTabGO.GetComponent<AbilityTab>().InitializeSetup(ability);
     }
 }

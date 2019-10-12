@@ -7,20 +7,27 @@ using TMPro;
 
 public class StatusIcon : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    [Header("Component References")]
+    public GameObject infoPanel;
+    public Sprite statusImage;
+    public TextMeshProUGUI statusStacksText;
+    public TextMeshProUGUI statusNameText;
+    public TextMeshProUGUI statusDescriptionText;   
+
+    [Header ("Properties")]
     public string statusName;
     public string statusDescription;
-    public int statusStacks;
+    public int statusStacks;    
 
-    public TextMeshProUGUI statusStacksText;
-    public Sprite statusImage;
-
-    public void SetUpProperties(StatusIcon iconData)
+    public void InitializeSetup(StatusIcon iconData)
     {
         statusImage = iconData.statusImage;
         GetComponent<Image>().sprite = statusImage;
 
-        statusName = iconData.statusName;        
+        statusName = iconData.statusName;
+        statusNameText.text = statusName;
         statusDescription = iconData.statusDescription;
+        statusDescriptionText.text = statusDescription;
         statusStacks = iconData.statusStacks;
         statusStacksText.text = statusStacks.ToString();
     }
@@ -37,12 +44,18 @@ public class StatusIcon : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("Status Icon mouse over detected...");
-        SpellInfoBox.Instance.ShowInfoBox(statusName, 0, 0, 0, statusDescription);
+        //SpellInfoBox.Instance.ShowInfoBox(statusName, 0, 0, 0, statusDescription);
+        SetInfoPanelVisibility(true);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        SpellInfoBox.Instance.HideInfoBox();
+        //SpellInfoBox.Instance.HideInfoBox();
+        SetInfoPanelVisibility(false);
+    }
+
+    public void SetInfoPanelVisibility(bool onOrOff)
+    {
+        infoPanel.SetActive(onOrOff);
     }
 }

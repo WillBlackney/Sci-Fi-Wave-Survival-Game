@@ -431,11 +431,11 @@ public class Enemy : LivingEntity
 
     public void OnMouseOver()
     {
-        Defender selectedDefender = DefenderManager.Instance.selectedDefender;
+        //Defender selectedDefender = DefenderManager.Instance.selectedDefender;
 
         if (Input.GetMouseButtonDown(1))
         {
-            myInfoPanel.EnablePanelView();
+            myInfoPanel.SetPanelViewState(true);
         }        
     }
 

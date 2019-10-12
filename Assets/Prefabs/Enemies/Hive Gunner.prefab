@@ -261,6 +261,8 @@ MonoBehaviour:
   rapidFireStacks: 0
   DeadEye: 0
   deadEyeStacks: 0
+  TrueSight: 0
+  trueSightStacks: 0
 --- !u!114 &-8884309060993645805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1054,6 +1056,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4168503631159560877, guid: 5fc36fb899fb1834e80e5cdcd63ba5f4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5733015482831789483, guid: 5fc36fb899fb1834e80e5cdcd63ba5f4,
         type: 3}
