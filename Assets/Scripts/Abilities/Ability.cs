@@ -84,7 +84,11 @@ public class Ability : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler,
 
     public void OnButtonClick()
     {
-        myLivingEntity.GetComponent<Defender>().OnAbilityButtonClicked(abilityName);
+        if (myLivingEntity.GetComponent<Defender>())
+        {
+            myLivingEntity.GetComponent<Defender>().OnAbilityButtonClicked(abilityName);
+        }
+        
     }    
     
     public void ShowCooldownTimer()

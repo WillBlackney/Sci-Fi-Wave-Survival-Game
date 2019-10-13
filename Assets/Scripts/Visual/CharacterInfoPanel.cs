@@ -9,6 +9,7 @@ public class CharacterInfoPanel : MonoBehaviour
     public Enemy myEnemy;
     public TextMeshProUGUI nameText;
     public Image myCharacterImage;
+    public CanvasGroup myCanvasGroup;
     public GameObject panelParent;
     public GameObject abilityTabParent;
     public GameObject abilitiesParent;
@@ -31,33 +32,50 @@ public class CharacterInfoPanel : MonoBehaviour
         defenseText.text = myEnemy.baseDefense.ToString();
 
     }
-
     public void SetPanelViewState(bool onOrOff)
-    {
-        panelParent.SetActive(onOrOff);
+    {        
+        if(onOrOff == true)
+        {
+            StartCoroutine(EnablePanelView());
+            BlackScreenManager.Instance.FadeOut(8, 0.5f, true);
+        }
+        else
+        {
+            StartCoroutine(DisablePanelView());
+            BlackScreenManager.Instance.FadeIn(8);
+        }
     }
-    public void EnablePanelView()
+    public IEnumerator EnablePanelView()
     {
+        myCanvasGroup.alpha = 0;
         panelParent.SetActive(true);
+        while (myCanvasGroup.alpha < 1)
+        {
+            myCanvasGroup.alpha += 0.02f * 10;
+            yield return new WaitForEndOfFrame();
+        }
     }
-
-    public void DisablePanelView()
+    public IEnumerator DisablePanelView()
     {
+        myCanvasGroup.alpha = 1;
+        panelParent.SetActive(true);
+        while (myCanvasGroup.alpha < 1)
+        {
+            myCanvasGroup.alpha -= 0.02f * 10;
+            yield return new WaitForEndOfFrame();
+        }
         panelParent.SetActive(false);
     }
-
     public void OnDescriptionButtonClicked()
     {
         abilitiesParent.SetActive(false);
         descriptionParent.SetActive(true);
     }
-
     public void OnAbilitiesButtonClicked()
     {
         abilitiesParent.SetActive(true);
         descriptionParent.SetActive(false);
     }
-
     public void AddAbilityToolTipToView(AbilityDataSO ability)
     {
         GameObject newAbilityTabGO = Instantiate(PrefabHolder.Instance.abilityTabPrefab, abilityTabParent.transform);
