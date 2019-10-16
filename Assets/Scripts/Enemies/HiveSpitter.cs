@@ -14,7 +14,7 @@ public class HiveSpitter : Enemy
         mySpellBook.EnemyLearnAbility("Acid Spit");
         mySpellBook.EnemyLearnAbility("Move");
 
-        myPassiveManager.LearnRegeneration(2);
+        myPassiveManager.LearnRegeneration(2, true);
     }
 
     public override IEnumerator StartMyActivationCoroutine()

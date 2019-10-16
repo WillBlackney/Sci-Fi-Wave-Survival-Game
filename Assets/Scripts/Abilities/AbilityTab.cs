@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using TMPro;
+using UnityEngine.UI;
 
 public class AbilityTab : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
@@ -21,7 +19,19 @@ public class AbilityTab : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         apCostText.text = abilityData.abilityAPCost.ToString();
         rangeText.text = abilityData.abilityRange.ToString();
         coolDownText.text = abilityData.abilityBaseCooldownTime.ToString();
+        descriptionText.text = abilityData.abilityDescription;
         myImage.sprite = abilityData.abilityImage;
+    }
+    public void InitializeSetup(StatusIcon iconData)
+    {
+
+        nameText.text = iconData.statusName;
+        apCostText.text = "";
+        rangeText.text = "";
+        coolDownText.text = "";
+        descriptionText.text = iconData.statusDescription;
+        myImage.sprite = iconData.statusImage;
+        
     }
 
     public void SetInfoPanelVisbility(bool onOrOff)

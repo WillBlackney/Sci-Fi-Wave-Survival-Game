@@ -14,7 +14,7 @@ public class HiveCharger : Enemy
         mySpellBook.EnemyLearnAbility("Move");
         mySpellBook.EnemyLearnAbility("Charge");
 
-        myPassiveManager.LearnRegeneration(2);
+        myPassiveManager.LearnRegeneration(2, true);
     }
 
     public override IEnumerator StartMyActivationCoroutine()

@@ -120,20 +120,28 @@ public class PassiveManager : MonoBehaviour
             ModifyHeavyWeapon(1);
         }
     }
-    public void LearnEnrage(int stacks)
+    public void LearnEnrage(int stacks, bool createAbilityTab = false)
     {
         StatusIcon iconData = StatusIconLibrary.Instance.GetStatusIconByName("Enrage");
         Enrage = true;
         enrageStacks += stacks;
         myLivingEntity.myStatusManager.StartAddStatusProcess(StatusIconLibrary.Instance.GetStatusIconByName("Enrage"), stacks);
+        if (createAbilityTab && GetComponent<Enemy>())
+        {
+            GetComponent<Enemy>().myInfoPanel.AddAbilityToolTipToView(iconData);
+        }
     }
 
-    public void LearnGrowing(int stacks)
+    public void LearnGrowing(int stacks, bool createAbilityTab = false)
     {
         StatusIcon iconData = StatusIconLibrary.Instance.GetStatusIconByName("Growing");
         Growing = true;
         growingStacks += stacks;
         myLivingEntity.myStatusManager.StartAddStatusProcess(StatusIconLibrary.Instance.GetStatusIconByName("Growing"), stacks);
+        if (createAbilityTab && GetComponent<Enemy>())
+        {
+            GetComponent<Enemy>().myInfoPanel.AddAbilityToolTipToView(iconData);
+        }
     }
 
     public void LearnVolatile(int stacks)
@@ -238,11 +246,15 @@ public class PassiveManager : MonoBehaviour
         StartCoroutine(VisualEffectManager.Instance.CreateStatusEffect(transform.position, "Dead Eye", false));
     }
 
-    public void LearnStealth()
+    public void LearnStealth(bool createAbilityTab = false)
     {
         StatusIcon iconData = StatusIconLibrary.Instance.GetStatusIconByName("Stealth");
         Stealth = true;        
         myLivingEntity.myStatusManager.StartAddStatusProcess(StatusIconLibrary.Instance.GetStatusIconByName("Stealth"), 1);
+        if (createAbilityTab && GetComponent<Enemy>())
+        {
+            GetComponent<Enemy>().myInfoPanel.AddAbilityToolTipToView(iconData);
+        }
     }
 
     public void LearnPoisonImmunity()
@@ -276,12 +288,16 @@ public class PassiveManager : MonoBehaviour
         myLivingEntity.myStatusManager.StartAddStatusProcess(StatusIconLibrary.Instance.GetStatusIconByName("Quick Reflexes"), stacks);
     }
 
-    public void LearnRegeneration(int stacks)
+    public void LearnRegeneration(int stacks, bool createAbilityTab = false)
     {
         StatusIcon iconData = StatusIconLibrary.Instance.GetStatusIconByName("Regeneration");
         Regeneration = true;
         regenerationStacks += stacks;
         myLivingEntity.myStatusManager.StartAddStatusProcess(StatusIconLibrary.Instance.GetStatusIconByName("Regeneration"), stacks);
+        if(createAbilityTab && GetComponent<Enemy>())
+        {
+            GetComponent<Enemy>().myInfoPanel.AddAbilityToolTipToView(iconData);
+        }
     }
 
     public void LearnAdaptive(int stacks)
@@ -464,7 +480,7 @@ public class PassiveManager : MonoBehaviour
 
         myLivingEntity.myStatusManager.StartAddStatusProcess(iconData, stacks);
     }
-    public void ModifyRapidFire(int stacks)
+    public void ModifyRapidFire(int stacks, bool createAbilityTab = false)
     {
         StatusIcon iconData = StatusIconLibrary.Instance.GetStatusIconByName("Rapid Fire");
 
@@ -480,9 +496,12 @@ public class PassiveManager : MonoBehaviour
         }
 
         myLivingEntity.myStatusManager.StartAddStatusProcess(iconData, stacks);
+        if (createAbilityTab && GetComponent<Enemy>())
+        {
+            GetComponent<Enemy>().myInfoPanel.AddAbilityToolTipToView(iconData);
+        }
     }
-
-    public void ModifyTrueSight(int stacks)
+    public void ModifyTrueSight(int stacks, bool createAbilityTab)
     {
         StatusIcon iconData = StatusIconLibrary.Instance.GetStatusIconByName("True Sight");
 
@@ -498,5 +517,9 @@ public class PassiveManager : MonoBehaviour
         }
 
         myLivingEntity.myStatusManager.StartAddStatusProcess(iconData, stacks);
+        if (createAbilityTab && GetComponent<Enemy>())
+        {
+            GetComponent<Enemy>().myInfoPanel.AddAbilityToolTipToView(iconData);
+        }
     }
 }

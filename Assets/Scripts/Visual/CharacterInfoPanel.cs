@@ -14,6 +14,8 @@ public class CharacterInfoPanel : MonoBehaviour
     public GameObject abilityTabParent;
     public GameObject abilitiesParent;
     public GameObject descriptionParent;
+    public WeaponSlot rangedWeaponTab;
+    public WeaponSlot meleeWeaponTab;
     
     public TextMeshProUGUI energyText;
     public TextMeshProUGUI mobilityText;
@@ -80,5 +82,15 @@ public class CharacterInfoPanel : MonoBehaviour
     {
         GameObject newAbilityTabGO = Instantiate(PrefabHolder.Instance.abilityTabPrefab, abilityTabParent.transform);
         newAbilityTabGO.GetComponent<AbilityTab>().InitializeSetup(ability);
+    }
+    public void AddAbilityToolTipToView(StatusIcon ability)
+    {
+        GameObject newAbilityTabGO = Instantiate(PrefabHolder.Instance.abilityTabPrefab, abilityTabParent.transform);
+        newAbilityTabGO.GetComponent<AbilityTab>().InitializeSetup(ability);
+    }
+    public void SetWeaponTab(WeaponSlot slot, WeaponDataSO weapon)
+    {
+        slot.gameObject.SetActive(true);
+        slot.SetWeapon(weapon);
     }
 }

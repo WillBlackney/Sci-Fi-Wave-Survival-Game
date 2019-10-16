@@ -75,12 +75,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 11
-  m_Sprite: {fileID: 21300000, guid: 696283f8283215b448c150a53090ea14, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6b6ed8d7c7e033942a26ad9a0bfd5497, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.8, y: 0.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -370,6 +370,8 @@ MonoBehaviour:
   rapidFireStacks: 0
   DeadEye: 0
   deadEyeStacks: 0
+  TrueSight: 0
+  trueSightStacks: 0
 --- !u!95 &2294163363023826284
 Animator:
   serializedVersion: 3
@@ -567,7 +569,7 @@ PrefabInstance:
     - target: {fileID: 5993353080589036345, guid: 75ff4ade461c6c14fbecb9c257b3174a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -163.96341
+      value: -163.88994
       objectReference: {fileID: 0}
     - target: {fileID: 5993353080589036345, guid: 75ff4ade461c6c14fbecb9c257b3174a,
         type: 3}

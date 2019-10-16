@@ -19,6 +19,10 @@ public class WeaponLogic : Singleton<WeaponLogic>
                 }
                 
             }   
+            else if (entity.GetComponent<Enemy>())
+            {
+                entity.GetComponent<Enemy>().myInfoPanel.SetWeaponTab(entity.GetComponent<Enemy>().myInfoPanel.rangedWeaponTab, weaponData);
+            }
         }
 
         if (weaponData.weaponType == WeaponDataSO.WeaponType.Melee)
@@ -30,6 +34,11 @@ public class WeaponLogic : Singleton<WeaponLogic>
                 {
                     entity.GetComponent<Defender>().myMeleeWeaponSlot.SetWeapon(weaponData);
                 }
+            }
+
+            else if (entity.GetComponent<Enemy>())
+            {
+                entity.GetComponent<Enemy>().myInfoPanel.SetWeaponTab(entity.GetComponent<Enemy>().myInfoPanel.meleeWeaponTab, weaponData);
             }
         }
 

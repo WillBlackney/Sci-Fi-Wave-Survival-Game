@@ -15,7 +15,7 @@ public class HiveGunner : Enemy
         mySpellBook.EnemyLearnAbility("Shoot");
         mySpellBook.EnemyLearnAbility("Move");
 
-        myPassiveManager.LearnRegeneration(2);
+        myPassiveManager.LearnRegeneration(2, true);
     }
 
     public override IEnumerator StartMyActivationCoroutine()
